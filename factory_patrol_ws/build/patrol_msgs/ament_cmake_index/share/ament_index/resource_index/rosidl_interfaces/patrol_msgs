@@ -1,0 +1,12 @@
+msg/DroneState.idl
+msg/DroneState.msg
+msg/Mission.idl
+msg/Mission.msg
+msg/SwarmStatus.idl
+msg/SwarmStatus.msg
+msg/Task.idl
+msg/Task.msg
+msg/TaskAssignment.idl
+msg/TaskAssignment.msg
+msg/TaskBid.idl
+msg/TaskBid.msg

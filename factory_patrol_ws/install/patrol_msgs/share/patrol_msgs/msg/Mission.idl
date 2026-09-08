@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from patrol_msgs/msg/Mission.msg
+// generated code does not contain a copyright notice
+
+#include "patrol_msgs/msg/Task.idl"
+
+module patrol_msgs {
+  module msg {
+    struct Mission {
+      uint16 mission_id;
+
+      sequence<patrol_msgs::msg::Task> tasks;
+    };
+  };
+};

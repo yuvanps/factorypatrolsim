@@ -1,0 +1,21 @@
+[ 50%] [32mBuilding C object CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o[0m
+[100%] [32m[1mLinking C executable patrol_controller[0m
+[100%] Built target patrol_controller
+-- Install configuration: ""
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/lib/patrol_controller/patrol_controller
+-- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_ws/install/patrol_controller/lib/patrol_controller/patrol_controller" to ""
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/ament_index/resource_index/package_run_dependencies/patrol_controller
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/ament_index/resource_index/parent_prefix_path/patrol_controller
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/patrol_controller/environment/ament_prefix_path.sh
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/patrol_controller/environment/ament_prefix_path.dsv
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/patrol_controller/environment/path.sh
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/patrol_controller/environment/path.dsv
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/patrol_controller/local_setup.bash
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/patrol_controller/local_setup.sh
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/patrol_controller/local_setup.zsh
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/patrol_controller/local_setup.dsv
+-- Up-to-date: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/patrol_controller/package.dsv
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/ament_index/resource_index/packages/patrol_controller
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/patrol_controller/cmake/patrol_controllerConfig.cmake
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/patrol_controller/cmake/patrol_controllerConfig-version.cmake
+-- Installing: /home/mrweirdo/factory_patrol_ws/install/patrol_controller/share/patrol_controller/package.xml

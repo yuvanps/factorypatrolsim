@@ -1,0 +1,56 @@
+{
+  "package_name": "patrol_msgs",
+  "output_dir": "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs",
+  "template_dir": "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource",
+  "idl_tuples": [
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/Task.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/Mission.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/DroneState.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/TaskBid.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/TaskAssignment.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/SwarmStatus.idl"
+  ],
+  "ros_interface_files": [
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/Task.msg",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/Mission.msg",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/DroneState.msg",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/TaskBid.msg",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/TaskAssignment.msg",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/SwarmStatus.msg"
+  ],
+  "target_dependencies": [
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../../../lib/python3.12/site-packages/rosidl_generator_c/__init__.py",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/action__type_support.h.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/action__type_support.c.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/empty__description.c.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/full__description.c.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/idl.h.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/idl__description.c.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/idl__functions.c.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/idl__functions.h.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/idl__struct.h.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/idl__type_support.c.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/idl__type_support.h.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/msg__functions.c.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/msg__functions.h.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/msg__struct.h.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/msg__type_support.h.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/srv__type_support.c.em",
+    "/opt/ros/jazzy/share/rosidl_generator_c/cmake/../resource/srv__type_support.h.em",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs/msg/Task.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs/msg/Mission.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs/msg/DroneState.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs/msg/TaskBid.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs/msg/TaskAssignment.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs/msg/SwarmStatus.idl"
+  ],
+  "type_description_tuples": [
+    "msg/Task.idl:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs/msg/Task.json",
+    "msg/Mission.idl:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs/msg/Mission.json",
+    "msg/DroneState.idl:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs/msg/DroneState.json",
+    "msg/TaskBid.idl:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs/msg/TaskBid.json",
+    "msg/TaskAssignment.idl:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs/msg/TaskAssignment.json",
+    "msg/SwarmStatus.idl:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs/msg/SwarmStatus.json"
+  ]
+}

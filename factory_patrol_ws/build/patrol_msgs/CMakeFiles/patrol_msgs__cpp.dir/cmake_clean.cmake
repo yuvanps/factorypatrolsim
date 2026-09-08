@@ -1,0 +1,39 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/patrol_msgs__cpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/drone_state__builder.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/drone_state__struct.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/drone_state__traits.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/drone_state__type_support.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/mission__builder.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/mission__struct.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/mission__traits.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/mission__type_support.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/swarm_status__builder.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/swarm_status__struct.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/swarm_status__traits.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/swarm_status__type_support.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/task__builder.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/task__struct.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/task__traits.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/task__type_support.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/task_assignment__builder.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/task_assignment__struct.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/task_assignment__traits.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/task_assignment__type_support.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/task_bid__builder.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/task_bid__struct.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/task_bid__traits.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/detail/task_bid__type_support.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/drone_state.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/mission.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/rosidl_generator_cpp__visibility_control.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/swarm_status.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/task.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/task_assignment.hpp"
+  "rosidl_generator_cpp/patrol_msgs/msg/task_bid.hpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/patrol_msgs__cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

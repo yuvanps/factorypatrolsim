@@ -1,0 +1,31 @@
+# ==============================================================================
+# FACTORY PATROL GROUND STATION & SWARM CONTROLS
+# ==============================================================================
+
+To start the complete simulation:
+
+Terminal 1: Gazebo Factory Simulation
+-------------------------------------
+cd ~/factory_patrol_sim/PX4-Autopilot
+python3 Tools/simulation/gz/simulation-gazebo --world factory
+
+
+Terminal 2: Start PX4 SITL 3-Drone Swarm
+-----------------------------------------
+cd ~/factory_patrol_sim
+./start_swarm.sh
+
+
+Terminal 3: Start 3 ROS 2 Drone Controllers
+--------------------------------------------
+cd ~/factory_patrol_sim
+./start_controllers.sh
+
+
+Terminal 4: Ground Station - Dispatch Inspection Mission
+---------------------------------------------------------
+cd ~/factory_patrol_sim
+./send_mission.py
+
+(Or run with python3:)
+python3 send_mission.py

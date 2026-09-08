@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from patrol_msgs/msg/DroneState.msg
+// generated code does not contain a copyright notice
+
+
+module patrol_msgs {
+  module msg {
+    struct DroneState {
+      uint8 drone_id;
+
+      float x;
+
+      float y;
+
+      float z;
+
+      float battery_level;
+
+      uint8 state;
+    };
+  };
+};

@@ -1,0 +1,79 @@
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c: In function ‘main’:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:444:5: warning: ‘rclc_timer_init_default’ is deprecated: Call rclc_timer_init_default2 instead [-Wdeprecated-declarations]
+  444 |     rclc_timer_init_default(
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /opt/ros/jazzy/include/rclc/rclc.h:32,
+                 from /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:8:
+/opt/ros/jazzy/include/rclc/timer.h:63:1: note: declared here
+   63 | rclc_timer_init_default(
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c: In function ‘publish_offboard_control_mode’:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:90:5: warning: ignoring return value of ‘rcl_publish’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   90 |     rcl_publish(
+      |     ^~~~~~~~~~~~
+   91 |         &offboard_control_mode_pub,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   92 |         &msg,
+      |         ~~~~~
+   93 |         NULL
+      |         ~~~~
+   94 |     );
+      |     ~
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c: In function ‘publish_trajectory_setpoint’:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:142:5: warning: ignoring return value of ‘rcl_publish’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  142 |     rcl_publish(
+      |     ^~~~~~~~~~~~
+  143 |         &trajectory_setpoint_pub,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~
+  144 |         &msg,
+      |         ~~~~~
+  145 |         NULL
+      |         ~~~~
+  146 |     );
+      |     ~
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c: In function ‘publish_vehicle_command’:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:210:5: warning: ignoring return value of ‘rcl_publish’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  210 |     rcl_publish(
+      |     ^~~~~~~~~~~~
+  211 |         &vehicle_command_pub,
+      |         ~~~~~~~~~~~~~~~~~~~~~
+  212 |         &msg,
+      |         ~~~~~
+  213 |         NULL
+      |         ~~~~
+  214 |     );
+      |     ~
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c: In function ‘main’:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:514:5: warning: ignoring return value of ‘rcl_publisher_fini’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  514 |     rcl_publisher_fini(
+      |     ^~~~~~~~~~~~~~~~~~~
+  515 |         &offboard_control_mode_pub,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  516 |         &node
+      |         ~~~~~
+  517 |     );
+      |     ~
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:519:5: warning: ignoring return value of ‘rcl_publisher_fini’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  519 |     rcl_publisher_fini(
+      |     ^~~~~~~~~~~~~~~~~~~
+  520 |         &trajectory_setpoint_pub,
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~
+  521 |         &node
+      |         ~~~~~
+  522 |     );
+      |     ~
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:524:5: warning: ignoring return value of ‘rcl_publisher_fini’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  524 |     rcl_publisher_fini(
+      |     ^~~~~~~~~~~~~~~~~~~
+  525 |         &vehicle_command_pub,
+      |         ~~~~~~~~~~~~~~~~~~~~~
+  526 |         &node
+      |         ~~~~~
+  527 |     );
+      |     ~
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:531:5: warning: ignoring return value of ‘rcl_node_fini’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  531 |     rcl_node_fini(&node);
+      |     ^~~~~~~~~~~~~~~~~~~~
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:533:5: warning: ignoring return value of ‘rcl_shutdown’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  533 |     rcl_shutdown(&support.context);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

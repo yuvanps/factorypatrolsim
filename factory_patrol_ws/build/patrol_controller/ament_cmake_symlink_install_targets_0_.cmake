@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller/patrol_controller" "TARGETS" "patrol_controller" "DESTINATION" "lib/patrol_controller")

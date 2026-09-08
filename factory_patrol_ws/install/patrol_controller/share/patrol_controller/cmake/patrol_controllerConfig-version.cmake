@@ -1,0 +1,1 @@
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller/ament_cmake_core/patrol_controllerConfig-version.cmake

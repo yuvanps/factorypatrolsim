@@ -1,0 +1,79 @@
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:325:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclc_timer_init_default[m[K’ is deprecated: Call rclc_timer_init_default2 instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  325 |     [01;35m[Krclc_timer_init_default[m[K(
+      |     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclc/rclc.h:32[m[K,
+                 from [01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:8[m[K:
+[01m[K/opt/ros/jazzy/include/rclc/timer.h:63:1:[m[K [01;36m[Knote: [m[Kdeclared here
+   63 | [01;36m[Krclc_timer_init_default[m[K(
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kpublish_offboard_control_mode[m[K’:
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:70:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publish[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   70 |     [01;35m[Krcl_publish([m[K
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+   71 | [01;35m[K        &offboard_control_mode_pub,[m[K
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   72 | [01;35m[K        &msg,[m[K
+      |         [01;35m[K~~~~~[m[K
+   73 | [01;35m[K        NULL[m[K
+      |         [01;35m[K~~~~[m[K
+   74 | [01;35m[K    )[m[K;
+      |     [01;35m[K~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kpublish_trajectory_setpoint[m[K’:
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:120:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publish[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  120 |     [01;35m[Krcl_publish([m[K
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+  121 | [01;35m[K        &trajectory_setpoint_pub,[m[K
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  122 | [01;35m[K        &msg,[m[K
+      |         [01;35m[K~~~~~[m[K
+  123 | [01;35m[K        NULL[m[K
+      |         [01;35m[K~~~~[m[K
+  124 | [01;35m[K    )[m[K;
+      |     [01;35m[K~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kpublish_vehicle_command[m[K’:
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:155:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publish[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  155 |     [01;35m[Krcl_publish([m[K
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+  156 | [01;35m[K        &vehicle_command_pub,[m[K
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+  157 | [01;35m[K        &msg,[m[K
+      |         [01;35m[K~~~~~[m[K
+  158 | [01;35m[K        NULL[m[K
+      |         [01;35m[K~~~~[m[K
+  159 | [01;35m[K    )[m[K;
+      |     [01;35m[K~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:375:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publisher_fini[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  375 |     [01;35m[Krcl_publisher_fini([m[K
+      |     [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+  376 | [01;35m[K        &offboard_control_mode_pub,[m[K
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  377 | [01;35m[K        &node[m[K
+      |         [01;35m[K~~~~~[m[K
+  378 | [01;35m[K    )[m[K;
+      |     [01;35m[K~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:380:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publisher_fini[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  380 |     [01;35m[Krcl_publisher_fini([m[K
+      |     [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+  381 | [01;35m[K        &trajectory_setpoint_pub,[m[K
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  382 | [01;35m[K        &node[m[K
+      |         [01;35m[K~~~~~[m[K
+  383 | [01;35m[K    )[m[K;
+      |     [01;35m[K~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:385:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publisher_fini[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  385 |     [01;35m[Krcl_publisher_fini([m[K
+      |     [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+  386 | [01;35m[K        &vehicle_command_pub,[m[K
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+  387 | [01;35m[K        &node[m[K
+      |         [01;35m[K~~~~~[m[K
+  388 | [01;35m[K    )[m[K;
+      |     [01;35m[K~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:392:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_node_fini[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  392 |     [01;35m[Krcl_node_fini(&node)[m[K;
+      |     [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:394:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_shutdown[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  394 |     [01;35m[Krcl_shutdown(&support.context)[m[K;
+      |     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K

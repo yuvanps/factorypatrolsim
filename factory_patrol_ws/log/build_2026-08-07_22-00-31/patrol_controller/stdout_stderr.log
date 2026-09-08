@@ -1,0 +1,123 @@
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found rcl: 9.2.11 (/opt/ros/jazzy/share/rcl/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclc: 6.1.2 (/opt/ros/jazzy/share/rclc/cmake)
+-- Found px4_msgs: 1.17.0 (/home/mrweirdo/factory_patrol_ws/install/px4_msgs/share/px4_msgs/cmake)
+-- Configuring done (1.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/mrweirdo/factory_patrol_ws/build/patrol_controller
+[ 50%] [32mBuilding C object CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o[0m
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:240:9:[m[K [01;35m[Kwarning: [m[Kpassing argument 3 of ‘[01m[Krclc_support_init[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+  240 |         [01;35m[Kargv[m[K,
+      |         [01;35m[K^~~~[m[K
+      |         [01;35m[K|[m[K
+      |         [01;35m[Kchar **[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclc/rclc.h:28[m[K,
+                 from [01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:8[m[K:
+[01m[K/opt/ros/jazzy/include/rclc/init.h:53:24:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char * const*[m[K’ but argument is of type ‘[01m[Kchar **[m[K’
+   53 |   [01;36m[Kchar const * const * argv[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:325:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclc_timer_init_default[m[K’ is deprecated: Call rclc_timer_init_default2 instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  325 |     [01;35m[Krclc_timer_init_default[m[K(
+      |     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclc/rclc.h:32[m[K:
+[01m[K/opt/ros/jazzy/include/rclc/timer.h:63:1:[m[K [01;36m[Knote: [m[Kdeclared here
+   63 | [01;36m[Krclc_timer_init_default[m[K(
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:398:5:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Krcl_shutdown[m[K’
+  398 |     [01;31m[Krcl_shutdown[m[K();
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rcl/rcl/rcl.h:76[m[K,
+                 from [01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:7[m[K:
+[01m[K/opt/ros/jazzy/include/rcl/rcl/init.h:115:1:[m[K [01;36m[Knote: [m[Kdeclared here
+  115 | [01;36m[Krcl_shutdown[m[K(rcl_context_t * context);
+      | [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kpublish_offboard_control_mode[m[K’:
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:70:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publish[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+   70 |     [01;35m[Krcl_publish([m[K
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+   71 | [01;35m[K        &offboard_control_mode_pub,[m[K
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   72 | [01;35m[K        &msg,[m[K
+      |         [01;35m[K~~~~~[m[K
+   73 | [01;35m[K        NULL[m[K
+      |         [01;35m[K~~~~[m[K
+   74 | [01;35m[K    )[m[K;
+      |     [01;35m[K~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kpublish_trajectory_setpoint[m[K’:
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:120:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publish[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  120 |     [01;35m[Krcl_publish([m[K
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+  121 | [01;35m[K        &trajectory_setpoint_pub,[m[K
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  122 | [01;35m[K        &msg,[m[K
+      |         [01;35m[K~~~~~[m[K
+  123 | [01;35m[K        NULL[m[K
+      |         [01;35m[K~~~~[m[K
+  124 | [01;35m[K    )[m[K;
+      |     [01;35m[K~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kpublish_vehicle_command[m[K’:
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:155:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publish[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  155 |     [01;35m[Krcl_publish([m[K
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+  156 | [01;35m[K        &vehicle_command_pub,[m[K
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+  157 | [01;35m[K        &msg,[m[K
+      |         [01;35m[K~~~~~[m[K
+  158 | [01;35m[K        NULL[m[K
+      |         [01;35m[K~~~~[m[K
+  159 | [01;35m[K    )[m[K;
+      |     [01;35m[K~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:375:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publisher_fini[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  375 |     [01;35m[Krcl_publisher_fini([m[K
+      |     [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+  376 | [01;35m[K        &offboard_control_mode_pub,[m[K
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  377 | [01;35m[K        &node[m[K
+      |         [01;35m[K~~~~~[m[K
+  378 | [01;35m[K    )[m[K;
+      |     [01;35m[K~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:380:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publisher_fini[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  380 |     [01;35m[Krcl_publisher_fini([m[K
+      |     [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+  381 | [01;35m[K        &trajectory_setpoint_pub,[m[K
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  382 | [01;35m[K        &node[m[K
+      |         [01;35m[K~~~~~[m[K
+  383 | [01;35m[K    )[m[K;
+      |     [01;35m[K~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:385:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publisher_fini[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  385 |     [01;35m[Krcl_publisher_fini([m[K
+      |     [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+  386 | [01;35m[K        &vehicle_command_pub,[m[K
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+  387 | [01;35m[K        &node[m[K
+      |         [01;35m[K~~~~~[m[K
+  388 | [01;35m[K    )[m[K;
+      |     [01;35m[K~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:390:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_timer_fini[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  390 |     [01;35m[Krcl_timer_fini(&timer)[m[K;
+      |     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/mrweirdo/factory_patrol_ws/patrol_controller/src/patrol_controller.c:394:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_node_fini[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+  394 |     [01;35m[Krcl_node_fini(&node)[m[K;
+      |     [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/patrol_controller.dir/build.make:76: CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/patrol_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

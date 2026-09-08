@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "patrol_msgs__rs",
+		"source" : "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__rs"
+	}
+}

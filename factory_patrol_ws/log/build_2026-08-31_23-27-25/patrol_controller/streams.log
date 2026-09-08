@@ -1,0 +1,122 @@
+[0.024s] Invoking command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller': AMENT_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/lib:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/lib/python3.12/site-packages:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller -DCMAKE_INSTALL_PREFIX=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller
+[0.036s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.198s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.205s] -- Found rcl: 9.2.11 (/opt/ros/jazzy/share/rcl/cmake)
+[0.230s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.236s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.244s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.253s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.298s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.300s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.368s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.385s] -- Found rclc: 6.1.2 (/opt/ros/jazzy/share/rclc/cmake)
+[0.422s] -- Found px4_msgs: 1.17.0 (/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/share/px4_msgs/cmake)
+[0.439s] -- Found patrol_msgs: 0.0.0 (/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake)
+[0.515s] -- Configuring done (0.5s)
+[0.526s] -- Generating done (0.0s)
+[0.529s] -- Build files have been written to: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller
+[0.536s] Invoked command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller' returned '0': AMENT_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/lib:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/lib/python3.12/site-packages:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller -DCMAKE_INSTALL_PREFIX=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller
+[0.537s] Invoking command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller': AMENT_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/lib:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/lib/python3.12/site-packages:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller -- -j16 -l16
+[0.600s] [ 50%] [32mBuilding C object CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o[0m
+[0.686s] /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c: In function ‘main’:
+[0.686s] /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:444:5: warning: ‘rclc_timer_init_default’ is deprecated: Call rclc_timer_init_default2 instead [-Wdeprecated-declarations]
+[0.686s]   444 |     rclc_timer_init_default(
+[0.686s]       |     ^~~~~~~~~~~~~~~~~~~~~~~
+[0.686s] In file included from /opt/ros/jazzy/include/rclc/rclc.h:32,
+[0.686s]                  from /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:8:
+[0.686s] /opt/ros/jazzy/include/rclc/timer.h:63:1: note: declared here
+[0.686s]    63 | rclc_timer_init_default(
+[0.687s]       | ^~~~~~~~~~~~~~~~~~~~~~~
+[0.687s] /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c: In function ‘publish_offboard_control_mode’:
+[0.687s] /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:90:5: warning: ignoring return value of ‘rcl_publish’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+[0.687s]    90 |     rcl_publish(
+[0.687s]       |     ^~~~~~~~~~~~
+[0.687s]    91 |         &offboard_control_mode_pub,
+[0.687s]       |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0.687s]    92 |         &msg,
+[0.687s]       |         ~~~~~
+[0.687s]    93 |         NULL
+[0.687s]       |         ~~~~
+[0.687s]    94 |     );
+[0.687s]       |     ~
+[0.687s] /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c: In function ‘publish_trajectory_setpoint’:
+[0.687s] /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:142:5: warning: ignoring return value of ‘rcl_publish’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+[0.687s]   142 |     rcl_publish(
+[0.687s]       |     ^~~~~~~~~~~~
+[0.687s]   143 |         &trajectory_setpoint_pub,
+[0.687s]       |         ~~~~~~~~~~~~~~~~~~~~~~~~~
+[0.687s]   144 |         &msg,
+[0.687s]       |         ~~~~~
+[0.687s]   145 |         NULL
+[0.687s]       |         ~~~~
+[0.688s]   146 |     );
+[0.688s]       |     ~
+[0.688s] /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c: In function ‘publish_vehicle_command’:
+[0.688s] /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:210:5: warning: ignoring return value of ‘rcl_publish’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+[0.688s]   210 |     rcl_publish(
+[0.688s]       |     ^~~~~~~~~~~~
+[0.688s]   211 |         &vehicle_command_pub,
+[0.688s]       |         ~~~~~~~~~~~~~~~~~~~~~
+[0.688s]   212 |         &msg,
+[0.688s]       |         ~~~~~
+[0.688s]   213 |         NULL
+[0.688s]       |         ~~~~
+[0.688s]   214 |     );
+[0.688s]       |     ~
+[0.688s] /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c: In function ‘main’:
+[0.688s] /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:514:5: warning: ignoring return value of ‘rcl_publisher_fini’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+[0.688s]   514 |     rcl_publisher_fini(
+[0.688s]       |     ^~~~~~~~~~~~~~~~~~~
+[0.688s]   515 |         &offboard_control_mode_pub,
+[0.688s]       |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0.688s]   516 |         &node
+[0.688s]       |         ~~~~~
+[0.688s]   517 |     );
+[0.688s]       |     ~
+[0.688s] /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:519:5: warning: ignoring return value of ‘rcl_publisher_fini’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+[0.688s]   519 |     rcl_publisher_fini(
+[0.689s]       |     ^~~~~~~~~~~~~~~~~~~
+[0.689s]   520 |         &trajectory_setpoint_pub,
+[0.689s]       |         ~~~~~~~~~~~~~~~~~~~~~~~~~
+[0.689s]   521 |         &node
+[0.689s]       |         ~~~~~
+[0.689s]   522 |     );
+[0.689s]       |     ~
+[0.689s] /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:524:5: warning: ignoring return value of ‘rcl_publisher_fini’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+[0.689s]   524 |     rcl_publisher_fini(
+[0.689s]       |     ^~~~~~~~~~~~~~~~~~~
+[0.689s]   525 |         &vehicle_command_pub,
+[0.689s]       |         ~~~~~~~~~~~~~~~~~~~~~
+[0.689s]   526 |         &node
+[0.689s]       |         ~~~~~
+[0.689s]   527 |     );
+[0.689s]       |     ~
+[0.689s] /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:531:5: warning: ignoring return value of ‘rcl_node_fini’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+[0.689s]   531 |     rcl_node_fini(&node);
+[0.689s]       |     ^~~~~~~~~~~~~~~~~~~~
+[0.689s] /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:533:5: warning: ignoring return value of ‘rcl_shutdown’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+[0.689s]   533 |     rcl_shutdown(&support.context);
+[0.689s]       |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0.708s] [100%] [32m[1mLinking C executable patrol_controller[0m
+[0.848s] [100%] Built target patrol_controller
+[0.860s] Invoked command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller' returned '0': AMENT_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/lib:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/lib/python3.12/site-packages:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller -- -j16 -l16
+[0.872s] Invoking command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller': AMENT_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/lib:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/lib/python3.12/site-packages:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller
+[0.880s] -- Install configuration: ""
+[0.880s] -- Execute custom install script
+[0.881s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/lib/patrol_controller/patrol_controller
+[0.881s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/ament_index/resource_index/package_run_dependencies/patrol_controller
+[0.882s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/ament_index/resource_index/parent_prefix_path/patrol_controller
+[0.882s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/environment/ament_prefix_path.sh
+[0.882s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/environment/ament_prefix_path.dsv
+[0.882s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/environment/path.sh
+[0.883s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/environment/path.dsv
+[0.883s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/local_setup.bash
+[0.883s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/local_setup.sh
+[0.883s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/local_setup.zsh
+[0.884s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/local_setup.dsv
+[0.884s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/package.dsv
+[0.894s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/ament_index/resource_index/packages/patrol_controller
+[0.895s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/cmake/patrol_controllerConfig.cmake
+[0.895s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/cmake/patrol_controllerConfig-version.cmake
+[0.895s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/package.xml
+[0.898s] Invoked command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller' returned '0': AMENT_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/lib:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/lib/python3.12/site-packages:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller

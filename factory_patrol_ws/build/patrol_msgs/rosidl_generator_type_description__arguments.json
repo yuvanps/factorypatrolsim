@@ -1,0 +1,12 @@
+{
+  "package_name": "patrol_msgs",
+  "output_dir": "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs",
+  "idl_tuples": [
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/Task.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/Mission.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/DroneState.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/TaskBid.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/TaskAssignment.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/SwarmStatus.idl"
+  ]
+}

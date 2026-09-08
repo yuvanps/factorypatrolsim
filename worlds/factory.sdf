@@ -1,0 +1,525 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.9">
+
+  <world name="factory">
+
+    <!-- ========================= -->
+    <!-- PHYSICS                   -->
+    <!-- ========================= -->
+
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    
+    <gravity>0 0 -9.8</gravity>
+
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+
+    <spherical_coordinates>
+  <surface_model>EARTH_WGS84</surface_model>
+  <world_frame_orientation>ENU</world_frame_orientation>
+  <latitude_deg>47.397971057728974</latitude_deg>
+  <longitude_deg>8.546163739800146</longitude_deg>
+  <elevation>488.0</elevation>
+  <heading_deg>0</heading_deg>
+</spherical_coordinates>
+
+    <atmosphere type="adiabatic"/>
+
+    <plugin
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics"/>
+
+    <plugin
+      filename="gz-sim-user-commands-system"
+      name="gz::sim::systems::UserCommands"/>
+
+    <plugin
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster"/>
+
+    <plugin
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <plugin
+      filename="gz-sim-navsat-system"
+      name="gz::sim::systems::NavSat"/>
+
+    <plugin
+      filename="gz-sim-air-pressure-system"
+      name="gz::sim::systems::AirPressure"/>
+
+    <plugin
+      filename="gz-sim-magnetometer-system"
+      name="gz::sim::systems::Magnetometer"/>
+
+    <plugin
+      filename="gz-sim-imu-system"
+      name="gz::sim::systems::Imu"/>
+    <!-- ========================= -->
+    <!-- LIGHT                     -->
+    <!-- ========================= -->
+
+    <light name="sun"
+           type="directional">
+
+      <cast_shadows>true</cast_shadows>
+
+      <pose>0 0 20 0 0 0</pose>
+
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+
+      <direction>-0.3 0.2 -1</direction>
+
+    </light>
+    <light name="interior_light" type="point">
+      <cast_shadows>false</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>50</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+    </light>
+
+
+    <!-- ========================= -->
+    <!-- FLOOR                     -->
+    <!-- ========================= -->
+
+    <model name="floor">
+
+      <static>true</static>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>30 20 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+
+          <geometry>
+            <box>
+              <size>30 20 0.1</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.35 0.35 0.35 1</ambient>
+            <diffuse>0.35 0.35 0.35 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+
+        </visual>
+
+      </link>
+
+      <pose>0 0 -0.05 0 0 0</pose>
+
+    </model>
+
+
+    <!-- ========================= -->
+    <!-- NORTH WALL                -->
+    <!-- ========================= -->
+
+    <model name="north_wall">
+
+      <static>true</static>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>30 0.3 12</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+
+          <geometry>
+            <box>
+              <size>30 0.3 12</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.65 0.65 0.65 1</ambient>
+            <diffuse>0.65 0.65 0.65 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+
+        </visual>
+
+      </link>
+
+      <pose>0 10 6 0 0 0</pose>
+
+    </model>
+
+
+    <!-- ========================= -->
+    <!-- SOUTH WALL                -->
+    <!-- ========================= -->
+
+    <model name="south_wall">
+
+      <static>true</static>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>30 0.3 12</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+
+          <geometry>
+            <box>
+              <size>30 0.3 12</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.65 0.65 0.65 1</ambient>
+            <diffuse>0.65 0.65 0.65 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+
+        </visual>
+
+      </link>
+
+      <pose>0 -10 6 0 0 0</pose>
+
+    </model>
+
+
+    <!-- ========================= -->
+    <!-- EAST WALL                 -->
+    <!-- ========================= -->
+
+    <model name="east_wall">
+
+      <static>true</static>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.3 20 12</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+
+          <geometry>
+            <box>
+              <size>0.3 20 12</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.65 0.65 0.65 1</ambient>
+            <diffuse>0.65 0.65 0.65 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+
+        </visual>
+
+      </link>
+
+      <pose>15 0 6 0 0 0</pose>
+
+    </model>
+
+
+    <!-- ========================= -->
+    <!-- WEST WALL                 -->
+    <!-- ========================= -->
+
+    <model name="west_wall">
+
+      <static>true</static>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.3 20 12</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+
+          <geometry>
+            <box>
+              <size>0.3 20 12</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.65 0.65 0.65 1</ambient>
+            <diffuse>0.65 0.65 0.65 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+
+        </visual>
+
+      </link>
+
+      <pose>-15 0 6 0 0 0</pose>
+
+    </model>
+
+
+    <!-- ========================= -->
+    <!-- MACHINE A - BLUE          -->
+    <!-- ========================= -->
+
+    <model name="machine_A">
+
+      <static>true</static>
+
+      <link name="link">
+
+        <collision name="collision">
+
+          <geometry>
+            <box>
+              <size>4 3 3</size>
+            </box>
+          </geometry>
+
+        </collision>
+
+        <visual name="visual">
+
+          <geometry>
+            <box>
+              <size>4 3 3</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.1 0.3 0.8 1</ambient>
+            <diffuse>0.1 0.3 0.8 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+
+        </visual>
+
+      </link>
+
+      <pose>0 2 1.5 0 0 0</pose>
+
+    </model>
+
+
+    <!-- ========================= -->
+    <!-- MACHINE B - RED           -->
+    <!-- ========================= -->
+
+    <model name="machine_B">
+
+      <static>true</static>
+
+      <link name="link">
+
+        <collision name="collision">
+
+          <geometry>
+            <box>
+              <size>3 3 4</size>
+            </box>
+          </geometry>
+
+        </collision>
+
+        <visual name="visual">
+
+          <geometry>
+            <box>
+              <size>3 3 4</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.8 0.1 0.1 1</ambient>
+            <diffuse>0.8 0.1 0.1 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+
+        </visual>
+
+      </link>
+
+      <pose>-7 5 2 0 0 0</pose>
+
+    </model>
+
+
+    <!-- ========================= -->
+    <!-- MACHINE C - GREEN         -->
+    <!-- ========================= -->
+
+    <model name="machine_C">
+
+      <static>true</static>
+
+      <link name="link">
+
+        <collision name="collision">
+
+          <geometry>
+            <box>
+              <size>3 4 3</size>
+            </box>
+          </geometry>
+
+        </collision>
+
+        <visual name="visual">
+
+          <geometry>
+            <box>
+              <size>3 4 3</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.1 0.7 0.2 1</ambient>
+            <diffuse>0.1 0.7 0.2 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+
+        </visual>
+
+      </link>
+
+      <pose>7 -5 1.5 0 0 0</pose>
+
+    </model>
+
+
+    <!-- ========================= -->
+    <!-- MACHINE D - YELLOW        -->
+    <!-- ========================= -->
+
+    <model name="machine_D">
+
+      <static>true</static>
+
+      <link name="link">
+
+        <collision name="collision">
+
+          <geometry>
+            <box>
+              <size>5 2 3</size>
+            </box>
+          </geometry>
+
+        </collision>
+
+        <visual name="visual">
+
+          <geometry>
+            <box>
+              <size>5 2 3</size>
+            </box>
+          </geometry>
+
+          <material>
+            <ambient>0.8 0.7 0.1 1</ambient>
+            <diffuse>0.8 0.7 0.1 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+
+        </visual>
+
+      </link>
+
+      <pose>7 4 1.5 0 0 0</pose>
+
+    </model>
+
+    <!-- Overview Camera View of Entire Factory -->
+    <gui fullscreen="0">
+      <camera name="user_camera">
+        <pose>0 -8 6 0 0.4 1.57</pose>
+        <view_controller>fps</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+    <!-- CEILING                   -->
+    <!-- ========================= -->
+
+    <model name="ceiling">
+
+      <static>true</static>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>30 20 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>30 20 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.65 0.65 0.65 1</ambient>
+            <diffuse>0.65 0.65 0.65 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+        </visual>
+
+      </link>
+
+      <pose>0 0 12 0 0 0</pose>
+
+    </model>
+
+    <gui fullscreen="0">
+      <camera name="user_camera">
+        <pose>0 -8 6 0 0.4 1.57</pose>
+        <view_controller>fps</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+  </world>
+</sdf>

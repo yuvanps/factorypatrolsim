@@ -1,0 +1,130 @@
+[0.011s] Invoking command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller': AMENT_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller
+[0.075s] -- The C compiler identification is GNU 13.3.0
+[0.095s] -- Detecting C compiler ABI info
+[0.214s] -- Detecting C compiler ABI info - done
+[0.221s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.221s] -- Detecting C compile features
+[0.222s] -- Detecting C compile features - done
+[0.225s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.391s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.478s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.509s] -- Found rcl: 9.2.11 (/opt/ros/jazzy/share/rcl/cmake)
+[0.553s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.563s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.577s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.592s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.661s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.664s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.767s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.793s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.824s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.851s] -- Found rclc: 6.1.2 (/opt/ros/jazzy/share/rclc/cmake)
+[0.928s] -- Found px4_msgs: 1.17.0 (/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/share/px4_msgs/cmake)
+[1.062s] -- Configuring done (1.0s)
+[1.079s] -- Generating done (0.0s)
+[1.082s] -- Build files have been written to: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller
+[1.099s] Invoked command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller' returned '0': AMENT_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller
+[1.100s] Invoking command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller': AMENT_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller -- -j16 -l16
+[1.173s] [ 50%] [32mBuilding C object CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o[0m
+[1.278s] [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kmain[m[K’:
+[1.279s] [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:444:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Krclc_timer_init_default[m[K’ is deprecated: Call rclc_timer_init_default2 instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[1.279s]   444 |     [01;35m[Krclc_timer_init_default[m[K(
+[1.279s]       |     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.279s] In file included from [01m[K/opt/ros/jazzy/include/rclc/rclc.h:32[m[K,
+[1.279s]                  from [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:8[m[K:
+[1.279s] [01m[K/opt/ros/jazzy/include/rclc/timer.h:63:1:[m[K [01;36m[Knote: [m[Kdeclared here
+[1.279s]    63 | [01;36m[Krclc_timer_init_default[m[K(
+[1.279s]       | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.281s] [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kpublish_offboard_control_mode[m[K’:
+[1.282s] [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:90:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publish[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+[1.282s]    90 |     [01;35m[Krcl_publish([m[K
+[1.282s]       |     [01;35m[K^~~~~~~~~~~~[m[K
+[1.282s]    91 | [01;35m[K        &offboard_control_mode_pub,[m[K
+[1.282s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.282s]    92 | [01;35m[K        &msg,[m[K
+[1.282s]       |         [01;35m[K~~~~~[m[K
+[1.282s]    93 | [01;35m[K        NULL[m[K
+[1.282s]       |         [01;35m[K~~~~[m[K
+[1.282s]    94 | [01;35m[K    )[m[K;
+[1.282s]       |     [01;35m[K~[m[K
+[1.283s] [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kpublish_trajectory_setpoint[m[K’:
+[1.283s] [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:142:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publish[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+[1.283s]   142 |     [01;35m[Krcl_publish([m[K
+[1.283s]       |     [01;35m[K^~~~~~~~~~~~[m[K
+[1.283s]   143 | [01;35m[K        &trajectory_setpoint_pub,[m[K
+[1.283s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.283s]   144 | [01;35m[K        &msg,[m[K
+[1.283s]       |         [01;35m[K~~~~~[m[K
+[1.283s]   145 | [01;35m[K        NULL[m[K
+[1.283s]       |         [01;35m[K~~~~[m[K
+[1.283s]   146 | [01;35m[K    )[m[K;
+[1.283s]       |     [01;35m[K~[m[K
+[1.283s] [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kpublish_vehicle_command[m[K’:
+[1.283s] [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:210:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publish[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+[1.283s]   210 |     [01;35m[Krcl_publish([m[K
+[1.283s]       |     [01;35m[K^~~~~~~~~~~~[m[K
+[1.283s]   211 | [01;35m[K        &vehicle_command_pub,[m[K
+[1.283s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.283s]   212 | [01;35m[K        &msg,[m[K
+[1.283s]       |         [01;35m[K~~~~~[m[K
+[1.283s]   213 | [01;35m[K        NULL[m[K
+[1.283s]       |         [01;35m[K~~~~[m[K
+[1.283s]   214 | [01;35m[K    )[m[K;
+[1.283s]       |     [01;35m[K~[m[K
+[1.283s] [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:[m[K In function ‘[01m[Kmain[m[K’:
+[1.283s] [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:514:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publisher_fini[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+[1.283s]   514 |     [01;35m[Krcl_publisher_fini([m[K
+[1.284s]       |     [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.284s]   515 | [01;35m[K        &offboard_control_mode_pub,[m[K
+[1.284s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.284s]   516 | [01;35m[K        &node[m[K
+[1.284s]       |         [01;35m[K~~~~~[m[K
+[1.284s]   517 | [01;35m[K    )[m[K;
+[1.284s]       |     [01;35m[K~[m[K
+[1.284s] [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:519:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publisher_fini[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+[1.284s]   519 |     [01;35m[Krcl_publisher_fini([m[K
+[1.284s]       |     [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.284s]   520 | [01;35m[K        &trajectory_setpoint_pub,[m[K
+[1.284s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.284s]   521 | [01;35m[K        &node[m[K
+[1.284s]       |         [01;35m[K~~~~~[m[K
+[1.284s]   522 | [01;35m[K    )[m[K;
+[1.284s]       |     [01;35m[K~[m[K
+[1.284s] [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:524:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_publisher_fini[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+[1.284s]   524 |     [01;35m[Krcl_publisher_fini([m[K
+[1.284s]       |     [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.284s]   525 | [01;35m[K        &vehicle_command_pub,[m[K
+[1.284s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.284s]   526 | [01;35m[K        &node[m[K
+[1.284s]       |         [01;35m[K~~~~~[m[K
+[1.284s]   527 | [01;35m[K    )[m[K;
+[1.284s]       |     [01;35m[K~[m[K
+[1.284s] [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:531:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_node_fini[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+[1.284s]   531 |     [01;35m[Krcl_node_fini(&node)[m[K;
+[1.284s]       |     [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[1.284s] [01m[K/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:533:5:[m[K [01;35m[Kwarning: [m[Kignoring return value of ‘[01m[Krcl_shutdown[m[K’ declared with attribute ‘[01m[Kwarn_unused_result[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-result-Wunused-result]8;;[m[K]
+[1.284s]   533 |     [01;35m[Krcl_shutdown(&support.context)[m[K;
+[1.285s]       |     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.314s] [100%] [32m[1mLinking C executable patrol_controller[0m
+[1.489s] [100%] Built target patrol_controller
+[1.507s] Invoked command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller' returned '0': AMENT_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --build /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller -- -j16 -l16
+[1.508s] Invoking command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller': AMENT_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --install /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller
+[1.520s] -- Install configuration: ""
+[1.520s] -- Execute custom install script
+[1.520s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/lib/patrol_controller/patrol_controller
+[1.538s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/ament_index/resource_index/package_run_dependencies/patrol_controller
+[1.552s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/ament_index/resource_index/parent_prefix_path/patrol_controller
+[1.565s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/environment/ament_prefix_path.sh
+[1.578s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/environment/ament_prefix_path.dsv
+[1.591s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/environment/path.sh
+[1.606s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/environment/path.dsv
+[1.619s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/local_setup.bash
+[1.632s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/local_setup.sh
+[1.645s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/local_setup.zsh
+[1.659s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/local_setup.dsv
+[1.672s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/package.dsv
+[1.685s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/ament_index/resource_index/packages/patrol_controller
+[1.699s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/cmake/patrol_controllerConfig.cmake
+[1.713s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/cmake/patrol_controllerConfig-version.cmake
+[1.726s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller/share/patrol_controller/package.xml
+[1.745s] Invoked command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller' returned '0': AMENT_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_controller:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy /usr/bin/cmake --install /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_controller

@@ -1,0 +1,11 @@
+{
+  "package_name": "patrol_msgs",
+  "non_idl_tuples": [
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs:msg/Task.msg",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs:msg/Mission.msg",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs:msg/DroneState.msg",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs:msg/TaskBid.msg",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs:msg/TaskAssignment.msg",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs:msg/SwarmStatus.msg"
+  ]
+}
