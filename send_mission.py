@@ -38,7 +38,7 @@ def main():
         {'id': 103, 'x': 5.0, 'y': -1.0, 'z': -3.2, 'priority': 1, 'type': 0, 'hover': 4.0}, # Machine C Inspection
         {'id': 104, 'x': 5.0, 'y': 6.0, 'z': -3.2, 'priority': 1, 'type': 0, 'hover': 4.0},  # Machine D Inspection
         {'id': 105, 'x': -4.0, 'y': -0.5, 'z': -4.0, 'priority': 1, 'type': 0, 'hover': 4.0}, # Machine A West
-        {'id': 106, 'x': -7.0, 'y': 2.0, 'z': -4.0, 'priority': 1, 'type': 0, 'hover': 4.0},  # Machine B Inspection
+        {'id': 106, 'x': -7.0, 'y': 1.0, 'z': -3.0, 'priority': 1, 'type': 0, 'hover': 4.0},  # Machine B Inspection (standoff)
     ]
 
     for wp in waypoints:

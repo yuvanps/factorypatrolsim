@@ -26,7 +26,7 @@
 #define TIMER_PERIOD_MS 100
 #define VEHICLE_CMD_DO_SET_MODE            176
 #define VEHICLE_CMD_COMPONENT_ARM_DISARM   400
-#define WAYPOINT_RADIUS 0.7f
+#define WAYPOINT_RADIUS 1.2f
 
 static px4_msgs__msg__VehicleOdometry odometry_msg;
 static rcl_subscription_t odometry_sub;
@@ -87,6 +87,7 @@ static uint8_t my_zone_index = 0;  // Next zone to patrol
 // Collision avoidance
 #define SAFE_DISTANCE_SQ 6.25f  // 2.5m squared — hold if peer is within this
 static bool proximity_hold = false;
+static bool initial_takeoff_done = false;
 
 // How long to stagger ascent per drone: drone_id * STAGGER_TICKS
 #define STAGGER_TICKS 30  // 3 seconds between each drone's ascent start
@@ -201,13 +202,14 @@ static float get_patrol_altitude(uint8_t drone_id) {
     return -4.5f; // Drone 2
 }
 
-// Each drone has a UNIQUE transit altitude with 3m separation.
-// Factory ceiling is 12m, machines top out ~4m. Safe range: 5m–11.5m AGL
-// Drone 0: -6.0m (6m AGL), Drone 1: -9.0m (9m AGL), Drone 2: -11.5m (11.5m AGL)
+// Each drone has a UNIQUE transit altitude above the tallest machines (~4m).
+// Factory ceiling is 12m. Use tight layering with 0.5m separation to stay
+// well clear of machines while remaining comfortably below the ceiling.
+// Drone 0: -5.0m (5m AGL), Drone 1: -5.5m (5.5m AGL), Drone 2: -6.0m (6m AGL)
 static float get_transit_altitude(uint8_t drone_id) {
-    if (drone_id == 0) return -6.0f;
-    if (drone_id == 1) return -9.0f;
-    return -11.5f; // Drone 2
+    if (drone_id == 0) return -5.0f;
+    if (drone_id == 1) return -5.5f;
+    return -6.0f; // Drone 2
 }
 
 // Returns true if any peer drone is within SAFE_DISTANCE_SQ of this drone's target.
@@ -258,9 +260,23 @@ static void task_assignment_callback(const void * msgin) {
         t->active = true;
         t->completed = false;
 
+        // Always accumulate zones assigned to this drone into my_zones[]
+        if (msg->drone_id == g_drone_id) {
+            bool already_have = false;
+            for (uint8_t zi = 0; zi < my_zone_count; zi++) {
+                if (my_zones[zi] == msg->task_id) { already_have = true; break; }
+            }
+            if (!already_have && my_zone_count < MAX_MY_ZONES) {
+                my_zones[my_zone_count++] = msg->task_id;
+                printf("[Drone %d] Zone %d registered (%d total zones).\n",
+                       g_drone_id, msg->task_id, my_zone_count);
+            }
+        }
+
         if (msg->drone_id == g_drone_id && !has_active_task && g_state != DRONE_STATE_RETURNING) {
             has_active_task = true;
             nav_state = 0; // Reset navigation state machine
+            task_start_tick = setpoint_counter;
             current_task_id = t->task_id;
             g_state = DRONE_STATE_PATROLLING;
             hover_timer_ms = 0;
@@ -279,7 +295,7 @@ static void start_next_zone(void) {
         t->active = true;
         t->completed = false;
         has_active_task = true;
-        nav_state = 0; // WAIT_STAGGER
+        nav_state = initial_takeoff_done ? 1 : 0; // Skip stagger if already airborne
         task_start_tick = setpoint_counter;
         g_state = DRONE_STATE_PATROLLING;
         hover_timer_ms = 0;
@@ -315,24 +331,9 @@ static void update_task_execution(void) {
         if (my_zone_count > 0) {
             start_next_zone();
         } else {
-            // Waiting for Drone 0 to assign initial zones
-            uint8_t count = 0;
-            AuctionTask* task_list = auction_get_tasks(&count);
-            for (int i = 0; i < count; i++) {
-                if (task_list[i].assigned_drone == g_drone_id) {
-                    // Collect ALL zones assigned to this drone into my_zones
-                    for (int j = 0; j < count && my_zone_count < MAX_MY_ZONES; j++) {
-                        if (task_list[j].assigned_drone == g_drone_id) {
-                            my_zones[my_zone_count++] = task_list[j].task_id;
-                        }
-                    }
-                    my_zone_index = 0;
-                    printf("[Drone %d] Acquired %d patrol zones. Starting independent loop.\n",
-                           g_drone_id, my_zone_count);
-                    start_next_zone();
-                    break;
-                }
-            }
+            // Still waiting for zone assignments from Drone 0
+            target_z = get_patrol_altitude(g_drone_id);
+            return;
         }
         if (!has_active_task) {
             target_z = get_patrol_altitude(g_drone_id); // Hover and wait
@@ -351,13 +352,23 @@ static void update_task_execution(void) {
         // WAIT_STAGGER: Hold on ground until stagger window opens
         if ((uint32_t)(setpoint_counter - task_start_tick) >= stagger_delay) {
             nav_state = 1;
+            initial_takeoff_done = true;
             printf("[Drone %d] Ascending to transit %.1fm\n", g_drone_id, -transit_z);
         }
         return; // Stay grounded during stagger wait
     } else if (nav_state == 1) {
         // ASCEND: Straight up to this drone's exclusive transit altitude
+        // Hold horizontal position during ascent to avoid drifting into obstacles
+        target_x = current_x;
+        target_y = current_y;
         target_z = transit_z;
-        if (fabsf(current_z - transit_z) < 0.5f) nav_state = 2;
+        // Transition to TRANSLATE when at transit altitude, OR after 15s timeout
+        uint32_t ascend_elapsed = setpoint_counter - task_start_tick;
+        if (fabsf(current_z - transit_z) < 0.8f || ascend_elapsed > 150) {
+            nav_state = 2;
+            printf("[Drone %d] Transit altitude reached (z=%.1f, target=%.1f). Translating.\n",
+                   g_drone_id, current_z, transit_z);
+        }
     } else if (nav_state == 2) {
         // TRANSLATE: Horizontal flight at transit altitude — with proximity hold
         if (check_peer_proximity()) {
@@ -413,11 +424,24 @@ static void timer_callback(rcl_timer_t *timer_handle, int64_t last_call_time) {
             assign.drone_id = out_d;
             (void)rcl_publish(&task_assignment_pub, &assign, NULL);
 
+            // Drone 0 must also collect its own zones here (callback may not fire for self)
+            if (out_d == 0) {
+                bool already_have = false;
+                for (uint8_t zi = 0; zi < my_zone_count; zi++) {
+                    if (my_zones[zi] == out_t) { already_have = true; break; }
+                }
+                if (!already_have && my_zone_count < MAX_MY_ZONES) {
+                    my_zones[my_zone_count++] = out_t;
+                    printf("[Drone 0] Zone %d registered (%d total zones).\n", out_t, my_zone_count);
+                }
+            }
+
             if (out_d == 0 && !has_active_task && g_state != DRONE_STATE_RETURNING) {
                 AuctionTask* t = auction_get_task(out_t);
                 if (t) {
                     has_active_task = true;
                     nav_state = 0; // Reset navigation state machine
+                    task_start_tick = setpoint_counter;
                     current_task_id = t->task_id;
                     g_state = DRONE_STATE_PATROLLING;
                     hover_timer_ms = 0;
