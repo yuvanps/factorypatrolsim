@@ -1,0 +1,128 @@
+{
+  "run_id": "run_20260929_234304",
+  "status": "aborted",
+  "window_s": 33.825,
+  "per_drone_distance_m": {
+    "0": 0.285,
+    "1": 0.263,
+    "2": 1.059
+  },
+  "per_drone_battery_consumed_percent": {
+    "0": 0.42,
+    "1": 0.65,
+    "2": 0.92
+  },
+  "per_drone_valid_samples": {
+    "0": 43,
+    "1": 66,
+    "2": 93
+  },
+  "per_drone_placeholder_samples": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+  },
+  "rejected_transitions": {
+    "0": [
+      {
+        "t_s": 4.135,
+        "dt_s": 0.0997,
+        "jump_m": 2.536,
+        "implied_speed_mps": 25.4,
+        "from": [
+          -7.991,
+          7.013,
+          -0.245
+        ],
+        "to": [
+          -7.99,
+          7.009,
+          -2.781
+        ]
+      },
+      {
+        "t_s": 4.235,
+        "dt_s": 0.1004,
+        "jump_m": 5.858,
+        "implied_speed_mps": 58.4,
+        "from": [
+          -7.99,
+          7.009,
+          -2.781
+        ],
+        "to": [
+          -7.991,
+          7.003,
+          -8.639
+        ]
+      }
+    ],
+    "1": [
+      {
+        "t_s": 6.435,
+        "dt_s": 0.1001,
+        "jump_m": 1.671,
+        "implied_speed_mps": 16.7,
+        "from": [
+          -4.024,
+          7.003,
+          -0.115
+        ],
+        "to": [
+          -4.023,
+          7.001,
+          -1.785
+        ]
+      },
+      {
+        "t_s": 6.535,
+        "dt_s": 0.0999,
+        "jump_m": 6.047,
+        "implied_speed_mps": 60.5,
+        "from": [
+          -4.023,
+          7.001,
+          -1.785
+        ],
+        "to": [
+          -4.02,
+          7.001,
+          -7.833
+        ]
+      }
+    ],
+    "2": [
+      {
+        "t_s": 9.245,
+        "dt_s": 0.1,
+        "jump_m": 3.569,
+        "implied_speed_mps": 35.7,
+        "from": [
+          0.019,
+          7.039,
+          -0.753
+        ],
+        "to": [
+          0.019,
+          7.039,
+          -4.322
+        ]
+      }
+    ]
+  },
+  "first_completion": {},
+  "excluded": {
+    "0": {
+      "from_s": 4.335,
+      "reason": "position outside factory (-8.0,7.0,-23.9)"
+    },
+    "1": {
+      "from_s": 6.635,
+      "reason": "position outside factory (-4.0,7.0,-19.6)"
+    },
+    "2": {
+      "from_s": 9.345,
+      "reason": "position outside factory (0.0,7.0,-13.9)"
+    }
+  }
+}

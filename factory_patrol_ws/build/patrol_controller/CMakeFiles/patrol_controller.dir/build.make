@@ -177,7 +177,7 @@ patrol_controller: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_c.so
 patrol_controller: /opt/ros/jazzy/lib/librosidl_typesupport_fastrtps_cpp.so
 patrol_controller: /opt/ros/jazzy/lib/librmw.so
 patrol_controller: /opt/ros/jazzy/lib/librosidl_dynamic_typesupport.so
-patrol_controller: /opt/ros/jazzy/lib/libfastcdr.so.2.2.7
+patrol_controller: /opt/ros/jazzy/lib/libfastcdr.so.2.2.8
 patrol_controller: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_cpp.so
 patrol_controller: /opt/ros/jazzy/lib/librosidl_typesupport_introspection_c.so
 patrol_controller: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_c.so

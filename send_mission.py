@@ -1,3 +1,14 @@
+#!/usr/bin/env python3
+"""Ground Station — Dispatch inspection mission to the drone swarm.
+
+Loads tasks from a YAML config file and publishes them as a Mission message.
+
+Usage:
+    python3 send_mission.py                              # default tasks
+    python3 send_mission.py config/tasks/benchmark.yaml    # explicit file
+    ./send_mission.sh                                    # via wrapper
+"""
+
 import sys
 import os
 
@@ -15,11 +26,68 @@ import rclpy
 from rclpy.node import Node
 from patrol_msgs.msg import Mission, Task
 import time
+import yaml
+
+
+def load_tasks_from_yaml(yaml_path: str) -> list[dict]:
+    """Load task definitions from a YAML file."""
+    with open(yaml_path, 'r') as f:
+        data = yaml.safe_load(f) or {}
+    tasks_raw = data.get('tasks', [])
+    tasks = []
+    for t in tasks_raw:
+        pos = t.get('position', [0, 0, -3])
+        tasks.append({
+            'id': t['id'],
+            'x': float(pos[0]),
+            'y': float(pos[1]),
+            'z': float(pos[2]),
+            'priority': t.get('priority', 1),
+            'type': t.get('inspection_type', 0),
+            'hover': t.get('hover_duration', 4.0),
+            'label': t.get('label', ''),
+        })
+    return tasks
+
+
+def get_default_tasks() -> list[dict]:
+    """Fallback hardcoded tasks if no YAML file is available."""
+    return [
+        {'id': 101, 'x': -10.75, 'y': 0.0, 'z': -4.0, 'priority': 1, 'type': 0, 'hover': 4.0},
+        {'id': 102, 'x': -8.25,  'y': 0.0, 'z': -4.0, 'priority': 1, 'type': 0, 'hover': 4.0},
+        {'id': 103, 'x': -5.75,  'y': 0.0, 'z': -4.0, 'priority': 1, 'type': 0, 'hover': 4.0},
+        {'id': 104, 'x':  5.0,   'y': 4.0, 'z': -3.5, 'priority': 1, 'type': 0, 'hover': 4.0},
+        {'id': 105, 'x': 10.0,   'y': 4.0, 'z': -3.5, 'priority': 1, 'type': 0, 'hover': 4.0},
+        {'id': 106, 'x':  7.0,   'y': -4.0, 'z': -3.5, 'priority': 1, 'type': 0, 'hover': 4.0},
+    ]
+
 
 def main():
     rclpy.init()
     node = Node('ground_station_publisher')
     pub = node.create_publisher(Mission, '/ground_station/mission', 10)
+
+    # Determine tasks source
+    tasks_file = None
+    if len(sys.argv) > 1:
+        tasks_file = sys.argv[1]
+    else:
+        # Try default locations
+        candidates = [
+            'config/tasks/benchmark.yaml',
+            '/home/mrweirdo/factory_patrol_sim/config/tasks/benchmark.yaml',
+        ]
+        for c in candidates:
+            if os.path.exists(c):
+                tasks_file = c
+                break
+
+    if tasks_file and os.path.exists(tasks_file):
+        waypoints = load_tasks_from_yaml(tasks_file)
+        print(f"[Ground Station] Loaded {len(waypoints)} tasks from {tasks_file}")
+    else:
+        waypoints = get_default_tasks()
+        print(f"[Ground Station] Using {len(waypoints)} default tasks")
 
     # Wait for subscribers to connect
     print("[Ground Station] Waiting for drone swarm controllers to connect (3 seconds)...")
@@ -27,19 +95,6 @@ def main():
 
     mission = Mission()
     mission.mission_id = 1
-
-    # Pre-calculated factory patrol points partitioned by sectors and clearance:
-    # Drone 0 (South Aisle & Entry corridor)
-    # Drone 1 (East Corridor & Machinery C/D)
-    # Drone 2 (West Corridor & Machinery A/B)
-    waypoints = [
-        {'id': 101, 'x': 2.0, 'y': -4.0, 'z': -2.5, 'priority': 1, 'type': 0, 'hover': 3.0}, # South-East Aisle
-        {'id': 102, 'x': -3.0, 'y': -4.0, 'z': -2.5, 'priority': 1, 'type': 0, 'hover': 3.0}, # South-West Aisle
-        {'id': 103, 'x': 5.0, 'y': -1.0, 'z': -3.2, 'priority': 1, 'type': 0, 'hover': 4.0}, # Machine C Inspection
-        {'id': 104, 'x': 5.0, 'y': 6.0, 'z': -3.2, 'priority': 1, 'type': 0, 'hover': 4.0},  # Machine D Inspection
-        {'id': 105, 'x': -4.0, 'y': -0.5, 'z': -4.0, 'priority': 1, 'type': 0, 'hover': 4.0}, # Machine A West
-        {'id': 106, 'x': -7.0, 'y': 1.0, 'z': -3.0, 'priority': 1, 'type': 0, 'hover': 4.0},  # Machine B Inspection (standoff)
-    ]
 
     for wp in waypoints:
         t = Task()

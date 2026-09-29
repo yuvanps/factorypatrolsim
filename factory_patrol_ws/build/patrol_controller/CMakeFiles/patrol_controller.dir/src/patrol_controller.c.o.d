@@ -53,12 +53,13 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: \
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/strings.h /usr/include/time.h \
  /usr/include/x86_64-linux-gnu/bits/time.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
@@ -91,8 +92,7 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: \
  /opt/ros/jazzy/include/rmw/rmw/types.h \
  /opt/ros/jazzy/include/rcutils/rcutils/logging.h \
  /opt/ros/jazzy/include/rcutils/rcutils/error_handling.h \
- /usr/include/assert.h /usr/include/string.h /usr/include/strings.h \
- /opt/ros/jazzy/include/rcutils/rcutils/snprintf.h \
+ /usr/include/assert.h /opt/ros/jazzy/include/rcutils/rcutils/snprintf.h \
  /opt/ros/jazzy/include/rcutils/rcutils/testing/fault_injection.h \
  /opt/ros/jazzy/include/rcutils/rcutils/time.h \
  /opt/ros/jazzy/include/rcutils/rcutils/types.h \
@@ -250,28 +250,36 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: \
  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_odometry__functions.h \
  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_odometry__type_support.h \
  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/include/auction_logic.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__struct.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__functions.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/rosidl_generator_c__visibility_control.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__type_support.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/mission.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__struct.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__functions.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__type_support.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/drone_state.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__struct.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__functions.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__type_support.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task_bid.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__struct.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__functions.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__type_support.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task_assignment.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__struct.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__functions.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__type_support.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/swarm_status.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__struct.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__functions.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__type_support.h
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/task.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task__struct.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task__functions.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/rosidl_generator_c__visibility_control.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task__type_support.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/mission.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/mission__struct.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/mission__functions.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/mission__type_support.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/drone_state.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__struct.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__functions.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__type_support.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/task_bid.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__struct.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__functions.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__type_support.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/task_assignment.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__struct.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__functions.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__type_support.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/swarm_status.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__struct.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__functions.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/experiment_event.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__struct.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/movement_command.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__struct.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.h

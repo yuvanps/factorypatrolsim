@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "px4_msgs/msg/detail/sensor_airflow__type_support.h"
 #include "px4_msgs/msg/detail/sensor_airflow__struct.h"
+#include "px4_msgs/msg/detail/sensor_airflow__type_support.h"
 #include "px4_msgs/msg/detail/sensor_airflow__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
 

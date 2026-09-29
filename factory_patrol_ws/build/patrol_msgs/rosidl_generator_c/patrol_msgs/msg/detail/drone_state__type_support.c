@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "patrol_msgs/msg/detail/drone_state__functions.h"
-#include "patrol_msgs/msg/detail/drone_state__struct.h"
 #include "patrol_msgs/msg/detail/drone_state__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "patrol_msgs/msg/detail/drone_state__struct.h"
+#include "patrol_msgs/msg/detail/drone_state__functions.h"
 
 #ifdef __cplusplus
 extern "C"

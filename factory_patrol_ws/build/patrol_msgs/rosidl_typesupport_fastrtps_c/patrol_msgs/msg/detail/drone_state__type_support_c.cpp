@@ -78,6 +78,11 @@ bool cdr_serialize_patrol_msgs__msg__DroneState(
     cdr << ros_message->state;
   }
 
+  // Field name: current_task_id
+  {
+    cdr << ros_message->current_task_id;
+  }
+
   return true;
 }
 
@@ -114,6 +119,11 @@ bool cdr_deserialize_patrol_msgs__msg__DroneState(
   // Field name: state
   {
     cdr >> ros_message->state;
+  }
+
+  // Field name: current_task_id
+  {
+    cdr >> ros_message->current_task_id;
   }
 
   return true;
@@ -172,6 +182,13 @@ size_t get_serialized_size_patrol_msgs__msg__DroneState(
   // Field name: state
   {
     size_t item_size = sizeof(ros_message->state);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: current_task_id
+  {
+    size_t item_size = sizeof(ros_message->current_task_id);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -244,6 +261,14 @@ size_t max_serialized_size_patrol_msgs__msg__DroneState(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Field name: current_task_id
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint16_t);
+    current_alignment += array_size * sizeof(uint16_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+  }
+
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -253,7 +278,7 @@ size_t max_serialized_size_patrol_msgs__msg__DroneState(
     using DataType = patrol_msgs__msg__DroneState;
     is_plain =
       (
-      offsetof(DataType, state) +
+      offsetof(DataType, current_task_id) +
       last_member_size
       ) == ret_val;
   }
@@ -293,6 +318,11 @@ bool cdr_serialize_key_patrol_msgs__msg__DroneState(
   // Field name: state
   {
     cdr << ros_message->state;
+  }
+
+  // Field name: current_task_id
+  {
+    cdr << ros_message->current_task_id;
   }
 
   return true;
@@ -351,6 +381,13 @@ size_t get_serialized_size_key_patrol_msgs__msg__DroneState(
   // Field name: state
   {
     size_t item_size = sizeof(ros_message->state);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: current_task_id
+  {
+    size_t item_size = sizeof(ros_message->current_task_id);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -421,6 +458,14 @@ size_t max_serialized_size_key_patrol_msgs__msg__DroneState(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Field name: current_task_id
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint16_t);
+    current_alignment += array_size * sizeof(uint16_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -429,7 +474,7 @@ size_t max_serialized_size_key_patrol_msgs__msg__DroneState(
     using DataType = patrol_msgs__msg__DroneState;
     is_plain =
       (
-      offsetof(DataType, state) +
+      offsetof(DataType, current_task_id) +
       last_member_size
       ) == ret_val;
   }

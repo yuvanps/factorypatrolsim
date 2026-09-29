@@ -9,8 +9,17 @@ static uint8_t num_tasks = 0;
 static DroneStateInfo drones[MAX_DRONES];
 static float current_bids[MAX_TASKS][MAX_DRONES];
 static bool patrol_in_progress = false;
+static uint8_t num_active_drones = 0; // Spawned drones: IDs 0..num_active_drones-1
 
-void auction_init(void) {
+// Eligible bidder = spawned AND healthy (not timed out / low battery)
+static bool drone_eligible(int d) {
+    return d >= 0 && d < num_active_drones && drones[d].is_healthy;
+}
+
+void auction_init(uint8_t num_drones, uint64_t now_us) {
+    if (num_drones < 1) num_drones = 1;
+    if (num_drones > MAX_DRONES) num_drones = MAX_DRONES;
+    num_active_drones = num_drones;
     num_tasks = 0;
     for (int i = 0; i < MAX_TASKS; i++) {
         tasks[i].active = false;
@@ -23,11 +32,14 @@ void auction_init(void) {
     for (int d = 0; d < MAX_DRONES; d++) {
         drones[d].battery_level = 100.0f;
         drones[d].state = DRONE_STATE_IDLE;
-        drones[d].is_healthy = true;   // Always start healthy — don't carry over stale state
-        drones[d].last_seen_us = 0;
-        drones[d].x = 0.0f;
-        drones[d].y = -(d * 2.0f + 1.0f);
-        drones[d].z = -3.0f;
+        // Spawned drones start healthy with a fresh heartbeat reference, so a spawned drone
+        // that never reports is timed out like any other. Unspawned slots are never healthy.
+        drones[d].is_healthy = (d < num_active_drones);
+        drones[d].state = (d < num_active_drones) ? DRONE_STATE_IDLE : DRONE_STATE_FAILED;
+        drones[d].last_seen_us = now_us;
+        drones[d].x = (d * 4.0f) - 8.0f;
+        drones[d].y = 7.0f;
+        drones[d].z = 0.0f;
     }
 }
 
@@ -49,8 +61,8 @@ void auction_add_task(uint16_t id, float x, float y, float z, uint8_t priority, 
 }
 
 void auction_update_drone_state(uint8_t drone_id, float x, float y, float z, float battery, uint8_t state, uint64_t timestamp_us) {
-    if (drone_id >= MAX_DRONES) return;
-    
+    if (drone_id >= num_active_drones) return; // Not part of this experiment
+
     drones[drone_id].x = x;
     drones[drone_id].y = y;
     drones[drone_id].z = z;
@@ -85,7 +97,7 @@ uint8_t auction_get_assigned_task_count(uint8_t drone_id) {
 
 void auction_record_bid(uint16_t task_id, uint8_t drone_id, float cost) {
     for (int i = 0; i < num_tasks; i++) {
-        if (tasks[i].task_id == task_id && drone_id < MAX_DRONES) {
+        if (tasks[i].task_id == task_id && drone_id < num_active_drones) {
             current_bids[i][drone_id] = cost;
             break;
         }
@@ -93,7 +105,7 @@ void auction_record_bid(uint16_t task_id, uint8_t drone_id, float cost) {
 }
 
 float auction_calculate_cost(uint8_t drone_id, uint16_t task_id) {
-    if (drone_id >= MAX_DRONES || !drones[drone_id].is_healthy) return -1.0f;
+    if (!drone_eligible(drone_id)) return -1.0f;
     
     for (int i = 0; i < num_tasks; i++) {
         if (tasks[i].task_id == task_id) {
@@ -119,8 +131,8 @@ bool auction_run_allocation(uint16_t *out_task_id, uint8_t *out_drone_id) {
     if (num_tasks == 0) return false;
 
     uint8_t healthy_drones = 0;
-    for (int d = 0; d < MAX_DRONES; d++) {
-        if (drones[d].is_healthy) healthy_drones++;
+    for (int d = 0; d < num_active_drones; d++) {
+        if (drone_eligible(d)) healthy_drones++;
     }
     if (healthy_drones == 0) healthy_drones = 1;
 
@@ -132,8 +144,8 @@ bool auction_run_allocation(uint16_t *out_task_id, uint8_t *out_drone_id) {
             float best_cost = 999999.0f;
             uint8_t best_drone = 255;
             
-            for (int d = 0; d < MAX_DRONES; d++) {
-                if (drones[d].is_healthy && auction_get_assigned_task_count(d) < max_per_drone) {
+            for (int d = 0; d < num_active_drones; d++) {
+                if (drone_eligible(d) && auction_get_assigned_task_count(d) < max_per_drone) {
                     float cost = auction_calculate_cost(d, tasks[i].task_id);
                     if (cost >= 0.0f && cost < best_cost) {
                         best_cost = cost;
@@ -159,7 +171,7 @@ void auction_handle_drone_failure(uint8_t failed_drone_id) {
             printf("[Swarm] Revoking Task %d from failed Drone %d and re-auctioning...\n", tasks[i].task_id, failed_drone_id);
             tasks[i].assigned_drone = 255;
             for (int d = 0; d < MAX_DRONES; d++) {
-                if (d != failed_drone_id && drones[d].is_healthy) {
+                if (d != failed_drone_id && drone_eligible(d)) {
                     current_bids[i][d] = auction_calculate_cost(d, tasks[i].task_id);
                 } else {
                     current_bids[i][d] = -1.0f;
@@ -170,8 +182,8 @@ void auction_handle_drone_failure(uint8_t failed_drone_id) {
 }
 
 void auction_check_peer_timeouts(uint64_t current_time_us, uint64_t timeout_us) {
-    for (int d = 0; d < MAX_DRONES; d++) {
-        if (drones[d].is_healthy && drones[d].last_seen_us > 0) {
+    for (int d = 0; d < num_active_drones; d++) {
+        if (drones[d].is_healthy) {
             if (current_time_us > drones[d].last_seen_us + timeout_us) {
                 drones[d].is_healthy = false;
                 drones[d].state = DRONE_STATE_FAILED;
@@ -205,7 +217,7 @@ void auction_recycle_tasks_if_all_completed(void) {
             tasks[i].completed = false;
             tasks[i].assigned_drone = 255;
             for (int d = 0; d < MAX_DRONES; d++) {
-                if (drones[d].is_healthy) {
+                if (drone_eligible(d)) {
                     current_bids[i][d] = auction_calculate_cost(d, tasks[i].task_id);
                 } else {
                     current_bids[i][d] = -1.0f;
@@ -230,18 +242,19 @@ AuctionTask* auction_get_tasks(uint8_t *count) {
 }
 
 bool auction_is_drone_healthy(uint8_t drone_id) {
-    if (drone_id < MAX_DRONES) {
-        return drones[drone_id].is_healthy;
-    }
-    return false;
+    return drone_eligible(drone_id);
 }
 
 uint8_t auction_count_healthy_drones(void) {
     uint8_t count = 0;
-    for (int d = 0; d < MAX_DRONES; d++) {
-        if (drones[d].is_healthy) count++;
+    for (int d = 0; d < num_active_drones; d++) {
+        if (drone_eligible(d)) count++;
     }
     return count;
+}
+
+uint8_t auction_get_num_drones(void) {
+    return num_active_drones;
 }
 
 void auction_get_drone_position(uint8_t drone_id, float *x, float *y, float *z) {

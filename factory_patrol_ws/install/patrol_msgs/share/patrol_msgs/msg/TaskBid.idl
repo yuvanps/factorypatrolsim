@@ -1,16 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from patrol_msgs/msg/TaskBid.msg
-// generated code does not contain a copyright notice
-
-
-module patrol_msgs {
-  module msg {
-    struct TaskBid {
-      uint8 drone_id;
-
-      uint16 task_id;
-
-      float cost;
-    };
-  };
-};
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs/msg/TaskBid.idl

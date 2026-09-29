@@ -1,6 +1,1 @@
-uint8 drone_id
-float32 x
-float32 y
-float32 z
-float32 battery_level
-uint8 state
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/DroneState.msg

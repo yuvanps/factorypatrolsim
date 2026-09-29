@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "px4_msgs/msg/detail/orb_test_large__struct.h"
-#include "px4_msgs/msg/detail/orb_test_large__type_support.h"
 #include "px4_msgs/msg/detail/orb_test_large__functions.h"
+#include "px4_msgs/msg/detail/orb_test_large__type_support.h"
+#include "px4_msgs/msg/detail/orb_test_large__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus

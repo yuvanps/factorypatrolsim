@@ -96,6 +96,16 @@ CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/swarm_s
 CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/swarm_status__struct.hpp
 CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/swarm_status__traits.hpp
 CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/swarm_status__type_support.hpp
+CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/experiment_event.hpp
+CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__builder.hpp
+CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__struct.hpp
+CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__traits.hpp
+CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__type_support.hpp
+CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/movement_command.hpp
+CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__builder.hpp
+CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__struct.hpp
+CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__traits.hpp
+CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__type_support.hpp
 CMakeFiles/patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/patrol_msgs/msg/task.hpp: /opt/ros/jazzy/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -123,6 +133,8 @@ rosidl_generator_cpp/patrol_msgs/msg/task.hpp: rosidl_adapter/patrol_msgs/msg/Dr
 rosidl_generator_cpp/patrol_msgs/msg/task.hpp: rosidl_adapter/patrol_msgs/msg/TaskBid.idl
 rosidl_generator_cpp/patrol_msgs/msg/task.hpp: rosidl_adapter/patrol_msgs/msg/TaskAssignment.idl
 rosidl_generator_cpp/patrol_msgs/msg/task.hpp: rosidl_adapter/patrol_msgs/msg/SwarmStatus.idl
+rosidl_generator_cpp/patrol_msgs/msg/task.hpp: rosidl_adapter/patrol_msgs/msg/ExperimentEvent.idl
+rosidl_generator_cpp/patrol_msgs/msg/task.hpp: rosidl_adapter/patrol_msgs/msg/MovementCommand.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_cpp__arguments.json
 
@@ -213,6 +225,36 @@ rosidl_generator_cpp/patrol_msgs/msg/detail/swarm_status__traits.hpp: rosidl_gen
 rosidl_generator_cpp/patrol_msgs/msg/detail/swarm_status__type_support.hpp: rosidl_generator_cpp/patrol_msgs/msg/task.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/patrol_msgs/msg/detail/swarm_status__type_support.hpp
 
+rosidl_generator_cpp/patrol_msgs/msg/experiment_event.hpp: rosidl_generator_cpp/patrol_msgs/msg/task.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/patrol_msgs/msg/experiment_event.hpp
+
+rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__builder.hpp: rosidl_generator_cpp/patrol_msgs/msg/task.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__builder.hpp
+
+rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__struct.hpp: rosidl_generator_cpp/patrol_msgs/msg/task.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__struct.hpp
+
+rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__traits.hpp: rosidl_generator_cpp/patrol_msgs/msg/task.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__traits.hpp
+
+rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__type_support.hpp: rosidl_generator_cpp/patrol_msgs/msg/task.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__type_support.hpp
+
+rosidl_generator_cpp/patrol_msgs/msg/movement_command.hpp: rosidl_generator_cpp/patrol_msgs/msg/task.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/patrol_msgs/msg/movement_command.hpp
+
+rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__builder.hpp: rosidl_generator_cpp/patrol_msgs/msg/task.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__builder.hpp
+
+rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__struct.hpp: rosidl_generator_cpp/patrol_msgs/msg/task.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__struct.hpp
+
+rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__traits.hpp: rosidl_generator_cpp/patrol_msgs/msg/task.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__traits.hpp
+
+rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__type_support.hpp: rosidl_generator_cpp/patrol_msgs/msg/task.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__type_support.hpp
+
 rosidl_generator_cpp/patrol_msgs/msg/rosidl_generator_cpp__visibility_control.hpp: rosidl_generator_cpp/patrol_msgs/msg/task.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/patrol_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
 
@@ -221,10 +263,18 @@ patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/drone_state__build
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/drone_state__struct.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/drone_state__traits.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/drone_state__type_support.hpp
+patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__builder.hpp
+patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__struct.hpp
+patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__traits.hpp
+patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/experiment_event__type_support.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/mission__builder.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/mission__struct.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/mission__traits.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/mission__type_support.hpp
+patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__builder.hpp
+patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__struct.hpp
+patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__traits.hpp
+patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/movement_command__type_support.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/swarm_status__builder.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/swarm_status__struct.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/swarm_status__traits.hpp
@@ -242,7 +292,9 @@ patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/task_bid__struct.h
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/task_bid__traits.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/detail/task_bid__type_support.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/drone_state.hpp
+patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/experiment_event.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/mission.hpp
+patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/movement_command.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/swarm_status.hpp
 patrol_msgs__cpp: rosidl_generator_cpp/patrol_msgs/msg/task.hpp

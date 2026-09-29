@@ -69,13 +69,14 @@ include /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/pa
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__rs/CMakeFiles/patrol_msgs__rs: rosidl_generator_rs/patrol_msgs/rust/src/lib.rs
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__rs/CMakeFiles/patrol_msgs__rs: rosidl_generator_rs/patrol_msgs/rust/build.rs
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__rs/CMakeFiles/patrol_msgs__rs: rosidl_generator_rs/patrol_msgs/rust/Cargo.toml
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__rs/CMakeFiles/patrol_msgs__rs: rosidl_generator_rs/patrol_msgs/rust/src/msg.rs
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__rs/CMakeFiles/patrol_msgs__rs: rosidl_generator_rs/patrol_msgs/rust/src/msg/rmw.rs
 
 rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: /opt/ros/jazzy/lib/rosidl_generator_rs/rosidl_generator_rs
 rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_rs/__init__.py
 rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/action.rs.em
 rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/action/rmw.rs.em
+rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/build.rs.em
+rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/Cargo.toml.em
+rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/lib.rs.em
 rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/msg.rs.em
 rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/msg/rmw.rs.em
 rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: /opt/ros/jazzy/share/rosidl_generator_rs/resource/srv.rs.em
@@ -90,12 +91,8 @@ rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: rosidl_adapter/patrol_msgs/msg/
 rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: rosidl_adapter/patrol_msgs/msg/TaskBid.idl
 rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: rosidl_adapter/patrol_msgs/msg/TaskAssignment.idl
 rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: rosidl_adapter/patrol_msgs/msg/SwarmStatus.idl
-rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: rosidl_adapter/patrol_msgs/msg/Task.idl
-rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: rosidl_adapter/patrol_msgs/msg/Mission.idl
-rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: rosidl_adapter/patrol_msgs/msg/DroneState.idl
-rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: rosidl_adapter/patrol_msgs/msg/TaskBid.idl
-rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: rosidl_adapter/patrol_msgs/msg/TaskAssignment.idl
-rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: rosidl_adapter/patrol_msgs/msg/SwarmStatus.idl
+rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: rosidl_adapter/patrol_msgs/msg/ExperimentEvent.idl
+rosidl_generator_rs/patrol_msgs/rust/src/lib.rs: rosidl_adapter/patrol_msgs/msg/MovementCommand.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Rust code for ROS interfaces"
 	cd /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__rs && /usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_rs/cmake/../../../lib/rosidl_generator_rs/rosidl_generator_rs --generator-arguments-file /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_rs__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -105,18 +102,10 @@ rosidl_generator_rs/patrol_msgs/rust/build.rs: rosidl_generator_rs/patrol_msgs/r
 rosidl_generator_rs/patrol_msgs/rust/Cargo.toml: rosidl_generator_rs/patrol_msgs/rust/src/lib.rs
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/patrol_msgs/rust/Cargo.toml
 
-rosidl_generator_rs/patrol_msgs/rust/src/msg.rs: rosidl_generator_rs/patrol_msgs/rust/src/lib.rs
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/patrol_msgs/rust/src/msg.rs
-
-rosidl_generator_rs/patrol_msgs/rust/src/msg/rmw.rs: rosidl_generator_rs/patrol_msgs/rust/src/lib.rs
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/patrol_msgs/rust/src/msg/rmw.rs
-
 patrol_msgs__rs: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__rs/CMakeFiles/patrol_msgs__rs
 patrol_msgs__rs: rosidl_generator_rs/patrol_msgs/rust/Cargo.toml
 patrol_msgs__rs: rosidl_generator_rs/patrol_msgs/rust/build.rs
 patrol_msgs__rs: rosidl_generator_rs/patrol_msgs/rust/src/lib.rs
-patrol_msgs__rs: rosidl_generator_rs/patrol_msgs/rust/src/msg.rs
-patrol_msgs__rs: rosidl_generator_rs/patrol_msgs/rust/src/msg/rmw.rs
 patrol_msgs__rs: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__rs/CMakeFiles/patrol_msgs__rs.dir/build.make
 .PHONY : patrol_msgs__rs
 

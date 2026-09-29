@@ -1,7 +1,11 @@
 msg/DroneState.idl
 msg/DroneState.msg
+msg/ExperimentEvent.idl
+msg/ExperimentEvent.msg
 msg/Mission.idl
 msg/Mission.msg
+msg/MovementCommand.idl
+msg/MovementCommand.msg
 msg/SwarmStatus.idl
 msg/SwarmStatus.msg
 msg/Task.idl

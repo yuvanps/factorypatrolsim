@@ -1,0 +1,70 @@
+# =============================================================================
+# BENCHMARK task set (nominal patrol mission)
+# =============================================================================
+# Coordinates are in the global factory frame = Gazebo world frame:
+#   x = Gazebo X (east), y = Gazebo Y (north), z = -height (negative = above ground).
+#
+# Factory layout (30x20m):
+#   Western half (x < 0):  Storage area with 4 rack rows (x = -12, -9.5, -7, -4.5;
+#                          y from -6 to 2; 3.5m tall), aisles at x = -10.75, -8.25, -5.75
+#   Eastern half (x > 0):  CNC (5,5), lathe (10,5), workbench (7,0), conveyor (8,-4)
+#   Central partition at x=0 (y -4..6, 3.5m tall)
+#
+# ROUTE GEOMETRY: the controller routes every leg through the centre corridor
+# (0,0) at a per-drone transit altitude (5m, 6m, 7m, ...), and climbs/descends
+# vertically above each task. A task that lies under another task's
+# centre->task leg forces transiting drones over drones that are climbing,
+# descending or inspecting there. This layout keeps every task column at least
+# 3.1m (horizontally) from every other task's centre->task leg, and >= 5.7m from
+# the centre. Same 6 tasks, labels, altitudes and hover times as the original
+# layout; only 101/102/103 moved along their own aisles and 104 moved within the
+# CNC footprint. (The original layout is kept in tasks/safety_stress.yaml.)
+#
+# SAFETY CLEARANCES:
+#   - All waypoints at least 2m from any wall and inside the controller clamp (|x|<=12, |y|<=7)
+#   - Rack area: z=-4.0 (0.5m above 3.5m rack tops); machine area: z=-3.5
+
+tasks:
+  # --- Storage Area (hover above the aisles) ---
+  - id: 101
+    position: [-10.75, -1.5, -4.0]
+    priority: 1
+    inspection_type: 0
+    hover_duration: 4.0
+    label: "Storage Aisle 1"
+
+  - id: 102
+    position: [-8.25, 2.0, -4.0]
+    priority: 1
+    inspection_type: 0
+    hover_duration: 4.0
+    label: "Storage Aisle 2"
+
+  - id: 103
+    position: [-5.75, -4.0, -4.0]
+    priority: 1
+    inspection_type: 0
+    hover_duration: 4.0
+    label: "Storage Aisle 3"
+
+  # --- Assembly / Machine Area ---
+  - id: 104
+    position: [4.0, 5.0, -3.5]
+    priority: 1
+    inspection_type: 0
+    hover_duration: 4.0
+    label: "CNC Machine"
+
+  - id: 105
+    position: [10.0, 4.0, -3.5]
+    priority: 1
+    inspection_type: 0
+    hover_duration: 4.0
+    label: "Lathe Machine"
+
+  - id: 106
+    position: [7.0, -4.0, -3.5]
+    priority: 1
+    inspection_type: 0
+    hover_duration: 4.0
+    label: "Assembly Area Center"

@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "px4_msgs/msg/detail/sensor_correction__type_support.h"
-#include "px4_msgs/msg/detail/sensor_correction__functions.h"
 #include "px4_msgs/msg/detail/sensor_correction__struct.h"
+#include "px4_msgs/msg/detail/sensor_correction__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus

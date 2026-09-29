@@ -1,0 +1,23 @@
+running develop
+running egg_info
+creating patrol_coordinator.egg-info
+writing patrol_coordinator.egg-info/PKG-INFO
+writing dependency_links to patrol_coordinator.egg-info/dependency_links.txt
+writing entry points to patrol_coordinator.egg-info/entry_points.txt
+writing requirements to patrol_coordinator.egg-info/requires.txt
+writing top-level names to patrol_coordinator.egg-info/top_level.txt
+writing manifest file 'patrol_coordinator.egg-info/SOURCES.txt'
+reading manifest file 'patrol_coordinator.egg-info/SOURCES.txt'
+writing manifest file 'patrol_coordinator.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_coordinator/lib/python3.12/site-packages/patrol-coordinator.egg-link (link to .)
+Installing coordinator_node script to /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_coordinator/lib/patrol_coordinator
+Installing metrics_collector script to /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_coordinator/lib/patrol_coordinator
+
+Installed /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_coordinator
+running symlink_data
+creating /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_coordinator/share/ament_index
+creating /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_coordinator/share/ament_index/resource_index
+creating /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_coordinator/share/ament_index/resource_index/packages
+symbolically linking /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_coordinator/resource/patrol_coordinator -> /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_coordinator/share/ament_index/resource_index/packages
+symbolically linking /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_coordinator/package.xml -> /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_coordinator/share/patrol_coordinator

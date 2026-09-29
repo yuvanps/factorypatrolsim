@@ -1,12 +1,1 @@
-msg/DroneState.idl
-msg/DroneState.msg
-msg/Mission.idl
-msg/Mission.msg
-msg/SwarmStatus.idl
-msg/SwarmStatus.msg
-msg/Task.idl
-msg/Task.msg
-msg/TaskAssignment.idl
-msg/TaskAssignment.msg
-msg/TaskBid.idl
-msg/TaskBid.msg
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/patrol_msgs

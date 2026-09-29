@@ -55,3 +55,6 @@ endforeach()
 message(STATUS "Execute custom uninstall script")
 
 # begin of custom uninstall code
+
+# uninstall files installed using the symlink install functions
+include("/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")

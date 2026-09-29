@@ -31,7 +31,7 @@ void patrol_msgs__msg__DroneState__rosidl_typesupport_introspection_c__DroneStat
   patrol_msgs__msg__DroneState__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember patrol_msgs__msg__DroneState__rosidl_typesupport_introspection_c__DroneState_message_member_array[6] = {
+static rosidl_typesupport_introspection_c__MessageMember patrol_msgs__msg__DroneState__rosidl_typesupport_introspection_c__DroneState_message_member_array[7] = {
   {
     "drone_id",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
@@ -139,13 +139,31 @@ static rosidl_typesupport_introspection_c__MessageMember patrol_msgs__msg__Drone
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "current_task_id",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT16,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(patrol_msgs__msg__DroneState, current_task_id),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers patrol_msgs__msg__DroneState__rosidl_typesupport_introspection_c__DroneState_message_members = {
   "patrol_msgs__msg",  // message namespace
   "DroneState",  // message name
-  6,  // number of fields
+  7,  // number of fields
   sizeof(patrol_msgs__msg__DroneState),
   false,  // has_any_key_member_
   patrol_msgs__msg__DroneState__rosidl_typesupport_introspection_c__DroneState_message_member_array,  // message members

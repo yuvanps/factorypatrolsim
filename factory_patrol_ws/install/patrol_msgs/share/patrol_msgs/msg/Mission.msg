@@ -1,2 +1,1 @@
-uint16 mission_id
-Task[] tasks
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/Mission.msg

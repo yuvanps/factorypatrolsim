@@ -1,2 +1,1 @@
-uint16 task_id
-uint8 drone_id
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/TaskAssignment.msg

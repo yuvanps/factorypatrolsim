@@ -72,6 +72,8 @@ CMakeFiles/patrol_msgs: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/
 CMakeFiles/patrol_msgs: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/TaskBid.msg
 CMakeFiles/patrol_msgs: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/TaskAssignment.msg
 CMakeFiles/patrol_msgs: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/SwarmStatus.msg
+CMakeFiles/patrol_msgs: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/ExperimentEvent.msg
+CMakeFiles/patrol_msgs: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/MovementCommand.msg
 
 patrol_msgs: CMakeFiles/patrol_msgs
 patrol_msgs: CMakeFiles/patrol_msgs.dir/build.make

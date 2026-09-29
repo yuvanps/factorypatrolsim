@@ -6,7 +6,9 @@ patrol_msgs.egg-info/dependency_links.txt
 patrol_msgs.egg-info/top_level.txt
 patrol_msgs/msg/__init__.py
 patrol_msgs/msg/_drone_state.py
+patrol_msgs/msg/_experiment_event.py
 patrol_msgs/msg/_mission.py
+patrol_msgs/msg/_swarm_status.py
 patrol_msgs/msg/_task.py
 patrol_msgs/msg/_task_assignment.py
 patrol_msgs/msg/_task_bid.py

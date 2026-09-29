@@ -94,6 +94,8 @@ rosidl_generator_c/patrol_msgs/msg/task.h: rosidl_adapter/patrol_msgs/msg/DroneS
 rosidl_generator_c/patrol_msgs/msg/task.h: rosidl_adapter/patrol_msgs/msg/TaskBid.idl
 rosidl_generator_c/patrol_msgs/msg/task.h: rosidl_adapter/patrol_msgs/msg/TaskAssignment.idl
 rosidl_generator_c/patrol_msgs/msg/task.h: rosidl_adapter/patrol_msgs/msg/SwarmStatus.idl
+rosidl_generator_c/patrol_msgs/msg/task.h: rosidl_adapter/patrol_msgs/msg/ExperimentEvent.idl
+rosidl_generator_c/patrol_msgs/msg/task.h: rosidl_adapter/patrol_msgs/msg/MovementCommand.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c__arguments.json
 
@@ -166,6 +168,30 @@ rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__struct.h: rosidl_generat
 rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.h: rosidl_generator_c/patrol_msgs/msg/task.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.h
 
+rosidl_generator_c/patrol_msgs/msg/experiment_event.h: rosidl_generator_c/patrol_msgs/msg/task.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/experiment_event.h
+
+rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.h: rosidl_generator_c/patrol_msgs/msg/task.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.h
+
+rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__struct.h: rosidl_generator_c/patrol_msgs/msg/task.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__struct.h
+
+rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.h: rosidl_generator_c/patrol_msgs/msg/task.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.h
+
+rosidl_generator_c/patrol_msgs/msg/movement_command.h: rosidl_generator_c/patrol_msgs/msg/task.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/movement_command.h
+
+rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.h: rosidl_generator_c/patrol_msgs/msg/task.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.h
+
+rosidl_generator_c/patrol_msgs/msg/detail/movement_command__struct.h: rosidl_generator_c/patrol_msgs/msg/task.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/movement_command__struct.h
+
+rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.h: rosidl_generator_c/patrol_msgs/msg/task.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.h
+
 rosidl_generator_c/patrol_msgs/msg/detail/task__description.c: rosidl_generator_c/patrol_msgs/msg/task.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/task__description.c
 
@@ -219,6 +245,24 @@ rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__functions.c: rosidl_gene
 
 rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.c: rosidl_generator_c/patrol_msgs/msg/task.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.c
+
+rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c: rosidl_generator_c/patrol_msgs/msg/task.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c
+
+rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c: rosidl_generator_c/patrol_msgs/msg/task.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c
+
+rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c: rosidl_generator_c/patrol_msgs/msg/task.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c
+
+rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c: rosidl_generator_c/patrol_msgs/msg/task.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c
+
+rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c: rosidl_generator_c/patrol_msgs/msg/task.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c
+
+rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c: rosidl_generator_c/patrol_msgs/msg/task.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c
 
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task__description.c.o: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/flags.make
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task__description.c.o: rosidl_generator_c/patrol_msgs/msg/detail/task__description.c
@@ -472,6 +516,90 @@ CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/ms
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.c -o CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.c.s
 
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.o: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/flags.make
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.o: rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.o: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.o -MF CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.o.d -o CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.o -c /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c > CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.i
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c -o CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.s
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.o: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/flags.make
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.o: rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.o: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.o -MF CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.o.d -o CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.o -c /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c > CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.i
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c -o CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.s
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.o: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/flags.make
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.o: rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.o: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.o -MF CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.o.d -o CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.o -c /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c > CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.i
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c -o CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.s
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.o: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/flags.make
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.o: rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.o: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.o -MF CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.o.d -o CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.o -c /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c > CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.i
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c -o CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.s
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.o: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/flags.make
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.o: rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.o: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.o -MF CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.o.d -o CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.o -c /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c > CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.i
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c -o CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.s
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.o: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/flags.make
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.o: rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.o: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.o -MF CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.o.d -o CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.o -c /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c > CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.i
+
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c -o CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.s
+
 # Object files for target patrol_msgs__rosidl_generator_c
 patrol_msgs__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task__description.c.o" \
@@ -491,7 +619,13 @@ patrol_msgs__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__type_support.c.o" \
 "CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__description.c.o" \
 "CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__functions.c.o" \
-"CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.c.o"
+"CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.c.o" \
+"CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.o" \
+"CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.o" \
+"CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.o" \
+"CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.o" \
+"CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.o" \
+"CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.o"
 
 # External object files for target patrol_msgs__rosidl_generator_c
 patrol_msgs__rosidl_generator_c_EXTERNAL_OBJECTS =
@@ -514,11 +648,17 @@ libpatrol_msgs__rosidl_generator_c.so: CMakeFiles/patrol_msgs__rosidl_generator_
 libpatrol_msgs__rosidl_generator_c.so: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__description.c.o
 libpatrol_msgs__rosidl_generator_c.so: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__functions.c.o
 libpatrol_msgs__rosidl_generator_c.so: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.c.o
+libpatrol_msgs__rosidl_generator_c.so: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.o
+libpatrol_msgs__rosidl_generator_c.so: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.o
+libpatrol_msgs__rosidl_generator_c.so: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.o
+libpatrol_msgs__rosidl_generator_c.so: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c.o
+libpatrol_msgs__rosidl_generator_c.so: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c.o
+libpatrol_msgs__rosidl_generator_c.so: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c.o
 libpatrol_msgs__rosidl_generator_c.so: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/build.make
 libpatrol_msgs__rosidl_generator_c.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libpatrol_msgs__rosidl_generator_c.so: /opt/ros/jazzy/lib/librcutils.so
 libpatrol_msgs__rosidl_generator_c.so: CMakeFiles/patrol_msgs__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking C shared library libpatrol_msgs__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking C shared library libpatrol_msgs__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/patrol_msgs__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -535,12 +675,24 @@ CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/drone_state__struct.h
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/drone_state__type_support.c
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/drone_state__type_support.h
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.h
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__struct.h
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.h
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/mission__description.c
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/mission__functions.c
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/mission__functions.h
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/mission__struct.h
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/mission__type_support.c
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/mission__type_support.h
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/movement_command__description.c
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.c
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.h
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/movement_command__struct.h
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.c
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.h
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__description.c
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__functions.c
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__functions.h
@@ -566,7 +718,9 @@ CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/task_bid__type_support.c
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/detail/task_bid__type_support.h
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/drone_state.h
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/experiment_event.h
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/mission.h
+CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/movement_command.h
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/swarm_status.h
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/task.h
 CMakeFiles/patrol_msgs__rosidl_generator_c.dir/depend: rosidl_generator_c/patrol_msgs/msg/task_assignment.h

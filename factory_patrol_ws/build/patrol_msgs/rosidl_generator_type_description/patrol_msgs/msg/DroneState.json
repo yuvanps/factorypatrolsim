@@ -62,6 +62,16 @@
             "nested_type_name": ""
           },
           "default_value": ""
+        },
+        {
+          "name": "current_task_id",
+          "type": {
+            "type_id": 5,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
         }
       ]
     },
@@ -70,7 +80,7 @@
   "type_hashes": [
     {
       "type_name": "patrol_msgs/msg/DroneState",
-      "hash_string": "RIHS01_dad4e87195127db7f933a0b59dc1ee1bb760b7c10c490ffb654e3ec669098b89"
+      "hash_string": "RIHS01_7d4f247393c626f2b53b8bda21ed735a7ae714c053dd1f21e0dee0833a67bd08"
     }
   ]
 }

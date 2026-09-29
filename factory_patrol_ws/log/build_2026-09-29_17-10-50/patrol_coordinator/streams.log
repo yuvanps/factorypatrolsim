@@ -1,0 +1,18 @@
+[0.978s] Invoking command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_coordinator': AMENT_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_coordinator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_coordinator/lib/python3.12/site-packages:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_coordinator/build --no-deps symlink_data
+[1.204s] running develop
+[1.348s] running egg_info
+[1.361s] writing patrol_coordinator.egg-info/PKG-INFO
+[1.362s] writing dependency_links to patrol_coordinator.egg-info/dependency_links.txt
+[1.362s] writing entry points to patrol_coordinator.egg-info/entry_points.txt
+[1.362s] writing requirements to patrol_coordinator.egg-info/requires.txt
+[1.362s] writing top-level names to patrol_coordinator.egg-info/top_level.txt
+[1.391s] reading manifest file 'patrol_coordinator.egg-info/SOURCES.txt'
+[1.392s] writing manifest file 'patrol_coordinator.egg-info/SOURCES.txt'
+[1.406s] running build_ext
+[1.406s] Creating /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_coordinator/lib/python3.12/site-packages/patrol-coordinator.egg-link (link to .)
+[1.407s] Installing coordinator_node script to /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_coordinator/lib/patrol_coordinator
+[1.407s] Installing metrics_collector script to /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_coordinator/lib/patrol_coordinator
+[1.407s] 
+[1.407s] Installed /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_coordinator
+[1.407s] running symlink_data
+[1.431s] Invoked command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_coordinator' returned '0': AMENT_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_coordinator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_coordinator/lib/python3.12/site-packages:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_coordinator/build --no-deps symlink_data

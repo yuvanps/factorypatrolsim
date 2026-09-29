@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "patrol_msgs/msg/detail/task_assignment__functions.h"
 #include "patrol_msgs/msg/detail/task_assignment__type_support.h"
-#include "patrol_msgs/msg/detail/task_assignment__struct.h"
+#include "patrol_msgs/msg/detail/task_assignment__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "patrol_msgs/msg/detail/task_assignment__struct.h"
 
 #ifdef __cplusplus
 extern "C"

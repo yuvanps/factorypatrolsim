@@ -1,0 +1,28 @@
+[0.009s] Invoking command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs
+[0.049s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.137s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.151s] -- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.153s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.191s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.221s] -- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.465s] -- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[0.542s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.648s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.650s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[0.912s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[0.943s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.957s] -- Configuring done (0.9s)
+[1.002s] -- Generating done (0.0s)
+[1.012s] -- Build files have been written to: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs
+[1.020s] Invoked command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs
+[1.020s] Invoking command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs -- -j16 -l16
+[1.068s] failed to create symbolic link '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/ament_cmake_python/patrol_msgs/patrol_msgs' because existing path cannot be removed: Is a directory
+[1.068s] [  2%] Generating Rust code for ROS interfaces
+[1.068s] [  2%] Generating type hashes for ROS interfaces
+[1.069s] gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_patrol_msgs.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_patrol_msgs] Error 1
+[1.069s] gmake[1]: *** [CMakeFiles/Makefile2:471: CMakeFiles/ament_cmake_python_symlink_patrol_msgs.dir/all] Error 2
+[1.069s] gmake[1]: *** Waiting for unfinished jobs....
+[1.263s] [  2%] Built target patrol_msgs__rosidl_generator_type_description
+[1.287s] [  2%] Built target patrol_msgs__rs
+[1.288s] gmake: *** [Makefile:146: all] Error 2
+[1.290s] Invoked command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs -- -j16 -l16

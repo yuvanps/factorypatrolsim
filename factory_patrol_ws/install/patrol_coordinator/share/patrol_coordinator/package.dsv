@@ -1,0 +1,9 @@
+source;share/patrol_coordinator/hook/pythonpath.ps1
+source;share/patrol_coordinator/hook/pythonpath.dsv
+source;share/patrol_coordinator/hook/pythonpath.sh
+source;share/patrol_coordinator/hook/ament_prefix_path.ps1
+source;share/patrol_coordinator/hook/ament_prefix_path.dsv
+source;share/patrol_coordinator/hook/ament_prefix_path.sh
+source;../../build/patrol_coordinator/share/patrol_coordinator/hook/pythonpath_develop.ps1
+source;../../build/patrol_coordinator/share/patrol_coordinator/hook/pythonpath_develop.dsv
+source;../../build/patrol_coordinator/share/patrol_coordinator/hook/pythonpath_develop.sh

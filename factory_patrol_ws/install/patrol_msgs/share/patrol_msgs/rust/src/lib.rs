@@ -1,12 +1,1 @@
-#![allow(non_camel_case_types)]
-#![allow(clippy::derive_partial_eq_without_eq)]
-#![allow(clippy::upper_case_acronyms)]
-
-#[path = "msg.rs"]
-mod msg_idiomatic;
-pub mod msg {
-    pub use super::msg_idiomatic::*;
-    pub mod rmw;
-}
-
-
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_rs/patrol_msgs/rust/src/lib.rs

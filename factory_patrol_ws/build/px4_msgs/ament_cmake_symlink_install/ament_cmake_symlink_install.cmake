@@ -1158,9 +1158,6 @@ include("/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/px4_msgs/amen
 # install("TARGETS" "px4_msgs_s__rosidl_typesupport_c" "DESTINATION" "lib/python3.12/site-packages/px4_msgs")
 include("/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/px4_msgs/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(FILES "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/px4_msgs/ament_cmake_index/share/ament_index/resource_index/rust_packages/px4_msgs" "DESTINATION" "share/ament_index/resource_index/rust_packages")
-ament_cmake_symlink_install_files("/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/px4_msgs" FILES "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/px4_msgs/ament_cmake_index/share/ament_index/resource_index/rust_packages/px4_msgs" "DESTINATION" "share/ament_index/resource_index/rust_packages")
-
 # install(DIRECTORY "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust" "DESTINATION" "share/px4_msgs")
 ament_cmake_symlink_install_directory("/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/px4_msgs" DIRECTORY "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/px4_msgs/rosidl_generator_rs/px4_msgs/rust" "DESTINATION" "share/px4_msgs")
 

@@ -48,6 +48,7 @@ struct DroneState_
       this->z = 0.0f;
       this->battery_level = 0.0f;
       this->state = 0;
+      this->current_task_id = 0;
     }
   }
 
@@ -63,6 +64,7 @@ struct DroneState_
       this->z = 0.0f;
       this->battery_level = 0.0f;
       this->state = 0;
+      this->current_task_id = 0;
     }
   }
 
@@ -85,6 +87,9 @@ struct DroneState_
   using _state_type =
     uint8_t;
   _state_type state;
+  using _current_task_id_type =
+    uint16_t;
+  _current_task_id_type current_task_id;
 
   // setters for named parameter idiom
   Type & set__drone_id(
@@ -121,6 +126,12 @@ struct DroneState_
     const uint8_t & _arg)
   {
     this->state = _arg;
+    return *this;
+  }
+  Type & set__current_task_id(
+    const uint16_t & _arg)
+  {
+    this->current_task_id = _arg;
     return *this;
   }
 
@@ -182,6 +193,9 @@ struct DroneState_
       return false;
     }
     if (this->state != other.state) {
+      return false;
+    }
+    if (this->current_task_id != other.current_task_id) {
       return false;
     }
     return true;

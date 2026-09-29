@@ -196,6 +196,9 @@ pub struct DroneState {
     #[allow(missing_docs)]
     pub state: u8,
 
+    /// task the drone is currently flying to / inspecting (0 = none)
+    pub current_task_id: u16,
+
 }
 
 
@@ -218,6 +221,7 @@ impl rosidl_runtime_rs::Message for DroneState {
         z: msg.z,
         battery_level: msg.battery_level,
         state: msg.state,
+        current_task_id: msg.current_task_id,
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
       drone_id: msg.drone_id,
@@ -226,6 +230,7 @@ impl rosidl_runtime_rs::Message for DroneState {
       z: msg.z,
       battery_level: msg.battery_level,
       state: msg.state,
+      current_task_id: msg.current_task_id,
       })
     }
   }
@@ -238,6 +243,7 @@ impl rosidl_runtime_rs::Message for DroneState {
       z: msg.z,
       battery_level: msg.battery_level,
       state: msg.state,
+      current_task_id: msg.current_task_id,
     }
   }
 }
@@ -427,6 +433,162 @@ impl rosidl_runtime_rs::Message for SwarmStatus {
     Self {
       status: msg.status,
       reason: msg.reason.to_string(),
+    }
+  }
+}
+
+
+// Corresponds to patrol_msgs__msg__ExperimentEvent
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct ExperimentEvent {
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub timestamp: u64,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub event_type: std::string::String,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub data: std::string::String,
+
+}
+
+
+
+impl Default for ExperimentEvent {
+  fn default() -> Self {
+    <Self as rosidl_runtime_rs::Message>::from_rmw_message(super::msg::rmw::ExperimentEvent::default())
+  }
+}
+
+impl rosidl_runtime_rs::Message for ExperimentEvent {
+  type RmwMsg = super::msg::rmw::ExperimentEvent;
+
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
+    match msg_cow {
+      std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+        timestamp: msg.timestamp,
+        event_type: msg.event_type.as_str().into(),
+        data: msg.data.as_str().into(),
+      }),
+      std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+      timestamp: msg.timestamp,
+        event_type: msg.event_type.as_str().into(),
+        data: msg.data.as_str().into(),
+      })
+    }
+  }
+
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self {
+    Self {
+      timestamp: msg.timestamp,
+      event_type: msg.event_type.to_string(),
+      data: msg.data.to_string(),
+    }
+  }
+}
+
+
+// Corresponds to patrol_msgs__msg__MovementCommand
+/// Movement command from a reactive coordination algorithm (e.g. APF) to one patrol controller.
+/// All positions/velocities are in the common factory frame used by DroneState and Task:
+///   x = Gazebo X (east), y = Gazebo Y (north), z = -height (negative = above ground).
+
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct MovementCommand {
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub drone_id: u8,
+
+    /// goal this command steers toward; controllers ignore commands for any other task
+    pub task_id: u16,
+
+    /// position setpoint the controller should track
+    pub target_x: f32,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub target_y: f32,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub target_z: f32,
+
+    /// commanded velocity that produced the target (informational / diagnostics)
+    pub velocity_x: f32,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub velocity_y: f32,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub velocity_z: f32,
+
+}
+
+
+
+impl Default for MovementCommand {
+  fn default() -> Self {
+    <Self as rosidl_runtime_rs::Message>::from_rmw_message(super::msg::rmw::MovementCommand::default())
+  }
+}
+
+impl rosidl_runtime_rs::Message for MovementCommand {
+  type RmwMsg = super::msg::rmw::MovementCommand;
+
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
+    match msg_cow {
+      std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+        drone_id: msg.drone_id,
+        task_id: msg.task_id,
+        target_x: msg.target_x,
+        target_y: msg.target_y,
+        target_z: msg.target_z,
+        velocity_x: msg.velocity_x,
+        velocity_y: msg.velocity_y,
+        velocity_z: msg.velocity_z,
+      }),
+      std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+      drone_id: msg.drone_id,
+      task_id: msg.task_id,
+      target_x: msg.target_x,
+      target_y: msg.target_y,
+      target_z: msg.target_z,
+      velocity_x: msg.velocity_x,
+      velocity_y: msg.velocity_y,
+      velocity_z: msg.velocity_z,
+      })
+    }
+  }
+
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self {
+    Self {
+      drone_id: msg.drone_id,
+      task_id: msg.task_id,
+      target_x: msg.target_x,
+      target_y: msg.target_y,
+      target_z: msg.target_z,
+      velocity_x: msg.velocity_x,
+      velocity_y: msg.velocity_y,
+      velocity_z: msg.velocity_z,
     }
   }
 }

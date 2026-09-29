@@ -15,6 +15,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/TaskBid.msg"
   "msg/TaskAssignment.msg"
   "msg/SwarmStatus.msg"
+  "msg/ExperimentEvent.msg"
+  "msg/MovementCommand.msg"
 )
 
 ament_export_dependencies(rosidl_default_runtime)

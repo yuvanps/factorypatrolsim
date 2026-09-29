@@ -70,6 +70,7 @@ class DroneState(metaclass=Metaclass_DroneState):
         '_z',
         '_battery_level',
         '_state',
+        '_current_task_id',
         '_check_fields',
     ]
 
@@ -80,6 +81,7 @@ class DroneState(metaclass=Metaclass_DroneState):
         'z': 'float',
         'battery_level': 'float',
         'state': 'uint8',
+        'current_task_id': 'uint16',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
@@ -91,6 +93,7 @@ class DroneState(metaclass=Metaclass_DroneState):
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint16'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -108,6 +111,7 @@ class DroneState(metaclass=Metaclass_DroneState):
         self.z = kwargs.get('z', float())
         self.battery_level = kwargs.get('battery_level', float())
         self.state = kwargs.get('state', int())
+        self.current_task_id = kwargs.get('current_task_id', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -150,6 +154,8 @@ class DroneState(metaclass=Metaclass_DroneState):
         if self.battery_level != other.battery_level:
             return False
         if self.state != other.state:
+            return False
+        if self.current_task_id != other.current_task_id:
             return False
         return True
 
@@ -247,3 +253,18 @@ class DroneState(metaclass=Metaclass_DroneState):
             assert value >= 0 and value < 256, \
                 "The 'state' field must be an unsigned integer in [0, 255]"
         self._state = value
+
+    @builtins.property
+    def current_task_id(self):
+        """Message field 'current_task_id'."""
+        return self._current_task_id
+
+    @current_task_id.setter
+    def current_task_id(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, int), \
+                "The 'current_task_id' field must be of type 'int'"
+            assert value >= 0 and value < 65536, \
+                "The 'current_task_id' field must be an unsigned integer in [0, 65535]"
+        self._current_task_id = value

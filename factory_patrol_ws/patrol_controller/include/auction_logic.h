@@ -5,7 +5,7 @@
 #include <stdbool.h>
 
 #define MAX_TASKS 20
-#define MAX_DRONES 3
+#define MAX_DRONES 10
 
 #define DRONE_STATE_IDLE 0
 #define DRONE_STATE_PATROLLING 1
@@ -36,7 +36,10 @@ typedef struct {
     uint64_t last_seen_us;
 } DroneStateInfo;
 
-void auction_init(void);
+// num_drones: number of drones actually spawned for this experiment (IDs 0..num_drones-1).
+// Only these IDs can ever be eligible bidders; all other slots are permanently inactive.
+void auction_init(uint8_t num_drones, uint64_t now_us);
+uint8_t auction_get_num_drones(void);
 void auction_add_task(uint16_t id, float x, float y, float z, uint8_t priority, uint8_t type, float hover);
 void auction_update_drone_state(uint8_t drone_id, float x, float y, float z, float battery, uint8_t state, uint64_t timestamp);
 void auction_record_bid(uint16_t task_id, uint8_t drone_id, float cost);

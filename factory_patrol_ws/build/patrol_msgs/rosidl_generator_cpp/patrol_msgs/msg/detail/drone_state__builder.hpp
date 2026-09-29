@@ -24,16 +24,32 @@ namespace msg
 namespace builder
 {
 
+class Init_DroneState_current_task_id
+{
+public:
+  explicit Init_DroneState_current_task_id(::patrol_msgs::msg::DroneState & msg)
+  : msg_(msg)
+  {}
+  ::patrol_msgs::msg::DroneState current_task_id(::patrol_msgs::msg::DroneState::_current_task_id_type arg)
+  {
+    msg_.current_task_id = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::patrol_msgs::msg::DroneState msg_;
+};
+
 class Init_DroneState_state
 {
 public:
   explicit Init_DroneState_state(::patrol_msgs::msg::DroneState & msg)
   : msg_(msg)
   {}
-  ::patrol_msgs::msg::DroneState state(::patrol_msgs::msg::DroneState::_state_type arg)
+  Init_DroneState_current_task_id state(::patrol_msgs::msg::DroneState::_state_type arg)
   {
     msg_.state = std::move(arg);
-    return std::move(msg_);
+    return Init_DroneState_current_task_id(msg_);
   }
 
 private:

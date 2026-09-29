@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "px4_msgs/msg/detail/pwm_input__type_support.h"
 #include "px4_msgs/msg/detail/pwm_input__functions.h"
 #include "px4_msgs/msg/detail/pwm_input__struct.h"
+#include "px4_msgs/msg/detail/pwm_input__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus

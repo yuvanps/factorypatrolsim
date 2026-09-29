@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "px4_msgs/msg/detail/dataman_request__type_support.h"
 #include "px4_msgs/msg/detail/dataman_request__struct.h"
+#include "px4_msgs/msg/detail/dataman_request__type_support.h"
 #include "px4_msgs/msg/detail/dataman_request__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
 

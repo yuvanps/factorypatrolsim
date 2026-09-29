@@ -1,0 +1,41 @@
+# =============================================================================
+# Scenario: SAFETY STRESS (collision-avoidance stress test)
+# =============================================================================
+# Deliberately contains crossing patrol paths, tasks lying under other tasks'
+# transit routes, tasks next to the shared centre corridor, and a low inspection
+# inside a narrow rack aisle (see config/tasks/safety_stress.yaml).
+# Algorithms run with their own coordination strategy; collisions are a valid
+# (recorded) outcome here, not a test failure.
+#
+#   ./scripts/start_experiment.sh --scenario safety_stress --algorithm auction --drones 3
+
+scenario:
+  name: safety_stress
+  description: Crossing routes, stacked/nearby tasks and a constrained aisle to stress spatial coordination.
+  # Metrics this scenario is intended to support (computed in post-processing):
+  #   collision count, minimum inter-drone separation, near-collision count,
+  #   mission completion/failure, task completion rate, recovery time.
+
+experiment:
+  num_drones: 3          # used only if --drones / num_drones parameter is not given
+  random_seed: 42
+
+mission:
+  hover_time: 4.0
+  tasks_file: config/tasks/safety_stress.yaml
+
+drones:
+  initial_battery: 100.0
+  battery_drain_rate: 0.01   # percent per tick (100ms)
+
+metrics:
+  state_snapshot_interval: 0.2   # finer sampling for separation / near-collision analysis
+  mission_timeout_s: 600.0        # run summary is written as status=timeout if the mission
+                                  # (every task completed at least once) is not done by then
+
+simulation:
+  duration_seconds: 0
+  world: factory
+  # Static factory geometry used by algorithms that reason about obstacles (e.g. APF).
+  # Same file for every algorithm and scenario so comparisons use identical geometry.
+  obstacles_file: config/environment/factory_obstacles.yaml

@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 #include <math.h>
 
@@ -22,6 +23,8 @@
 #include <patrol_msgs/msg/task_bid.h>
 #include <patrol_msgs/msg/task_assignment.h>
 #include <patrol_msgs/msg/swarm_status.h>
+#include <patrol_msgs/msg/experiment_event.h>
+#include <patrol_msgs/msg/movement_command.h>
 
 #define TIMER_PERIOD_MS 100
 #define VEHICLE_CMD_DO_SET_MODE            176
@@ -39,25 +42,35 @@ static rcl_publisher_t drone_state_pub;
 static rcl_publisher_t task_bid_pub;
 static rcl_publisher_t task_assignment_pub;
 static rcl_publisher_t swarm_status_pub;
+static rcl_publisher_t experiment_event_pub; // instrumentation only (metrics), never read by any controller
 
 static rcl_subscription_t mission_sub;
 static rcl_subscription_t task_bid_sub;
 static rcl_subscription_t task_assignment_sub;
 static rcl_subscription_t drone_state_sub;
+static rcl_subscription_t movement_cmd_sub;
 
 static patrol_msgs__msg__Mission mission_msg;
 static patrol_msgs__msg__TaskBid bid_msg;
 static patrol_msgs__msg__TaskAssignment assignment_msg;
 static patrol_msgs__msg__DroneState peer_drone_state_msg;
+static patrol_msgs__msg__MovementCommand movement_cmd_msg;
 
 static rcl_timer_t timer;
 static uint8_t g_drone_id = 0;
+static uint8_t g_num_drones = 0; // Number of spawned drones (argv[2]); valid IDs are 0..g_num_drones-1
 static uint8_t g_state = DRONE_STATE_IDLE;
 
 static int setpoint_counter = 0;
 static bool mission_started = false;
 
-// Spawn coordinate offsets in global factory frame
+// Factory frame (shared by all drones, tasks and /ground_station/drone_state):
+//   x = Gazebo world X (east), y = Gazebo world Y (north), z = -Gazebo world Z (negative = above ground).
+// PX4 local NED (VehicleOdometry / TrajectorySetpoint) has its origin at each drone's own spawn point:
+//   NED[0] = north = Gazebo Y - spawn_y,  NED[1] = east = Gazebo X - spawn_x,  NED[2] = down.
+// So:  factory_x = NED[1] + spawn_x,  factory_y = NED[0] + spawn_y,  factory_z = NED[2].
+
+// Spawn coordinate offsets in global factory frame (Gazebo world X/Y of PX4_GZ_MODEL_POSE)
 static float spawn_x = 0.0f;
 static float spawn_y = 0.0f;
 
@@ -92,6 +105,22 @@ static bool initial_takeoff_done = false;
 // How long to stagger ascent per drone: drone_id * STAGGER_TICKS
 #define STAGGER_TICKS 30  // 3 seconds between each drone's ascent start
 
+// Navigation mode (argv[3]):
+//   internal (default) - built-in transit: per-drone altitude layers, centre-corridor routing,
+//                        proximity hold. Used by the auction baseline.
+//   external           - after a vertical takeoff, transit is driven by MovementCommands on
+//                        /swarm/movement_command (reactive algorithms, e.g. APF). Task allocation,
+//                        zone looping, arrival check (WAYPOINT_RADIUS), inspection hover,
+//                        low-battery return and failure handling are unchanged.
+static bool g_nav_external = false;
+#define NAV_EXTERNAL_FOLLOW 5            // nav_state used only in external mode
+#define MOVEMENT_CMD_TIMEOUT_US 500000ULL // stale command -> keep last setpoint (bounded hold)
+static bool external_airborne = false;    // external mode: initial vertical takeoff completed
+static bool movement_cmd_valid = false;
+static uint16_t movement_cmd_task_id = 0;
+static float movement_cmd_x = 0.0f, movement_cmd_y = 0.0f, movement_cmd_z = 0.0f;
+static uint64_t movement_cmd_rx_us = 0;
+
 static uint64_t timestamp_us(void) {
     struct timespec ts;
     clock_gettime(CLOCK_REALTIME, &ts);
@@ -116,9 +145,18 @@ static void publish_trajectory_setpoint(void) {
     px4_msgs__msg__TrajectorySetpoint msg;
     px4_msgs__msg__TrajectorySetpoint__init(&msg);
     msg.timestamp = timestamp_us();
-    // Transform global factory target to PX4 local NED frame:
-    msg.position[0] = target_x - spawn_x;
-    msg.position[1] = target_y - spawn_y;
+
+    // Safety: clamp factory-frame targets within wall bounds (3m margin)
+    float safe_x = target_x;
+    float safe_y = target_y;
+    if (safe_x > 12.0f) safe_x = 12.0f;
+    if (safe_x < -12.0f) safe_x = -12.0f;
+    if (safe_y > 7.0f) safe_y = 7.0f;
+    if (safe_y < -7.0f) safe_y = -7.0f;
+
+    // Transform clamped global factory target to PX4 local NED frame (north, east, down):
+    msg.position[0] = safe_y - spawn_y;
+    msg.position[1] = safe_x - spawn_x;
     msg.position[2] = target_z;
     msg.velocity[0] = NAN; msg.velocity[1] = NAN; msg.velocity[2] = NAN;
     msg.acceleration[0] = NAN; msg.acceleration[1] = NAN; msg.acceleration[2] = NAN;
@@ -145,9 +183,9 @@ static void publish_vehicle_command(uint16_t command, float param1, float param2
 
 static void odometry_callback(const void * msgin) {
     const px4_msgs__msg__VehicleOdometry * msg = (const px4_msgs__msg__VehicleOdometry *)msgin;
-    // Transform PX4 local odometry to global factory frame:
-    current_x = msg->position[0] + spawn_x;
-    current_y = msg->position[1] + spawn_y;
+    // Transform PX4 local NED odometry (origin = this drone's spawn) to global factory frame:
+    current_x = msg->position[1] + spawn_x; // east  -> factory x
+    current_y = msg->position[0] + spawn_y; // north -> factory y
     current_z = msg->position[2];
     position_received = true;
     auction_update_drone_state(g_drone_id, current_x, current_y, current_z, current_battery, g_state, timestamp_us());
@@ -155,9 +193,22 @@ static void odometry_callback(const void * msgin) {
 
 static void peer_drone_state_callback(const void * msgin) {
     const patrol_msgs__msg__DroneState * msg = (const patrol_msgs__msg__DroneState *)msgin;
-    if (msg->drone_id != g_drone_id && msg->drone_id < MAX_DRONES && msg->battery_level > 0.0f) {
+    if (msg->drone_id != g_drone_id && msg->drone_id < g_num_drones && msg->battery_level > 0.0f) {
         auction_update_drone_state(msg->drone_id, msg->x, msg->y, msg->z, msg->battery_level, msg->state, timestamp_us());
     }
+}
+
+static void movement_command_callback(const void * msgin) {
+    const patrol_msgs__msg__MovementCommand * msg = (const patrol_msgs__msg__MovementCommand *)msgin;
+    if (msg->drone_id != g_drone_id) return;
+    // Reject malformed commands outright (defence in depth; the algorithm already guarantees finite values)
+    if (!isfinite(msg->target_x) || !isfinite(msg->target_y) || !isfinite(msg->target_z)) return;
+    movement_cmd_task_id = msg->task_id;
+    movement_cmd_x = msg->target_x;
+    movement_cmd_y = msg->target_y;
+    movement_cmd_z = msg->target_z;
+    movement_cmd_rx_us = timestamp_us();
+    movement_cmd_valid = true;
 }
 
 static void mission_callback(const void * msgin) {
@@ -169,7 +220,7 @@ static void mission_callback(const void * msgin) {
     // Reset battery to full for the new mission run
     current_battery = 100.0f;
 
-    auction_init();
+    auction_init(g_num_drones, timestamp_us());
 
     // Force-register self as healthy at 100% so stale peer messages can't poison our own slot
     auction_update_drone_state(g_drone_id, current_x, current_y, current_z, current_battery, DRONE_STATE_IDLE, timestamp_us());
@@ -196,33 +247,35 @@ static void task_bid_callback(const void * msgin) {
 }
 
 static float get_patrol_altitude(uint8_t drone_id) {
-    // Inspection hover altitudes — well below transit layers
-    if (drone_id == 0) return -2.5f;
-    if (drone_id == 1) return -3.5f;
-    return -4.5f; // Drone 2
+    // Formulaic: each drone gets its own patrol hover layer
+    // Drone 0: -2.5, Drone 1: -3.5, Drone 2: -4.5, Drone 3: -5.5, ...
+    return -2.5f - (drone_id * 1.0f);
 }
 
 // Each drone has a UNIQUE transit altitude above the tallest machines (~4m).
-// Factory ceiling is 12m. Use tight layering with 0.5m separation to stay
-// well clear of machines while remaining comfortably below the ceiling.
-// Drone 0: -5.0m (5m AGL), Drone 1: -5.5m (5.5m AGL), Drone 2: -6.0m (6m AGL)
+// All transit routes meet at the centre corridor (0,0), so layers are 1.25m apart
+// (0.5m layering produced ~1.4m near-misses there; PX4 altitude tracking uses ~0.3m of
+// the gap). Layers are compressed only if needed to keep the top layer at or below 10m
+// (factory ceiling barrier is at 12m).
+// <=5 drones: Drone 0: -5.0m, Drone 1: -6.25m, Drone 2: -7.5m, ... Drone 4: -10.0m.  10 drones: 0.56m.
+#define TRANSIT_BASE_ALT   -5.0f
+#define TRANSIT_TOP_ALT   -10.0f
+#define TRANSIT_LAYER_SEP   1.25f
 static float get_transit_altitude(uint8_t drone_id) {
-    if (drone_id == 0) return -5.0f;
-    if (drone_id == 1) return -5.5f;
-    return -6.0f; // Drone 2
+    float sep = TRANSIT_LAYER_SEP;
+    if (g_num_drones > 1) {
+        float max_sep = (TRANSIT_BASE_ALT - TRANSIT_TOP_ALT) / (float)(g_num_drones - 1);
+        if (max_sep < sep) sep = max_sep;
+    }
+    return TRANSIT_BASE_ALT - (drone_id * sep);
 }
 
 // Returns true if any peer drone is within SAFE_DISTANCE_SQ of this drone's target.
 // If so, the drone should hold position (not move toward target).
 // Priority rule: lower drone ID has right-of-way and keeps moving.
 static bool check_peer_proximity(void) {
-    uint8_t count = 0;
-    AuctionTask* unused = auction_get_tasks(&count); (void)unused;
-    
-    DroneStateInfo* peers = NULL; // We use auction_get_tasks as a proxy; read peers via auction
-    // Access peers via auction_update_drone_state data — stored internally.
-    // We reuse the exported DroneStateInfo through a helper we'll call:
-    for (uint8_t d = 0; d < MAX_DRONES; d++) {
+    // Peer positions come from /ground_station/drone_state (factory frame), stored by the auction module
+    for (uint8_t d = 0; d < g_num_drones; d++) {
         if (d == g_drone_id) continue;
         if (!auction_is_drone_healthy(d)) continue;
         
@@ -306,20 +359,81 @@ static void start_next_zone(void) {
     }
 }
 
+// External-mode transit (nav_state 1 -> NAV_EXTERNAL_FOLLOW -> 4). nav_state 0 (stagger) and
+// 4 (hold at the task point + inspection hover) are shared with internal mode.
+static void update_external_navigation(const AuctionTask *t, float task_z) {
+    if (nav_state == 1) {
+        // Initial TAKEOFF only: climb vertically above the spawn point to the task altitude,
+        // then hand transit over to the external algorithm. Later zones start airborne.
+        if (!external_airborne) {
+            target_z = task_z;
+            uint32_t ascend_elapsed = setpoint_counter - task_start_tick;
+            // 0.3 m: hand over at the inspection altitude, not at rack/partition-top height
+            if (fabsf(current_z - task_z) >= 0.3f && ascend_elapsed <= 150) return;
+            external_airborne = true;
+            printf("[Drone %d] Takeoff complete (z=%.1f). Following external movement commands.\n",
+                   g_drone_id, current_z);
+        }
+        nav_state = NAV_EXTERNAL_FOLLOW;
+    }
+
+    // FOLLOW: track the latest command for THIS task. If it is missing, stale or for another
+    // task, keep the previous setpoint (at most one short command horizon away) until a new one arrives.
+    if (movement_cmd_valid && movement_cmd_task_id == current_task_id &&
+        timestamp_us() - movement_cmd_rx_us < MOVEMENT_CMD_TIMEOUT_US) {
+        target_x = movement_cmd_x;
+        target_y = movement_cmd_y;
+        target_z = movement_cmd_z;
+    }
+
+    // Arrival uses the same criterion as internal mode; from here the controller holds the
+    // exact task point (nav_state 4), so residual repulsion cannot make the drone oscillate.
+    float dx = t->x - current_x, dy = t->y - current_y, dz = task_z - current_z;
+    if (sqrtf(dx*dx + dy*dy + dz*dz) < WAYPOINT_RADIUS) {
+        nav_state = 4;
+        target_x = t->x; target_y = t->y; target_z = task_z;
+        printf("[Drone %d] Reached task %d. Inspecting.\n", g_drone_id, current_task_id);
+    }
+}
+
+// Instrumentation: announce a task completion (the moment t->completed is set) on
+// /experiment/events so the metrics collector counts exactly what the mission logic
+// completed. Publish-only; it does not influence navigation or allocation.
+static void publish_task_completed(uint16_t task_id, float hover_s) {
+    patrol_msgs__msg__ExperimentEvent ev;
+    patrol_msgs__msg__ExperimentEvent__init(&ev);
+    ev.timestamp = timestamp_us() * 1000ULL; // ns, same clock as the other experiment events
+    char data[96];
+    snprintf(data, sizeof(data), "{\"drone_id\": %d, \"task_id\": %d, \"hover_s\": %.2f}",
+             g_drone_id, task_id, hover_s);
+    rosidl_runtime_c__String__assign(&ev.event_type, "task_completed");
+    rosidl_runtime_c__String__assign(&ev.data, data);
+    (void)rcl_publish(&experiment_event_pub, &ev, NULL);
+    patrol_msgs__msg__ExperimentEvent__fini(&ev);
+}
+
 static void update_task_execution(void) {
     if (!position_received || !mission_started) return;
 
-    // ---- LOW BATTERY: Return to base using transit lane ----
+    // ---- LOW BATTERY: Return to base via center corridor ----
     if (g_state == DRONE_STATE_RETURNING) {
         float transit_z = get_transit_altitude(g_drone_id);
         if (nav_state == 0) {
+            // Ascend to transit altitude
             target_z = transit_z;
             if (fabsf(current_z - transit_z) < 0.5f) nav_state = 1;
         } else if (nav_state == 1) {
+            // Fly to factory center corridor first
+            target_x = 0.0f; target_y = 0.0f; target_z = transit_z;
+            float dx = target_x - current_x; float dy = target_y - current_y;
+            if (sqrtf(dx*dx + dy*dy) < 1.5f) nav_state = 2;
+        } else if (nav_state == 2) {
+            // Fly from center to spawn XY at transit altitude
             target_x = spawn_x; target_y = spawn_y; target_z = transit_z;
             float dx = target_x - current_x; float dy = target_y - current_y;
-            if (sqrtf(dx*dx + dy*dy) < 0.5f) nav_state = 2;
-        } else if (nav_state == 2) {
+            if (sqrtf(dx*dx + dy*dy) < 0.5f) nav_state = 3;
+        } else if (nav_state == 3) {
+            // Descend at spawn
             target_x = spawn_x; target_y = spawn_y;
             target_z = get_patrol_altitude(g_drone_id);
         }
@@ -356,29 +470,52 @@ static void update_task_execution(void) {
             printf("[Drone %d] Ascending to transit %.1fm\n", g_drone_id, -transit_z);
         }
         return; // Stay grounded during stagger wait
+    } else if (g_nav_external && nav_state != 4) {
+        update_external_navigation(t, task_z);
     } else if (nav_state == 1) {
-        // ASCEND: Straight up to this drone's exclusive transit altitude
-        // Hold horizontal position during ascent to avoid drifting into obstacles
-        target_x = current_x;
-        target_y = current_y;
+        // ASCEND: Go up to transit altitude while holding horizontal position.
+        // DO NOT track current_x/current_y — that follows drift and prevents
+        // PX4 position hold. Leave target_x/target_y from the previous state
+        // (spawn position for initial takeoff, or last task position for zone loops).
         target_z = transit_z;
-        // Transition to TRANSLATE when at transit altitude, OR after 15s timeout
+        // Transition to TRANSIT_CENTER when near transit altitude, OR after 15s timeout
         uint32_t ascend_elapsed = setpoint_counter - task_start_tick;
-        if (fabsf(current_z - transit_z) < 0.8f || ascend_elapsed > 150) {
+        if (fabsf(current_z - transit_z) < 1.2f || ascend_elapsed > 150) {
             nav_state = 2;
             printf("[Drone %d] Transit altitude reached (z=%.1f, target=%.1f). Translating.\n",
                    g_drone_id, current_z, transit_z);
         }
     } else if (nav_state == 2) {
-        // TRANSLATE: Horizontal flight at transit altitude — with proximity hold
+        // TRANSIT_CENTER: Fly to factory center corridor (0,0) at transit altitude
+        // This avoids long diagonal flights near walls where PX4 overshoot causes collisions
         if (check_peer_proximity()) {
-            target_z = transit_z; // Hold altitude, don't move horizontally
+            target_z = transit_z;
+            return;
+        }
+        target_x = 0.0f; target_y = 0.0f; target_z = transit_z;
+        float h_dx = target_x - current_x; float h_dy = target_y - current_y;
+        if (sqrtf(h_dx*h_dx + h_dy*h_dy) < 1.5f) {
+            nav_state = 3;
+            printf("[Drone %d] Reached center corridor. Heading to task %d at (%.1f,%.1f)\n",
+                   g_drone_id, current_task_id, t->x, t->y);
+        }
+    } else if (nav_state == 3) {
+        // TRANSIT_TARGET: Fly from center corridor to task XY at transit altitude
+        if (check_peer_proximity()) {
+            target_z = transit_z;
             return;
         }
         target_x = t->x; target_y = t->y; target_z = transit_z;
         float h_dx = target_x - current_x; float h_dy = target_y - current_y;
-        if (sqrtf(h_dx*h_dx + h_dy*h_dy) < 0.5f) nav_state = 3;
-    } else if (nav_state == 3) {
+        if (sqrtf(h_dx*h_dx + h_dy*h_dy) < 0.5f) {
+            nav_state = 4;
+            // Switch to the inspection point now, so the arrival check below measures distance
+            // to the task (not to the transit-altitude point we are already at).
+            target_z = task_z;
+            printf("[Drone %d] Above task %d. Descending to %.1fm\n",
+                   g_drone_id, current_task_id, -task_z);
+        }
+    } else if (nav_state == 4) {
         // DESCEND: Drop to inspection point
         target_x = t->x; target_y = t->y; target_z = task_z;
     }
@@ -388,7 +525,7 @@ static void update_task_execution(void) {
     float dz = target_z - current_z;
     float distance = sqrtf(dx*dx + dy*dy + dz*dz);
 
-    if (distance < WAYPOINT_RADIUS && nav_state == 3) {
+    if (distance < WAYPOINT_RADIUS && nav_state == 4) {
         g_state = DRONE_STATE_INSPECTING;
         hover_timer_ms += TIMER_PERIOD_MS;
         float req_hover = t->hover_duration > 0.1f ? t->hover_duration : 3.0f;
@@ -396,6 +533,7 @@ static void update_task_execution(void) {
             printf("[Drone %d] Inspection done at Task %d (%.1fs). Cycling zones.\n",
                    g_drone_id, current_task_id, req_hover);
             t->active = false; t->completed = true;
+            publish_task_completed(current_task_id, req_hover);
             has_active_task = false; hover_timer_ms = 0;
             g_state = DRONE_STATE_IDLE;
             start_next_zone(); // Immediately begin next zone — no waiting for Drone 0
@@ -523,17 +661,38 @@ static void timer_callback(rcl_timer_t *timer_handle, int64_t last_call_time) {
     ds.z = current_z;
     ds.battery_level = current_battery;
     ds.state = g_state;
+    ds.current_task_id = has_active_task ? current_task_id : 0;
     (void)rcl_publish(&drone_state_pub, &ds, NULL);
 }
 
 int main(int argc, char const * const * argv) {
-    if (argc > 1) {
-        g_drone_id = atoi(argv[1]);
+    if (argc < 3) {
+        fprintf(stderr, "Usage: patrol_controller <drone_id> <num_drones> [internal|external]\n");
+        return 1;
     }
-    
+    if (argc >= 4 && argv[3][0] != '-') {
+        if (strcmp(argv[3], "external") == 0) {
+            g_nav_external = true;
+        } else if (strcmp(argv[3], "internal") != 0) {
+            fprintf(stderr, "Invalid navigation mode '%s' (expected internal|external)\n", argv[3]);
+            return 1;
+        }
+    }
+    int arg_id = atoi(argv[1]);
+    int arg_num = atoi(argv[2]);
+    if (arg_num < 1 || arg_num > MAX_DRONES || arg_id < 0 || arg_id >= arg_num) {
+        fprintf(stderr, "Invalid arguments: drone_id=%d num_drones=%d (need 1 <= num_drones <= %d, 0 <= drone_id < num_drones)\n",
+                arg_id, arg_num, MAX_DRONES);
+        return 1;
+    }
+    g_drone_id = (uint8_t)arg_id;
+    g_num_drones = (uint8_t)arg_num;
+
     // Set spawn offset matching start_swarm.sh coordinates
-    spawn_x = 0.0f;
-    spawn_y = -(g_drone_id * 2.0f + 1.0f); // Drone 0: -1.0, Drone 1: -3.0, Drone 2: -5.0
+    // Drones spawn in north area (y=7), spaced 4m apart along X starting at x=-8
+    // Clearances: north wall 2.85m, loading dock 4m, partition 1m north
+    spawn_x = (g_drone_id * 4.0f) - 8.0f;
+    spawn_y = 7.0f;
     
     target_x = spawn_x;
     target_y = spawn_y;
@@ -549,8 +708,9 @@ int main(int argc, char const * const * argv) {
 
     printf("====================================\n");
     printf("     FACTORY PATROL CONTROLLER      \n");
-    printf("     DRONE ID: %d                    \n", g_drone_id);
+    printf("     DRONE ID: %d / %d               \n", g_drone_id, g_num_drones);
     printf("     SPAWN: (%.1f, %.1f)             \n", spawn_x, spawn_y);
+    printf("     NAV MODE: %s                   \n", g_nav_external ? "external" : "internal");
     printf("     STATUS: Grounded (Ready)       \n");
     printf("====================================\n");
 
@@ -568,6 +728,7 @@ int main(int argc, char const * const * argv) {
     rclc_publisher_init(&task_bid_pub, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(patrol_msgs, msg, TaskBid), "/swarm/task_bid", &rel_qos_profile);
     rclc_publisher_init(&task_assignment_pub, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(patrol_msgs, msg, TaskAssignment), "/swarm/task_assignment", &rel_qos_profile);
     rclc_publisher_init(&swarm_status_pub, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(patrol_msgs, msg, SwarmStatus), "/ground_station/swarm_status", &rel_qos_profile);
+    rclc_publisher_init(&experiment_event_pub, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(patrol_msgs, msg, ExperimentEvent), "/experiment/events", &rel_qos_profile);
 
     rclc_timer_init_default(&timer, &support, RCL_MS_TO_NS(TIMER_PERIOD_MS), timer_callback);
     
@@ -576,8 +737,11 @@ int main(int argc, char const * const * argv) {
     rclc_subscription_init(&task_bid_sub, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(patrol_msgs, msg, TaskBid), "/swarm/task_bid", &rel_qos_profile);
     rclc_subscription_init(&task_assignment_sub, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(patrol_msgs, msg, TaskAssignment), "/swarm/task_assignment", &rel_qos_profile);
     rclc_subscription_init(&drone_state_sub, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(patrol_msgs, msg, DroneState), "/ground_station/drone_state", &rel_qos_profile);
+    if (g_nav_external) {
+        rclc_subscription_init(&movement_cmd_sub, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(patrol_msgs, msg, MovementCommand), "/swarm/movement_command", &rel_qos_profile);
+    }
 
-    rclc_executor_init(&executor, &support.context, 6, &allocator);
+    rclc_executor_init(&executor, &support.context, 7, &allocator);
     rclc_executor_add_timer(&executor, &timer);
     
     px4_msgs__msg__VehicleOdometry__init(&odometry_msg);
@@ -596,7 +760,12 @@ int main(int argc, char const * const * argv) {
     patrol_msgs__msg__DroneState__init(&peer_drone_state_msg);
     rclc_executor_add_subscription(&executor, &drone_state_sub, &peer_drone_state_msg, &peer_drone_state_callback, ON_NEW_DATA);
 
-    auction_init();
+    if (g_nav_external) {
+        patrol_msgs__msg__MovementCommand__init(&movement_cmd_msg);
+        rclc_executor_add_subscription(&executor, &movement_cmd_sub, &movement_cmd_msg, &movement_command_callback, ON_NEW_DATA);
+    }
+
+    auction_init(g_num_drones, timestamp_us());
 
     while (rcl_context_is_valid(&support.context)) {
         rclc_executor_spin_some(&executor, RCL_MS_TO_NS(100));

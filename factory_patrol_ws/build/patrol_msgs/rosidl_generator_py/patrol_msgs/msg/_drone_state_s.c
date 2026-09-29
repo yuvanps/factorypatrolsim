@@ -104,6 +104,15 @@ bool patrol_msgs__msg__drone_state__convert_from_py(PyObject * _pymsg, void * _r
     ros_message->state = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
+  {  // current_task_id
+    PyObject * field = PyObject_GetAttrString(_pymsg, "current_task_id");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->current_task_id = (uint16_t)PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -186,6 +195,17 @@ PyObject * patrol_msgs__msg__drone_state__convert_to_py(void * raw_ros_message)
     field = PyLong_FromUnsignedLong(ros_message->state);
     {
       int rc = PyObject_SetAttrString(_pymessage, "state", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // current_task_id
+    PyObject * field = NULL;
+    field = PyLong_FromUnsignedLong(ros_message->current_task_id);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "current_task_id", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

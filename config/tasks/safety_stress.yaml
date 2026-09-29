@@ -1,0 +1,79 @@
+# =============================================================================
+# SAFETY STRESS task set (collision-avoidance stress scenario)
+# =============================================================================
+# Coordinates are in the global factory frame = Gazebo world frame:
+#   x = Gazebo X (east), y = Gazebo Y (north), z = -height (negative = above ground).
+#
+# Tasks 101-106 are the ORIGINAL patrol layout, kept verbatim. Under the
+# controller's centre-corridor routing it contains built-in route conflicts:
+#   - 101/102/103 are collinear on y=0: the centre->101 leg passes directly over
+#     drones inspecting / climbing / descending at 102 and 103.
+#   - 104 lies ~1.9m from the centre->105 leg.
+# Added stressors:
+#   - 107: inspection right beside the shared centre corridor (0,0), 1m above the
+#     partition top, just below the lowest transit layer (5m).
+#   - 108: low inspection INSIDE rack aisle 2 (2.1m wide, below 3.5m rack tops).
+#
+# Factory layout: rack rows at x = -12, -9.5, -7, -4.5 (y -6..2, 3.5m tall);
+# aisles at x = -10.75, -8.25, -5.75; partition at x=0 (y -4..6, 3.5m tall);
+# CNC (5,5), lathe (10,5), workbench (7,0), conveyor (8,-4).
+
+tasks:
+  # --- Storage Area (Hover above the aisles) ---
+  - id: 101
+    position: [-10.75, 0.0, -4.0]
+    priority: 1
+    inspection_type: 0
+    hover_duration: 4.0
+    label: "Storage Aisle 1"
+
+  - id: 102
+    position: [-8.25, 0.0, -4.0]
+    priority: 1
+    inspection_type: 0
+    hover_duration: 4.0
+    label: "Storage Aisle 2"
+
+  - id: 103
+    position: [-5.75, 0.0, -4.0]
+    priority: 1
+    inspection_type: 0
+    hover_duration: 4.0
+    label: "Storage Aisle 3"
+
+  # --- Assembly / Machine Area ---
+  - id: 104
+    position: [5.0, 4.0, -3.5]
+    priority: 1
+    inspection_type: 0
+    hover_duration: 4.0
+    label: "CNC Machine"
+
+  - id: 105
+    position: [10.0, 4.0, -3.5]
+    priority: 1
+    inspection_type: 0
+    hover_duration: 4.0
+    label: "Lathe Machine"
+
+  - id: 106
+    position: [7.0, -4.0, -3.5]
+    priority: 1
+    inspection_type: 0
+    hover_duration: 4.0
+    label: "Assembly Area Center"
+
+  # --- Added stressors ---
+  - id: 107
+    position: [1.5, 0.5, -4.5]
+    priority: 1
+    inspection_type: 0
+    hover_duration: 4.0
+    label: "Partition Top (beside centre corridor)"
+
+  - id: 108
+    position: [-8.25, -3.0, -2.0]
+    priority: 1
+    inspection_type: 0
+    hover_duration: 4.0
+    label: "Storage Aisle 2 Low (inside aisle)"

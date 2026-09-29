@@ -1,0 +1,267 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-8b78375350b8bfc5b01c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				},
+				{
+					"build" : "patrol_msgs__py",
+					"jsonFile" : "directory-patrol_msgs__py-11773e2475a7492d0779.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "patrol_msgs__rs",
+					"jsonFile" : "directory-patrol_msgs__rs-28785ee7e48058ab85c0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__rs",
+					"targetIndexes" : 
+					[
+						14
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "patrol_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_patrol_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_patrol_msgs_egg-a039e3ff63d4f0cb3a38.json",
+					"name" : "ament_cmake_python_build_patrol_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_patrol_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_patrol_msgs-0f659d27fe379afab1af.json",
+					"name" : "ament_cmake_python_symlink_patrol_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs-fee3dc28ebc38bfca909.json",
+					"name" : "patrol_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs__cpp-9a74d2d2a0f4ac5d9a3f.json",
+					"name" : "patrol_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "patrol_msgs__py::@b037179ee8d9e6de41b5",
+					"jsonFile" : "target-patrol_msgs__py-3c4073a112724ac24dce.json",
+					"name" : "patrol_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs__rosidl_generator_c-38b0784a4a3bbe4353a7.json",
+					"name" : "patrol_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs__rosidl_generator_py-58a92f8ef7f50fe24957.json",
+					"name" : "patrol_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs__rosidl_generator_type_description-49b8427f2d98aca3f0aa.json",
+					"name" : "patrol_msgs__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs__rosidl_typesupport_c-22c0be737db8c34e9fa9.json",
+					"name" : "patrol_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs__rosidl_typesupport_cpp-946295c44b502de59974.json",
+					"name" : "patrol_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs__rosidl_typesupport_fastrtps_c-250370fe29438982d5fd.json",
+					"name" : "patrol_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs__rosidl_typesupport_fastrtps_cpp-cf19b2aa98ad6bc6b5b7.json",
+					"name" : "patrol_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs__rosidl_typesupport_introspection_c-de7052b9e875e13ca0bf.json",
+					"name" : "patrol_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs__rosidl_typesupport_introspection_cpp-81d9007be3103d3e5707.json",
+					"name" : "patrol_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "patrol_msgs__rs::@5e6fdb499b9488f2ad3f",
+					"jsonFile" : "target-patrol_msgs__rs-c0cfed9cf8ca8ead4cf7.json",
+					"name" : "patrol_msgs__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs_s__rosidl_typesupport_c-2e29e6c2722d6844899f.json",
+					"name" : "patrol_msgs_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs_s__rosidl_typesupport_fastrtps_c-0a4af8d592e275c41436.json",
+					"name" : "patrol_msgs_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs_s__rosidl_typesupport_introspection_c-b6e7198e65bccf4215f2.json",
+					"name" : "patrol_msgs_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "patrol_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-patrol_msgs_uninstall-ff0cb9a878fcb9469e13.json",
+					"name" : "patrol_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-1474dd32feb8d20aea85.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs",
+		"source" : "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

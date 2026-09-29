@@ -1,0 +1,44 @@
+# =============================================================================
+# Scenario: BENCHMARK (normal / nominal patrol mission)
+# =============================================================================
+# Measures coordination / task-allocation performance. The task layout is chosen
+# so that no task lies under another task's recurring transit route (see
+# config/tasks/benchmark.yaml), i.e. the nominal mission has no geometry-induced
+# mid-air conflicts. Collision avoidance is exercised in safety_stress.yaml instead.
+#
+# The algorithm is NOT part of the scenario — select it independently:
+#   ./scripts/start_experiment.sh --scenario benchmark --algorithm auction --drones 3
+#
+# Values here can be overridden by ROS 2 parameters on the command line.
+
+scenario:
+  name: benchmark
+  description: Nominal factory patrol; tasks spread over racks and machines, no crossing routes.
+  # Metrics this scenario is intended to support (computed in post-processing):
+  #   mission completion time, task completion rate/latency, total and per-drone
+  #   distance, battery consumption, workload distribution, allocation/reassignment,
+  #   computation/allocation time.
+
+experiment:
+  num_drones: 3          # used only if --drones / num_drones parameter is not given
+  random_seed: 42
+
+mission:
+  hover_time: 4.0        # default hover duration at each waypoint (seconds)
+  tasks_file: config/tasks/benchmark.yaml
+
+drones:
+  initial_battery: 100.0
+  battery_drain_rate: 0.01   # percent per tick (100ms)
+
+metrics:
+  state_snapshot_interval: 1.0   # seconds between drone_states.csv rows
+  mission_timeout_s: 600.0        # run summary is written as status=timeout if the mission
+                                  # (every task completed at least once) is not done by then
+
+simulation:
+  duration_seconds: 0        # 0 = run indefinitely
+  world: factory
+  # Static factory geometry used by algorithms that reason about obstacles (e.g. APF).
+  # Same file for every algorithm and scenario so comparisons use identical geometry.
+  obstacles_file: config/environment/factory_obstacles.yaml

@@ -1,0 +1,42 @@
+# =============================================================================
+# APF (Artificial Potential Field) parameters
+# =============================================================================
+# Scenario-independent: the same values are used for every scenario so that
+# comparisons against auction / PSO are not tuned per run. Change them only for
+# a dedicated parameter-sensitivity experiment. Any value can be overridden on
+# the command line as a ROS 2 parameter, e.g.  -p apf.goal_gain:=0.7
+#
+# Units: metres, seconds, m/s. The APF output is a velocity (m/s).
+# Origin of each default is noted: [PY] = APF_REF_ROS2JAZZY_PY, [CPP] = APF_REF_ROS2HUMBLE_C++.
+
+apf:
+  # --- Attraction:  F_att = goal_gain * (g - p), saturated at max_velocity ---
+  goal_gain: 0.5                 # 1/s  [CPP] k_position = 0.5
+  max_velocity: 1.5              # m/s  [CPP] max_vel = 1.5 (limit on |F_att| and on |v_cmd|)
+
+  # --- Obstacle repulsion (Khatib):  k_obs (1/d - 1/rho_obs) / d^2, for d < rho_obs ---
+  obstacle_repulsion_gain: 0.5   # [PY] REPULSE_GAIN-style (1/d - 1/d0) law, rescaled for a
+                                 #      1.5 m/s drone; balances max attraction at ~0.6 m clearance
+  obstacle_influence_radius: 1.5 # m    [PY] REPULSE_RANGE = 0.5 m at 0.4 m/s, scaled up for 1.5 m/s
+
+  # --- Drone-drone repulsion (Khatib):  k_drone (1/d - 1/rho_drone) / d^2, for d < rho_drone ---
+  drone_repulsion_gain: 10.0     # balances max attraction at ~1.5 m separation (x500 span ~0.7 m)
+  drone_influence_radius: 3.0    # m    [CPP] safe_distance = 3.0
+
+  # --- Goal handling ---
+  goal_tolerance: 1.2            # m    capture radius: inside it the command is the exact goal
+                                 #      (no repulsion). Equal to the controller's WAYPOINT_RADIUS,
+                                 #      which triggers INSPECTING for every algorithm.
+
+  # --- Numerics / command generation ---
+  min_distance: 0.1              # m    distance floor in the repulsion terms (d ~ 0 safety) [CPP] d > 0.01
+  velocity_smoothing: 0.2        #      v = (1-a) v_new + a v_prev   [CPP] damping = 0.2 ([PY] alpha filter)
+  command_horizon: 1.0           # s    position setpoint = p + v * horizon (tracked by PX4 position control)
+  update_rate_hz: 10.0           # Hz   APF loop rate ([PY]/[CPP] run at 20 Hz; telemetry here is 10 Hz)
+  heartbeat_timeout: 5.0         # s    a drone silent this long is not an APF neighbour
+                                 #      (same 5 s timeout the controllers use for failure detection)
+
+  # --- Diagnostics (written to experiment_events.jsonl via the metrics collector) ---
+  diagnostics_interval: 1.0      # s    per-drone force magnitudes + min separation
+  stall_speed: 0.1               # m/s  |v| below this while outside goal_tolerance ...
+  stall_time: 5.0                # s    ... for this long -> one 'apf_stall' event (local minimum)

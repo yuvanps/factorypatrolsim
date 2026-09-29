@@ -75,6 +75,8 @@ include /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/pa
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py/CMakeFiles/patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_task_bid.py
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py/CMakeFiles/patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_task_assignment.py
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py/CMakeFiles/patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_swarm_status.py
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py/CMakeFiles/patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_experiment_event.py
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py/CMakeFiles/patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_movement_command.py
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py/CMakeFiles/patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/__init__.py
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py/CMakeFiles/patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_task_s.c
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py/CMakeFiles/patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_mission_s.c
@@ -82,6 +84,8 @@ include /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/pa
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py/CMakeFiles/patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_task_bid_s.c
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py/CMakeFiles/patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_task_assignment_s.c
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py/CMakeFiles/patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_swarm_status_s.c
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py/CMakeFiles/patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py/CMakeFiles/patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c
 
 rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_py/__init__.py
@@ -102,6 +106,8 @@ rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.
 rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/patrol_msgs/msg/TaskBid.idl
 rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/patrol_msgs/msg/TaskAssignment.idl
 rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/patrol_msgs/msg/SwarmStatus.idl
+rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/patrol_msgs/msg/ExperimentEvent.idl
+rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/patrol_msgs/msg/MovementCommand.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py && /usr/bin/python3 /opt/ros/jazzy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -129,6 +135,12 @@ rosidl_generator_py/patrol_msgs/msg/_task_assignment.py: rosidl_generator_py/pat
 rosidl_generator_py/patrol_msgs/msg/_swarm_status.py: rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/patrol_msgs/msg/_swarm_status.py
 
+rosidl_generator_py/patrol_msgs/msg/_experiment_event.py: rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/patrol_msgs/msg/_experiment_event.py
+
+rosidl_generator_py/patrol_msgs/msg/_movement_command.py: rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/patrol_msgs/msg/_movement_command.py
+
 rosidl_generator_py/patrol_msgs/msg/__init__.py: rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/patrol_msgs/msg/__init__.py
 
@@ -150,6 +162,12 @@ rosidl_generator_py/patrol_msgs/msg/_task_assignment_s.c: rosidl_generator_py/pa
 rosidl_generator_py/patrol_msgs/msg/_swarm_status_s.c: rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/patrol_msgs/msg/_swarm_status_s.c
 
+rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c: rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c
+
+rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c: rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c
+
 patrol_msgs__py: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/patrol_msgs__py/CMakeFiles/patrol_msgs__py
 patrol_msgs__py: rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_c.c
 patrol_msgs__py: rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
@@ -157,8 +175,12 @@ patrol_msgs__py: rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesu
 patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/__init__.py
 patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_drone_state.py
 patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_drone_state_s.c
+patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_experiment_event.py
+patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c
 patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_mission.py
 patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_mission_s.c
+patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_movement_command.py
+patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c
 patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_swarm_status.py
 patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_swarm_status_s.c
 patrol_msgs__py: rosidl_generator_py/patrol_msgs/msg/_task.py

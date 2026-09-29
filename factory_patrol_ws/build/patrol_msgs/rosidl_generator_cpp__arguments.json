@@ -8,7 +8,9 @@
     "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/DroneState.idl",
     "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/TaskBid.idl",
     "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/TaskAssignment.idl",
-    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/SwarmStatus.idl"
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/SwarmStatus.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/ExperimentEvent.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs:msg/MovementCommand.idl"
   ],
   "target_dependencies": [
     "/opt/ros/jazzy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp",
@@ -35,7 +37,9 @@
     "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs/msg/DroneState.idl",
     "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs/msg/TaskBid.idl",
     "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs/msg/TaskAssignment.idl",
-    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs/msg/SwarmStatus.idl"
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs/msg/SwarmStatus.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs/msg/ExperimentEvent.idl",
+    "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_adapter/patrol_msgs/msg/MovementCommand.idl"
   ],
   "type_description_tuples": [
     "msg/Task.idl:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs/msg/Task.json",
@@ -43,6 +47,8 @@
     "msg/DroneState.idl:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs/msg/DroneState.json",
     "msg/TaskBid.idl:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs/msg/TaskBid.json",
     "msg/TaskAssignment.idl:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs/msg/TaskAssignment.json",
-    "msg/SwarmStatus.idl:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs/msg/SwarmStatus.json"
+    "msg/SwarmStatus.idl:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs/msg/SwarmStatus.json",
+    "msg/ExperimentEvent.idl:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs/msg/ExperimentEvent.json",
+    "msg/MovementCommand.idl:/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description/patrol_msgs/msg/MovementCommand.json"
   ]
 }

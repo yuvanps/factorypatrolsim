@@ -1,0 +1,52 @@
+{
+  "run_id": "run_20260929_212256",
+  "status": "completed",
+  "window_s": 46.487,
+  "per_drone_distance_m": {
+    "0": 101.505,
+    "1": 86.84,
+    "2": 0.0
+  },
+  "per_drone_battery_consumed_percent": {
+    "0": 4.64,
+    "1": 4.63,
+    "2": 0.03
+  },
+  "per_drone_valid_samples": {
+    "0": 465,
+    "1": 465,
+    "2": 4
+  },
+  "first_completion": {
+    "101": {
+      "drone_id": 0,
+      "t_s": 15.685
+    },
+    "102": {
+      "drone_id": 1,
+      "t_s": 19.187
+    },
+    "103": {
+      "drone_id": 2,
+      "t_s": 22.487
+    },
+    "104": {
+      "drone_id": 2,
+      "t_s": 46.487
+    },
+    "105": {
+      "drone_id": 1,
+      "t_s": 40.888
+    },
+    "106": {
+      "drone_id": 0,
+      "t_s": 34.685
+    }
+  },
+  "excluded": {
+    "2": {
+      "from_s": 0.487,
+      "reason": "implied speed > 15 m/s"
+    }
+  }
+}

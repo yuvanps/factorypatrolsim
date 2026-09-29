@@ -1,0 +1,37 @@
+# =============================================================================
+# Factory obstacle geometry (static, shared by ALL coordination algorithms)
+# =============================================================================
+# Axis-aligned boxes mirroring the <collision> boxes of worlds/factory.sdf
+# (identical to the world Gazebo loads, ~/.simulation-gazebo/worlds/factory.sdf).
+# No perception is modelled: algorithms read this geometry directly.
+#
+# Frame: common factory frame, the same as the task files and DroneState:
+#   x = Gazebo X (east), y = Gazebo Y (north), z = -height (negative = above ground).
+# The only conversion from the SDF is z_factory = -z_gazebo for the box centre
+# (sizes are unchanged). E.g. rack_row_1: SDF pose z=1.75, size z=3.5
+#   -> occupies heights 0..3.5 m -> factory z in [-3.5, 0].
+#
+# Omitted: the 2 cm painted floor markings (safety_line, storage/assembly zone
+# markers); they are flat decals lying on the floor, which is already included.
+#
+# The models have no rotation in the SDF, so axis-aligned boxes are exact.
+
+obstacles:
+  - {id: floor, type: box, center: [0, 0, 0.05], size: [30, 20, 0.1]}
+  - {id: ceiling_barrier, type: box, center: [0, 0, -12], size: [30, 20, 0.1]}
+  - {id: north_wall, type: box, center: [0, 10, -6], size: [30, 0.3, 12]}
+  - {id: south_wall, type: box, center: [0, -10, -6], size: [30, 0.3, 12]}
+  - {id: east_wall, type: box, center: [15, 0, -6], size: [0.3, 20, 12]}
+  - {id: west_wall, type: box, center: [-15, 0, -6], size: [0.3, 20, 12]}
+  - {id: central_partition, type: box, center: [0, 1, -1.75], size: [0.3, 10, 3.5]}
+  - {id: rack_row_1, type: box, center: [-12, -2, -1.75], size: [0.4, 8, 3.5]}
+  - {id: rack_row_2, type: box, center: [-9.5, -2, -1.75], size: [0.4, 8, 3.5]}
+  - {id: rack_row_3, type: box, center: [-7, -2, -1.75], size: [0.4, 8, 3.5]}
+  - {id: rack_row_4, type: box, center: [-4.5, -2, -1.75], size: [0.4, 8, 3.5]}
+  - {id: loading_dock, type: box, center: [-12, 7, -0.5], size: [4, 3, 1]}
+  - {id: cnc_machine, type: box, center: [5, 5, -1.25], size: [3, 2.5, 2.5]}
+  - {id: lathe_machine, type: box, center: [10, 5, -1], size: [2.5, 2, 2]}
+  - {id: assembly_workbench, type: box, center: [7, 0, -0.6], size: [4, 1.5, 1.2]}
+  - {id: conveyor_belt, type: box, center: [8, -4, -0.4], size: [8, 1, 0.8]}
+  - {id: packing_station, type: box, center: [4, -7, -0.75], size: [3, 2, 1.5]}
+  - {id: shipping_crate_stack, type: box, center: [10, -7, -1], size: [2, 2, 2]}

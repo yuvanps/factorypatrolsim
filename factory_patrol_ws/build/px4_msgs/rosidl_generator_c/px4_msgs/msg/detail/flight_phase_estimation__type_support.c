@@ -4,9 +4,9 @@
 
 #include <string.h>
 
+#include "px4_msgs/msg/detail/flight_phase_estimation__type_support.h"
 #include "px4_msgs/msg/detail/flight_phase_estimation__functions.h"
 #include "px4_msgs/msg/detail/flight_phase_estimation__struct.h"
-#include "px4_msgs/msg/detail/flight_phase_estimation__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus

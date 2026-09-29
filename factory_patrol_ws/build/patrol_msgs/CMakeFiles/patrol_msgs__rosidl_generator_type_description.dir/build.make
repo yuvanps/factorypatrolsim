@@ -72,6 +72,8 @@ CMakeFiles/patrol_msgs__rosidl_generator_type_description: rosidl_generator_type
 CMakeFiles/patrol_msgs__rosidl_generator_type_description: rosidl_generator_type_description/patrol_msgs/msg/TaskBid.json
 CMakeFiles/patrol_msgs__rosidl_generator_type_description: rosidl_generator_type_description/patrol_msgs/msg/TaskAssignment.json
 CMakeFiles/patrol_msgs__rosidl_generator_type_description: rosidl_generator_type_description/patrol_msgs/msg/SwarmStatus.json
+CMakeFiles/patrol_msgs__rosidl_generator_type_description: rosidl_generator_type_description/patrol_msgs/msg/ExperimentEvent.json
+CMakeFiles/patrol_msgs__rosidl_generator_type_description: rosidl_generator_type_description/patrol_msgs/msg/MovementCommand.json
 
 rosidl_generator_type_description/patrol_msgs/msg/Task.json: /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description
 rosidl_generator_type_description/patrol_msgs/msg/Task.json: /opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py
@@ -81,6 +83,8 @@ rosidl_generator_type_description/patrol_msgs/msg/Task.json: rosidl_adapter/patr
 rosidl_generator_type_description/patrol_msgs/msg/Task.json: rosidl_adapter/patrol_msgs/msg/TaskBid.idl
 rosidl_generator_type_description/patrol_msgs/msg/Task.json: rosidl_adapter/patrol_msgs/msg/TaskAssignment.idl
 rosidl_generator_type_description/patrol_msgs/msg/Task.json: rosidl_adapter/patrol_msgs/msg/SwarmStatus.idl
+rosidl_generator_type_description/patrol_msgs/msg/Task.json: rosidl_adapter/patrol_msgs/msg/ExperimentEvent.idl
+rosidl_generator_type_description/patrol_msgs/msg/Task.json: rosidl_adapter/patrol_msgs/msg/MovementCommand.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating type hashes for ROS interfaces"
 	/usr/bin/python3 /opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description --generator-arguments-file /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_type_description__arguments.json
 
@@ -99,9 +103,17 @@ rosidl_generator_type_description/patrol_msgs/msg/TaskAssignment.json: rosidl_ge
 rosidl_generator_type_description/patrol_msgs/msg/SwarmStatus.json: rosidl_generator_type_description/patrol_msgs/msg/Task.json
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/patrol_msgs/msg/SwarmStatus.json
 
+rosidl_generator_type_description/patrol_msgs/msg/ExperimentEvent.json: rosidl_generator_type_description/patrol_msgs/msg/Task.json
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/patrol_msgs/msg/ExperimentEvent.json
+
+rosidl_generator_type_description/patrol_msgs/msg/MovementCommand.json: rosidl_generator_type_description/patrol_msgs/msg/Task.json
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_type_description/patrol_msgs/msg/MovementCommand.json
+
 patrol_msgs__rosidl_generator_type_description: CMakeFiles/patrol_msgs__rosidl_generator_type_description
 patrol_msgs__rosidl_generator_type_description: rosidl_generator_type_description/patrol_msgs/msg/DroneState.json
+patrol_msgs__rosidl_generator_type_description: rosidl_generator_type_description/patrol_msgs/msg/ExperimentEvent.json
 patrol_msgs__rosidl_generator_type_description: rosidl_generator_type_description/patrol_msgs/msg/Mission.json
+patrol_msgs__rosidl_generator_type_description: rosidl_generator_type_description/patrol_msgs/msg/MovementCommand.json
 patrol_msgs__rosidl_generator_type_description: rosidl_generator_type_description/patrol_msgs/msg/SwarmStatus.json
 patrol_msgs__rosidl_generator_type_description: rosidl_generator_type_description/patrol_msgs/msg/Task.json
 patrol_msgs__rosidl_generator_type_description: rosidl_generator_type_description/patrol_msgs/msg/TaskAssignment.json

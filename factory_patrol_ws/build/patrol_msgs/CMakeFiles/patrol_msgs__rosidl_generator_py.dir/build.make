@@ -153,6 +153,34 @@ CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_swarm_status_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_py/patrol_msgs/msg/_swarm_status_s.c -o CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_swarm_status_s.c.s
 
+CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.o: CMakeFiles/patrol_msgs__rosidl_generator_py.dir/flags.make
+CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.o: rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c
+CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.o: CMakeFiles/patrol_msgs__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.o -MF CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.o.d -o CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.o -c /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c
+
+CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c > CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.i
+
+CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c -o CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.s
+
+CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.o: CMakeFiles/patrol_msgs__rosidl_generator_py.dir/flags.make
+CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.o: rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c
+CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.o: CMakeFiles/patrol_msgs__rosidl_generator_py.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.o -MF CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.o.d -o CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.o -c /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c
+
+CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c > CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.i
+
+CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c -o CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.s
+
 # Object files for target patrol_msgs__rosidl_generator_py
 patrol_msgs__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_task_s.c.o" \
@@ -160,7 +188,9 @@ patrol_msgs__rosidl_generator_py_OBJECTS = \
 "CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_drone_state_s.c.o" \
 "CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_task_bid_s.c.o" \
 "CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_task_assignment_s.c.o" \
-"CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_swarm_status_s.c.o"
+"CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_swarm_status_s.c.o" \
+"CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.o" \
+"CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.o"
 
 # External object files for target patrol_msgs__rosidl_generator_py
 patrol_msgs__rosidl_generator_py_EXTERNAL_OBJECTS =
@@ -171,6 +201,8 @@ libpatrol_msgs__rosidl_generator_py.so: CMakeFiles/patrol_msgs__rosidl_generator
 libpatrol_msgs__rosidl_generator_py.so: CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_task_bid_s.c.o
 libpatrol_msgs__rosidl_generator_py.so: CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_task_assignment_s.c.o
 libpatrol_msgs__rosidl_generator_py.so: CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_swarm_status_s.c.o
+libpatrol_msgs__rosidl_generator_py.so: CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.o
+libpatrol_msgs__rosidl_generator_py.so: CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_movement_command_s.c.o
 libpatrol_msgs__rosidl_generator_py.so: CMakeFiles/patrol_msgs__rosidl_generator_py.dir/build.make
 libpatrol_msgs__rosidl_generator_py.so: /usr/lib/x86_64-linux-gnu/libpython3.12.so
 libpatrol_msgs__rosidl_generator_py.so: libpatrol_msgs__rosidl_typesupport_c.so
@@ -178,7 +210,7 @@ libpatrol_msgs__rosidl_generator_py.so: libpatrol_msgs__rosidl_generator_c.so
 libpatrol_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/librosidl_runtime_c.so
 libpatrol_msgs__rosidl_generator_py.so: /opt/ros/jazzy/lib/librcutils.so
 libpatrol_msgs__rosidl_generator_py.so: CMakeFiles/patrol_msgs__rosidl_generator_py.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library libpatrol_msgs__rosidl_generator_py.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C shared library libpatrol_msgs__rosidl_generator_py.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/patrol_msgs__rosidl_generator_py.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

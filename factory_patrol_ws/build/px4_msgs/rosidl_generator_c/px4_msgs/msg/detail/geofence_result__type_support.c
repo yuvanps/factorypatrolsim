@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "px4_msgs/msg/detail/geofence_result__type_support.h"
 #include "px4_msgs/msg/detail/geofence_result__functions.h"
+#include "px4_msgs/msg/detail/geofence_result__type_support.h"
 #include "px4_msgs/msg/detail/geofence_result__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
 

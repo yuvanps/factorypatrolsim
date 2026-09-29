@@ -23,6 +23,7 @@ patrol_msgs__msg__DroneState__init(patrol_msgs__msg__DroneState * msg)
   // z
   // battery_level
   // state
+  // current_task_id
   return true;
 }
 
@@ -38,6 +39,7 @@ patrol_msgs__msg__DroneState__fini(patrol_msgs__msg__DroneState * msg)
   // z
   // battery_level
   // state
+  // current_task_id
 }
 
 bool
@@ -70,6 +72,10 @@ patrol_msgs__msg__DroneState__are_equal(const patrol_msgs__msg__DroneState * lhs
   if (lhs->state != rhs->state) {
     return false;
   }
+  // current_task_id
+  if (lhs->current_task_id != rhs->current_task_id) {
+    return false;
+  }
   return true;
 }
 
@@ -93,6 +99,8 @@ patrol_msgs__msg__DroneState__copy(
   output->battery_level = input->battery_level;
   // state
   output->state = input->state;
+  // current_task_id
+  output->current_task_id = input->current_task_id;
   return true;
 }
 

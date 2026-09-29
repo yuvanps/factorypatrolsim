@@ -1,0 +1,463 @@
+[0.000000] (-) TimerEvent: {}
+[0.000433] (-) JobUnselected: {'identifier': 'patrol_controller'}
+[0.000470] (-) JobUnselected: {'identifier': 'patrol_coordinator'}
+[0.000489] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.000507] (patrol_msgs) JobQueued: {'identifier': 'patrol_msgs', 'dependencies': OrderedDict()}
+[0.000526] (patrol_msgs) JobStarted: {'identifier': 'patrol_msgs'}
+[0.006447] (patrol_msgs) JobProgress: {'identifier': 'patrol_msgs', 'progress': 'cmake'}
+[0.007225] (patrol_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs'], 'cwd': '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'CHROME_DEVTOOLS_MCP_JS': '/home/mrweirdo/Downloads/Antigravity-x64/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js', 'AI_AGENT': 'antigravity', 'LANGUAGE': 'en_IN:en', 'USER': 'mrweirdo', 'ANTIGRAVITY_SOURCE_METADATA': '{"tool":{"conversationId":"794caaa4-09d9-4e95-9f4e-66e8313d98b4","stepIndex":116,"toolCall":{"id":"toolu_vrtx_01Rba7r7Q44K23xdmFMTZwjv","name":"run_command","argumentsJson":"{\\"BypassSandbox\\":true,\\"CommandLine\\":\\"source /opt/ros/jazzy/setup.bash \\\\u0026\\\\u0026 rm -rf build/patrol_msgs build/patrol_controller build/patrol_coordinator install/patrol_msgs install/patrol_controller install/patrol_coordinator \\\\u0026\\\\u0026 colcon build --symlink-install --packages-select patrol_msgs 2\\\\u003e\\\\u00261 | tail -20\\",\\"Cwd\\":\\"/home/mrweirdo/factory_patrol_sim/factory_patrol_ws\\",\\"WaitMsBeforeAsync\\":120000,\\"toolAction\\":\\"Clean building patrol_msgs\\",\\"toolSummary\\":\\"Rebuild patrol_msgs\\"}"}}}', 'XDG_SEAT': 'seat0', 'XDG_SESSION_TYPE': 'x11', 'ANTIGRAVITY_AGENTAPI_EXE': '/home/mrweirdo/Downloads/Antigravity-x64/resources/bin/language_server', 'JETSKI_APP_DATA_DIR': 'antigravity', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/mrweirdo', 'CHROME_DESKTOP': 'antigravity.desktop', 'DISABLE_AUTO_UPDATE': 'true', 'DESKTOP_SESSION': 'cinnamon', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/cinnamon.desktop', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'PAGER': 'cat', 'CINNAMON_VERSION': '6.4.14', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ANTIGRAVITY_AGENT': '1', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '1981', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'AGY_BROWSER_ACTIVE_PORT_FILE': '/home/mrweirdo/.config/Antigravity/DevToolsActivePort', 'ROS_DISTRO': 'jazzy', 'ZSH_TMUX_AUTOSTARTED': 'true', 'LOGNAME': 'mrweirdo', 'AGY_BROWSER_WS_URL': 'ws://127.0.0.1:35887/devtools/browser/ffc0e84d-283b-405e-8182-e5875b3f0ff9', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'dumb', 'XDG_SESSION_ID': 'c1', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'ANTIGRAVITY_LS_VERSION': 'hub-2.9.1', 'PATH': '/home/mrweirdo/.gemini/antigravity/bin:/home/mrweirdo/.config/Antigravity/bin:/home/mrweirdo/.local/bin:/opt/ros/jazzy/bin:/home/mrweirdo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/mrweirdo/ns-allinone-3.47/ns-3.47:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/', 'SESSION_MANAGER': 'local/mrweirdo-LOQ-15AHP9:@/tmp/.ICE-unix/1494,unix/mrweirdo-LOQ-15AHP9:/tmp/.ICE-unix/1494', 'GDM_LANG': 'en_US', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'en_IN', 'XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'ANTIGRAVITY_CONVERSATION_ID': '794caaa4-09d9-4e95-9f4e-66e8313d98b4', 'XDG_SESSION_DESKTOP': 'cinnamon', 'XAUTHORITY': '/home/mrweirdo/.Xauthority', 'LS_COLORS': '', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/mrweirdo', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ANTIGRAVITY_PROJECT_ID': '1f94a5d4-f281-4687-96b1-345f1b17fa3a', 'SHELL': '/bin/bash', 'ANTIGRAVITY_LS_ADDRESS': 'localhost:38619', 'QT_ACCESSIBILITY': '1', 'NO_AT_BRIDGE': '1', 'GDMSESSION': 'cinnamon', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'XDG_VTNR': '7', 'ANTIGRAVITY_TRAJECTORY_ID': '067ba093-7733-46b7-8135-1db5401ce661', 'PWD': '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-cinnamon:/etc/xdg', 'ZSH_TMUX_AUTOSTART': 'false', 'XDG_DATA_DIRS': '/usr/share/cinnamon:/usr/share/gnome:/home/mrweirdo/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'JETSKI_SAFECLIS_SOURCE': '/home/mrweirdo/.gemini/antigravity/bin/secplugins/src', 'COLCON': '1', 'ANTIGRAVITY_CSRF_TOKEN': '42790cdf-bb91-416f-a2e3-99dd06c901b7', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099874] (-) TimerEvent: {}
+[0.125324] (patrol_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.180451] (patrol_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.197882] (patrol_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199935] (-) TimerEvent: {}
+[0.283025] (patrol_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.289659] (patrol_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.289916] (patrol_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.290287] (patrol_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.299749] (patrol_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.299998] (-) TimerEvent: {}
+[0.390162] (patrol_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.395871] (patrol_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.396058] (patrol_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.396349] (patrol_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.400067] (patrol_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.400185] (-) TimerEvent: {}
+[0.500317] (-) TimerEvent: {}
+[0.508341] (patrol_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.557765] (patrol_msgs) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.600610] (-) TimerEvent: {}
+[0.636153] (patrol_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[0.639346] (patrol_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.674213] (patrol_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.700715] (-) TimerEvent: {}
+[0.704902] (patrol_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[0.800837] (-) TimerEvent: {}
+[0.901029] (-) TimerEvent: {}
+[1.001183] (-) TimerEvent: {}
+[1.101380] (-) TimerEvent: {}
+[1.159191] (patrol_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[1.201476] (-) TimerEvent: {}
+[1.303702] (-) TimerEvent: {}
+[1.403882] (-) TimerEvent: {}
+[1.504045] (-) TimerEvent: {}
+[1.506365] (patrol_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.604135] (-) TimerEvent: {}
+[1.704304] (-) TimerEvent: {}
+[1.804461] (-) TimerEvent: {}
+[1.904607] (-) TimerEvent: {}
+[1.973139] (patrol_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.975325] (patrol_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[2.004681] (-) TimerEvent: {}
+[2.087798] (patrol_msgs) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[2.104807] (-) TimerEvent: {}
+[2.204961] (-) TimerEvent: {}
+[2.305127] (-) TimerEvent: {}
+[2.405277] (-) TimerEvent: {}
+[2.456726] (patrol_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[2.503795] (patrol_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[2.505352] (-) TimerEvent: {}
+[2.513325] (patrol_msgs) StdoutLine: {'line': b'-- Configuring done (2.5s)\n'}
+[2.542671] (patrol_msgs) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[2.550402] (patrol_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs\n'}
+[2.558581] (patrol_msgs) CommandEnded: {'returncode': 0}
+[2.559100] (patrol_msgs) JobProgress: {'identifier': 'patrol_msgs', 'progress': 'build'}
+[2.559718] (patrol_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs', '--', '-j16', '-l16'], 'cwd': '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'CHROME_DEVTOOLS_MCP_JS': '/home/mrweirdo/Downloads/Antigravity-x64/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js', 'AI_AGENT': 'antigravity', 'LANGUAGE': 'en_IN:en', 'USER': 'mrweirdo', 'ANTIGRAVITY_SOURCE_METADATA': '{"tool":{"conversationId":"794caaa4-09d9-4e95-9f4e-66e8313d98b4","stepIndex":116,"toolCall":{"id":"toolu_vrtx_01Rba7r7Q44K23xdmFMTZwjv","name":"run_command","argumentsJson":"{\\"BypassSandbox\\":true,\\"CommandLine\\":\\"source /opt/ros/jazzy/setup.bash \\\\u0026\\\\u0026 rm -rf build/patrol_msgs build/patrol_controller build/patrol_coordinator install/patrol_msgs install/patrol_controller install/patrol_coordinator \\\\u0026\\\\u0026 colcon build --symlink-install --packages-select patrol_msgs 2\\\\u003e\\\\u00261 | tail -20\\",\\"Cwd\\":\\"/home/mrweirdo/factory_patrol_sim/factory_patrol_ws\\",\\"WaitMsBeforeAsync\\":120000,\\"toolAction\\":\\"Clean building patrol_msgs\\",\\"toolSummary\\":\\"Rebuild patrol_msgs\\"}"}}}', 'XDG_SEAT': 'seat0', 'XDG_SESSION_TYPE': 'x11', 'ANTIGRAVITY_AGENTAPI_EXE': '/home/mrweirdo/Downloads/Antigravity-x64/resources/bin/language_server', 'JETSKI_APP_DATA_DIR': 'antigravity', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/mrweirdo', 'CHROME_DESKTOP': 'antigravity.desktop', 'DISABLE_AUTO_UPDATE': 'true', 'DESKTOP_SESSION': 'cinnamon', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/cinnamon.desktop', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'PAGER': 'cat', 'CINNAMON_VERSION': '6.4.14', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ANTIGRAVITY_AGENT': '1', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '1981', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'AGY_BROWSER_ACTIVE_PORT_FILE': '/home/mrweirdo/.config/Antigravity/DevToolsActivePort', 'ROS_DISTRO': 'jazzy', 'ZSH_TMUX_AUTOSTARTED': 'true', 'LOGNAME': 'mrweirdo', 'AGY_BROWSER_WS_URL': 'ws://127.0.0.1:35887/devtools/browser/ffc0e84d-283b-405e-8182-e5875b3f0ff9', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'dumb', 'XDG_SESSION_ID': 'c1', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'ANTIGRAVITY_LS_VERSION': 'hub-2.9.1', 'PATH': '/home/mrweirdo/.gemini/antigravity/bin:/home/mrweirdo/.config/Antigravity/bin:/home/mrweirdo/.local/bin:/opt/ros/jazzy/bin:/home/mrweirdo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/mrweirdo/ns-allinone-3.47/ns-3.47:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/', 'SESSION_MANAGER': 'local/mrweirdo-LOQ-15AHP9:@/tmp/.ICE-unix/1494,unix/mrweirdo-LOQ-15AHP9:/tmp/.ICE-unix/1494', 'GDM_LANG': 'en_US', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'en_IN', 'XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'ANTIGRAVITY_CONVERSATION_ID': '794caaa4-09d9-4e95-9f4e-66e8313d98b4', 'XDG_SESSION_DESKTOP': 'cinnamon', 'XAUTHORITY': '/home/mrweirdo/.Xauthority', 'LS_COLORS': '', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/mrweirdo', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ANTIGRAVITY_PROJECT_ID': '1f94a5d4-f281-4687-96b1-345f1b17fa3a', 'SHELL': '/bin/bash', 'ANTIGRAVITY_LS_ADDRESS': 'localhost:38619', 'QT_ACCESSIBILITY': '1', 'NO_AT_BRIDGE': '1', 'GDMSESSION': 'cinnamon', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'XDG_VTNR': '7', 'ANTIGRAVITY_TRAJECTORY_ID': '067ba093-7733-46b7-8135-1db5401ce661', 'PWD': '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-cinnamon:/etc/xdg', 'ZSH_TMUX_AUTOSTART': 'false', 'XDG_DATA_DIRS': '/usr/share/cinnamon:/usr/share/gnome:/home/mrweirdo/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'JETSKI_SAFECLIS_SOURCE': '/home/mrweirdo/.gemini/antigravity/bin/secplugins/src', 'COLCON': '1', 'ANTIGRAVITY_CSRF_TOKEN': '42790cdf-bb91-416f-a2e3-99dd06c901b7', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[2.605460] (-) TimerEvent: {}
+[2.607479] (patrol_msgs) StdoutLine: {'line': b'[  2%] Generating Rust code for ROS interfaces\n'}
+[2.607617] (patrol_msgs) StdoutLine: {'line': b'[  2%] Generating type hashes for ROS interfaces\n'}
+[2.615791] (patrol_msgs) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_symlink_patrol_msgs\n'}
+[2.705597] (-) TimerEvent: {}
+[2.787922] (patrol_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[2.788563] (patrol_msgs) StdoutLine: {'line': b'creating patrol_msgs.egg-info\n'}
+[2.792042] (patrol_msgs) StdoutLine: {'line': b'[  2%] Built target patrol_msgs__rosidl_generator_type_description\n'}
+[2.801839] (patrol_msgs) StdoutLine: {'line': b'[  3%] Generating C code for ROS interfaces\n'}
+[2.805683] (-) TimerEvent: {}
+[2.806176] (patrol_msgs) StdoutLine: {'line': b'writing patrol_msgs.egg-info/PKG-INFO\n'}
+[2.806461] (patrol_msgs) StdoutLine: {'line': b'writing dependency_links to patrol_msgs.egg-info/dependency_links.txt\n'}
+[2.806592] (patrol_msgs) StdoutLine: {'line': b'writing top-level names to patrol_msgs.egg-info/top_level.txt\n'}
+[2.806677] (patrol_msgs) StdoutLine: {'line': b"writing manifest file 'patrol_msgs.egg-info/SOURCES.txt'\n"}
+[2.810294] (patrol_msgs) StdoutLine: {'line': b'[  4%] Generating C++ code for ROS interfaces\n'}
+[2.812934] (patrol_msgs) StdoutLine: {'line': b'[  4%] Built target patrol_msgs__rs\n'}
+[2.850657] (patrol_msgs) StdoutLine: {'line': b"reading manifest file 'patrol_msgs.egg-info/SOURCES.txt'\n"}
+[2.850960] (patrol_msgs) StdoutLine: {'line': b"writing manifest file 'patrol_msgs.egg-info/SOURCES.txt'\n"}
+[2.875625] (patrol_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_build_patrol_msgs_egg\n'}
+[2.905802] (-) TimerEvent: {}
+[3.005948] (-) TimerEvent: {}
+[3.106103] (-) TimerEvent: {}
+[3.116916] (patrol_msgs) StdoutLine: {'line': b'[  4%] Built target patrol_msgs__cpp\n'}
+[3.195025] (patrol_msgs) StdoutLine: {'line': b'[  8%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task__type_support.c.o\n'}
+[3.195256] (patrol_msgs) StdoutLine: {'line': b'[  8%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/mission__description.c.o\n'}
+[3.195382] (patrol_msgs) StdoutLine: {'line': b'[  8%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task__functions.c.o\n'}
+[3.195431] (patrol_msgs) StdoutLine: {'line': b'[  9%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task__description.c.o\n'}
+[3.195475] (patrol_msgs) StdoutLine: {'line': b'[ 11%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__description.c.o\n'}
+[3.195518] (patrol_msgs) StdoutLine: {'line': b'[  8%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/mission__functions.c.o\n'}
+[3.197028] (patrol_msgs) StdoutLine: {'line': b'[ 11%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__type_support.c.o\n'}
+[3.197171] (patrol_msgs) StdoutLine: {'line': b'[ 15%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__description.c.o\n'}
+[3.197230] (patrol_msgs) StdoutLine: {'line': b'[ 15%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__functions.c.o\n'}
+[3.197356] (patrol_msgs) StdoutLine: {'line': b'[ 15%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__functions.c.o\n'}
+[3.197442] (patrol_msgs) StdoutLine: {'line': b'[ 15%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__type_support.c.o\n'}
+[3.197500] (patrol_msgs) StdoutLine: {'line': b'[ 16%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/mission__type_support.c.o\n'}
+[3.199612] (patrol_msgs) StdoutLine: {'line': b'[ 20%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__description.c.o\n'}
+[3.199834] (patrol_msgs) StdoutLine: {'line': b'[ 20%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__type_support.c.o\n'}
+[3.199900] (patrol_msgs) StdoutLine: {'line': b'[ 20%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__functions.c.o\n'}
+[3.202734] (patrol_msgs) StdoutLine: {'line': b'[ 21%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__description.c.o\n'}
+[3.206396] (-) TimerEvent: {}
+[3.234684] (patrol_msgs) StdoutLine: {'line': b'[ 23%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__functions.c.o\n'}
+[3.234833] (patrol_msgs) StdoutLine: {'line': b'[ 23%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.c.o\n'}
+[3.237065] (patrol_msgs) StdoutLine: {'line': b'[ 26%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.o\n'}
+[3.237214] (patrol_msgs) StdoutLine: {'line': b'[ 26%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.o\n'}
+[3.237262] (patrol_msgs) StdoutLine: {'line': b'[ 26%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.o\n'}
+[3.273718] (patrol_msgs) StdoutLine: {'line': b'[ 27%] Linking C shared library libpatrol_msgs__rosidl_generator_c.so\n'}
+[3.306470] (-) TimerEvent: {}
+[3.310774] (patrol_msgs) StdoutLine: {'line': b'[ 27%] Built target patrol_msgs__rosidl_generator_c\n'}
+[3.322130] (patrol_msgs) StdoutLine: {'line': b'[ 33%] Generating C type support dispatch for ROS interfaces\n'}
+[3.322307] (patrol_msgs) StdoutLine: {'line': b'[ 33%] Generating C++ type support dispatch for ROS interfaces\n'}
+[3.322358] (patrol_msgs) StdoutLine: {'line': b'[ 33%] Generating C introspection for ROS interfaces\n'}
+[3.322401] (patrol_msgs) StdoutLine: {'line': b'[ 33%] Generating C++ type support for eProsima Fast-RTPS\n'}
+[3.322443] (patrol_msgs) StdoutLine: {'line': b'[ 33%] Generating C++ introspection for ROS interfaces\n'}
+[3.323025] (patrol_msgs) StdoutLine: {'line': b'[ 33%] Generating C type support for eProsima Fast-RTPS\n'}
+[3.406558] (-) TimerEvent: {}
+[3.506680] (-) TimerEvent: {}
+[3.548139] (patrol_msgs) StdoutLine: {'line': b'[ 35%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/patrol_msgs/msg/task__type_support.cpp.o\n'}
+[3.548305] (patrol_msgs) StdoutLine: {'line': b'[ 35%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/patrol_msgs/msg/swarm_status__type_support.cpp.o\n'}
+[3.548413] (patrol_msgs) StdoutLine: {'line': b'[ 36%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/patrol_msgs/msg/mission__type_support.cpp.o\n'}
+[3.548464] (patrol_msgs) StdoutLine: {'line': b'[ 37%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/patrol_msgs/msg/task_bid__type_support.cpp.o\n'}
+[3.548509] (patrol_msgs) StdoutLine: {'line': b'[ 40%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/patrol_msgs/msg/task_assignment__type_support.cpp.o\n'}
+[3.548550] (patrol_msgs) StdoutLine: {'line': b'[ 40%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/patrol_msgs/msg/drone_state__type_support.cpp.o\n'}
+[3.549420] (patrol_msgs) StdoutLine: {'line': b'[ 41%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/patrol_msgs/msg/experiment_event__type_support.cpp.o\n'}
+[3.561678] (patrol_msgs) StdoutLine: {'line': b'[ 44%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/patrol_msgs/msg/mission__type_support.cpp.o\n'}
+[3.561849] (patrol_msgs) StdoutLine: {'line': b'[ 44%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/patrol_msgs/msg/task__type_support.cpp.o\n'}
+[3.562804] (patrol_msgs) StdoutLine: {'line': b'[ 44%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/patrol_msgs/msg/drone_state__type_support.cpp.o\n'}
+[3.572165] (patrol_msgs) StdoutLine: {'line': b'[ 45%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/patrol_msgs/msg/task_bid__type_support.cpp.o\n'}
+[3.574808] (patrol_msgs) StdoutLine: {'line': b'[ 46%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/patrol_msgs/msg/task_assignment__type_support.cpp.o\n'}
+[3.590674] (patrol_msgs) StdoutLine: {'line': b'[ 48%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/patrol_msgs/msg/experiment_event__type_support.cpp.o\n'}
+[3.590879] (patrol_msgs) StdoutLine: {'line': b'[ 48%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/patrol_msgs/msg/swarm_status__type_support.cpp.o\n'}
+[3.606786] (-) TimerEvent: {}
+[3.610910] (patrol_msgs) StdoutLine: {'line': b'[ 49%] Linking CXX shared library libpatrol_msgs__rosidl_typesupport_c.so\n'}
+[3.643283] (patrol_msgs) StdoutLine: {'line': b'[ 51%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/patrol_msgs/msg/detail/drone_state__type_support.cpp.o\n'}
+[3.643451] (patrol_msgs) StdoutLine: {'line': b'[ 51%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/patrol_msgs/msg/detail/mission__type_support.cpp.o\n'}
+[3.648654] (patrol_msgs) StdoutLine: {'line': b'[ 52%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/patrol_msgs/msg/detail/task__type_support.cpp.o\n'}
+[3.676299] (patrol_msgs) StdoutLine: {'line': b'[ 53%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/patrol_msgs/msg/detail/task_bid__type_support.cpp.o\n'}
+[3.686748] (patrol_msgs) StdoutLine: {'line': b'[ 54%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/patrol_msgs/msg/detail/task_assignment__type_support.cpp.o\n'}
+[3.694193] (patrol_msgs) StdoutLine: {'line': b'[ 54%] Built target patrol_msgs__rosidl_typesupport_c\n'}
+[3.706909] (-) TimerEvent: {}
+[3.712543] (patrol_msgs) StdoutLine: {'line': b'[ 55%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/patrol_msgs/msg/detail/swarm_status__type_support.cpp.o\n'}
+[3.726320] (patrol_msgs) StdoutLine: {'line': b'[ 56%] Building C object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/patrol_msgs/msg/detail/task__type_support.c.o\n'}
+[3.780699] (patrol_msgs) StdoutLine: {'line': b'[ 57%] Building C object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/patrol_msgs/msg/detail/mission__type_support.c.o\n'}
+[3.807029] (-) TimerEvent: {}
+[3.851862] (patrol_msgs) StdoutLine: {'line': b'[ 58%] Building C object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/patrol_msgs/msg/detail/drone_state__type_support.c.o\n'}
+[3.904779] (patrol_msgs) StdoutLine: {'line': b'[ 60%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/patrol_msgs/msg/detail/dds_fastrtps/task__type_support.cpp.o\n'}
+[3.905021] (patrol_msgs) StdoutLine: {'line': b'[ 61%] Building C object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/patrol_msgs/msg/detail/task_bid__type_support.c.o\n'}
+[3.907143] (-) TimerEvent: {}
+[3.939449] (patrol_msgs) StdoutLine: {'line': b'[ 62%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/patrol_msgs/msg/detail/dds_fastrtps/mission__type_support.cpp.o\n'}
+[3.942684] (patrol_msgs) StdoutLine: {'line': b'[ 63%] Building C object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/patrol_msgs/msg/detail/task_assignment__type_support.c.o\n'}
+[3.946725] (patrol_msgs) StdoutLine: {'line': b'[ 65%] Building C object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/patrol_msgs/msg/detail/swarm_status__type_support.c.o\n'}
+[3.947279] (patrol_msgs) StdoutLine: {'line': b'[ 65%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/patrol_msgs/msg/detail/dds_fastrtps/drone_state__type_support.cpp.o\n'}
+[3.958678] (patrol_msgs) StdoutLine: {'line': b'[ 67%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/patrol_msgs/msg/detail/experiment_event__type_support.cpp.o\n'}
+[3.958940] (patrol_msgs) StdoutLine: {'line': b'[ 67%] Building C object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/patrol_msgs/msg/detail/experiment_event__type_support.c.o\n'}
+[3.960101] (patrol_msgs) StdoutLine: {'line': b'[ 68%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/patrol_msgs/msg/detail/dds_fastrtps/task_bid__type_support.cpp.o\n'}
+[3.980684] (patrol_msgs) StdoutLine: {'line': b'[ 70%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/patrol_msgs/msg/detail/task__type_support_c.cpp.o\n'}
+[3.980889] (patrol_msgs) StdoutLine: {'line': b'[ 69%] Linking CXX shared library libpatrol_msgs__rosidl_typesupport_cpp.so\n'}
+[3.990095] (patrol_msgs) StdoutLine: {'line': b'[ 71%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/patrol_msgs/msg/detail/mission__type_support_c.cpp.o\n'}
+[4.004500] (patrol_msgs) StdoutLine: {'line': b'[ 72%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/patrol_msgs/msg/detail/dds_fastrtps/task_assignment__type_support.cpp.o\n'}
+[4.007273] (-) TimerEvent: {}
+[4.009755] (patrol_msgs) StdoutLine: {'line': b'[ 73%] Linking C shared library libpatrol_msgs__rosidl_typesupport_introspection_c.so\n'}
+[4.021821] (patrol_msgs) StdoutLine: {'line': b'[ 74%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/patrol_msgs/msg/detail/drone_state__type_support_c.cpp.o\n'}
+[4.034183] (patrol_msgs) StdoutLine: {'line': b'[ 74%] Built target patrol_msgs__rosidl_typesupport_cpp\n'}
+[4.046065] (patrol_msgs) StdoutLine: {'line': b'[ 75%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/patrol_msgs/msg/detail/task_assignment__type_support_c.cpp.o\n'}
+[4.046276] (patrol_msgs) StdoutLine: {'line': b'[ 76%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/patrol_msgs/msg/detail/task_bid__type_support_c.cpp.o\n'}
+[4.053237] (patrol_msgs) StdoutLine: {'line': b'[ 76%] Built target patrol_msgs__rosidl_typesupport_introspection_c\n'}
+[4.058213] (patrol_msgs) StdoutLine: {'line': b'[ 77%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/patrol_msgs/msg/detail/dds_fastrtps/swarm_status__type_support.cpp.o\n'}
+[4.058672] (patrol_msgs) StdoutLine: {'line': b'[ 78%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/patrol_msgs/msg/detail/dds_fastrtps/experiment_event__type_support.cpp.o\n'}
+[4.066300] (patrol_msgs) StdoutLine: {'line': b'[ 80%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/patrol_msgs/msg/detail/swarm_status__type_support_c.cpp.o\n'}
+[4.101987] (patrol_msgs) StdoutLine: {'line': b'[ 81%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/patrol_msgs/msg/detail/experiment_event__type_support_c.cpp.o\n'}
+[4.107401] (-) TimerEvent: {}
+[4.207607] (-) TimerEvent: {}
+[4.307821] (-) TimerEvent: {}
+[4.328422] (patrol_msgs) StdoutLine: {'line': b'[ 82%] Linking CXX shared library libpatrol_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[4.407942] (-) TimerEvent: {}
+[4.508754] (-) TimerEvent: {}
+[4.525058] (patrol_msgs) StdoutLine: {'line': b'[ 82%] Built target patrol_msgs__rosidl_typesupport_introspection_cpp\n'}
+[4.600504] (patrol_msgs) StdoutLine: {'line': b'[ 83%] Linking CXX shared library libpatrol_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[4.608839] (-) TimerEvent: {}
+[4.628944] (patrol_msgs) StdoutLine: {'line': b'[ 84%] Linking CXX shared library libpatrol_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.671818] (patrol_msgs) StdoutLine: {'line': b'[ 84%] Built target patrol_msgs__rosidl_typesupport_fastrtps_c\n'}
+[4.705126] (patrol_msgs) StdoutLine: {'line': b'[ 84%] Built target patrol_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[4.708922] (-) TimerEvent: {}
+[4.723217] (patrol_msgs) StdoutLine: {'line': b'[ 84%] Built target patrol_msgs\n'}
+[4.742051] (patrol_msgs) StdoutLine: {'line': b'[ 85%] Generating Python code for ROS interfaces\n'}
+[4.809017] (-) TimerEvent: {}
+[4.909185] (-) TimerEvent: {}
+[5.009363] (-) TimerEvent: {}
+[5.109519] (-) TimerEvent: {}
+[5.209757] (-) TimerEvent: {}
+[5.217096] (patrol_msgs) StdoutLine: {'line': b'[ 85%] Built target patrol_msgs__py\n'}
+[5.239454] (patrol_msgs) StdoutLine: {'line': b'[ 87%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_swarm_status_s.c.o\n'}
+[5.239620] (patrol_msgs) StdoutLine: {'line': b'[ 87%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_task_s.c.o\n'}
+[5.240728] (patrol_msgs) StdoutLine: {'line': b'[ 88%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_drone_state_s.c.o\n'}
+[5.240879] (patrol_msgs) StdoutLine: {'line': b'[ 89%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_task_bid_s.c.o\n'}
+[5.241019] (patrol_msgs) StdoutLine: {'line': b'[ 91%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_task_assignment_s.c.o\n'}
+[5.241069] (patrol_msgs) StdoutLine: {'line': b'[ 91%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_mission_s.c.o\n'}
+[5.247548] (patrol_msgs) StdoutLine: {'line': b'[ 92%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.o\n'}
+[5.309858] (-) TimerEvent: {}
+[5.365908] (patrol_msgs) StdoutLine: {'line': b'[ 93%] Linking C shared library libpatrol_msgs__rosidl_generator_py.so\n'}
+[5.402742] (patrol_msgs) StdoutLine: {'line': b'[ 93%] Built target patrol_msgs__rosidl_generator_py\n'}
+[5.409988] (-) TimerEvent: {}
+[5.420842] (patrol_msgs) StdoutLine: {'line': b'[ 96%] Building C object CMakeFiles/patrol_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_c.c.o\n'}
+[5.420999] (patrol_msgs) StdoutLine: {'line': b'[ 96%] Building C object CMakeFiles/patrol_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\n'}
+[5.421052] (patrol_msgs) StdoutLine: {'line': b'[ 96%] Building C object CMakeFiles/patrol_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\n'}
+[5.510066] (-) TimerEvent: {}
+[5.510279] (patrol_msgs) StdoutLine: {'line': b'[ 97%] Linking C shared module rosidl_generator_py/patrol_msgs/patrol_msgs_s__rosidl_typesupport_c.so\n'}
+[5.516522] (patrol_msgs) StdoutLine: {'line': b'[100%] Linking C shared module rosidl_generator_py/patrol_msgs/patrol_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[5.516720] (patrol_msgs) StdoutLine: {'line': b'[100%] Linking C shared module rosidl_generator_py/patrol_msgs/patrol_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[5.546022] (patrol_msgs) StdoutLine: {'line': b'[100%] Built target patrol_msgs_s__rosidl_typesupport_c\n'}
+[5.554127] (patrol_msgs) StdoutLine: {'line': b'[100%] Built target patrol_msgs_s__rosidl_typesupport_fastrtps_c\n'}
+[5.554686] (patrol_msgs) StdoutLine: {'line': b'[100%] Built target patrol_msgs_s__rosidl_typesupport_introspection_c\n'}
+[5.572014] (patrol_msgs) CommandEnded: {'returncode': 0}
+[5.572445] (patrol_msgs) JobProgress: {'identifier': 'patrol_msgs', 'progress': 'install'}
+[5.581680] (patrol_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs'], 'cwd': '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs', 'env': OrderedDict({'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'CHROME_DEVTOOLS_MCP_JS': '/home/mrweirdo/Downloads/Antigravity-x64/resources/app.asar.unpacked/node_modules/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js', 'AI_AGENT': 'antigravity', 'LANGUAGE': 'en_IN:en', 'USER': 'mrweirdo', 'ANTIGRAVITY_SOURCE_METADATA': '{"tool":{"conversationId":"794caaa4-09d9-4e95-9f4e-66e8313d98b4","stepIndex":116,"toolCall":{"id":"toolu_vrtx_01Rba7r7Q44K23xdmFMTZwjv","name":"run_command","argumentsJson":"{\\"BypassSandbox\\":true,\\"CommandLine\\":\\"source /opt/ros/jazzy/setup.bash \\\\u0026\\\\u0026 rm -rf build/patrol_msgs build/patrol_controller build/patrol_coordinator install/patrol_msgs install/patrol_controller install/patrol_coordinator \\\\u0026\\\\u0026 colcon build --symlink-install --packages-select patrol_msgs 2\\\\u003e\\\\u00261 | tail -20\\",\\"Cwd\\":\\"/home/mrweirdo/factory_patrol_sim/factory_patrol_ws\\",\\"WaitMsBeforeAsync\\":120000,\\"toolAction\\":\\"Clean building patrol_msgs\\",\\"toolSummary\\":\\"Rebuild patrol_msgs\\"}"}}}', 'XDG_SEAT': 'seat0', 'XDG_SESSION_TYPE': 'x11', 'ANTIGRAVITY_AGENTAPI_EXE': '/home/mrweirdo/Downloads/Antigravity-x64/resources/bin/language_server', 'JETSKI_APP_DATA_DIR': 'antigravity', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/mrweirdo', 'CHROME_DESKTOP': 'antigravity.desktop', 'DISABLE_AUTO_UPDATE': 'true', 'DESKTOP_SESSION': 'cinnamon', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/cinnamon.desktop', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'PAGER': 'cat', 'CINNAMON_VERSION': '6.4.14', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'ANTIGRAVITY_AGENT': '1', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '1981', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', 'AGY_BROWSER_ACTIVE_PORT_FILE': '/home/mrweirdo/.config/Antigravity/DevToolsActivePort', 'ROS_DISTRO': 'jazzy', 'ZSH_TMUX_AUTOSTARTED': 'true', 'LOGNAME': 'mrweirdo', 'AGY_BROWSER_WS_URL': 'ws://127.0.0.1:35887/devtools/browser/ffc0e84d-283b-405e-8182-e5875b3f0ff9', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'dumb', 'XDG_SESSION_ID': 'c1', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'FC_FONTATIONS': '1', 'ANTIGRAVITY_LS_VERSION': 'hub-2.9.1', 'PATH': '/home/mrweirdo/.gemini/antigravity/bin:/home/mrweirdo/.config/Antigravity/bin:/home/mrweirdo/.local/bin:/opt/ros/jazzy/bin:/home/mrweirdo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/mrweirdo/ns-allinone-3.47/ns-3.47:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/', 'SESSION_MANAGER': 'local/mrweirdo-LOQ-15AHP9:@/tmp/.ICE-unix/1494,unix/mrweirdo-LOQ-15AHP9:/tmp/.ICE-unix/1494', 'GDM_LANG': 'en_US', 'GTK3_MODULES': 'xapp-gtk3-module', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'DISPLAY': ':0', 'LANG': 'en_IN', 'XDG_CURRENT_DESKTOP': 'X-Cinnamon', 'ANTIGRAVITY_CONVERSATION_ID': '794caaa4-09d9-4e95-9f4e-66e8313d98b4', 'XDG_SESSION_DESKTOP': 'cinnamon', 'XAUTHORITY': '/home/mrweirdo/.Xauthority', 'LS_COLORS': '', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/mrweirdo', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ANTIGRAVITY_PROJECT_ID': '1f94a5d4-f281-4687-96b1-345f1b17fa3a', 'SHELL': '/bin/bash', 'ANTIGRAVITY_LS_ADDRESS': 'localhost:38619', 'QT_ACCESSIBILITY': '1', 'NO_AT_BRIDGE': '1', 'GDMSESSION': 'cinnamon', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'XDG_VTNR': '7', 'ANTIGRAVITY_TRAJECTORY_ID': '067ba093-7733-46b7-8135-1db5401ce661', 'PWD': '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-cinnamon:/etc/xdg', 'ZSH_TMUX_AUTOSTART': 'false', 'XDG_DATA_DIRS': '/usr/share/cinnamon:/usr/share/gnome:/home/mrweirdo/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'JETSKI_SAFECLIS_SOURCE': '/home/mrweirdo/.gemini/antigravity/bin/secplugins/src', 'COLCON': '1', 'ANTIGRAVITY_CSRF_TOKEN': '42790cdf-bb91-416f-a2e3-99dd06c901b7', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[5.589794] (patrol_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.590319] (patrol_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.590625] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/ament_index/resource_index/rosidl_interfaces/patrol_msgs\n'}
+[5.599436] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/Task.json\n'}
+[5.607835] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/Mission.json\n'}
+[5.610164] (-) TimerEvent: {}
+[5.617218] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/DroneState.json\n'}
+[5.626095] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/TaskBid.json\n'}
+[5.636347] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/TaskAssignment.json\n'}
+[5.645076] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/SwarmStatus.json\n'}
+[5.654309] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/ExperimentEvent.json\n'}
+[5.664627] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__functions.h\n'}
+[5.672995] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__struct.h\n'}
+[5.681035] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__type_support.h\n'}
+[5.689765] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__functions.h\n'}
+[5.697613] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__struct.h\n'}
+[5.706458] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__type_support.h\n'}
+[5.710239] (-) TimerEvent: {}
+[5.715342] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__functions.h\n'}
+[5.723122] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__struct.h\n'}
+[5.731723] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__type_support.h\n'}
+[5.740426] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__functions.h\n'}
+[5.748702] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__struct.h\n'}
+[5.756944] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__type_support.h\n'}
+[5.765836] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__functions.h\n'}
+[5.774968] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__struct.h\n'}
+[5.784650] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__type_support.h\n'}
+[5.793890] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__functions.h\n'}
+[5.802584] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__struct.h\n'}
+[5.810362] (-) TimerEvent: {}
+[5.810680] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__type_support.h\n'}
+[5.819993] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__functions.h\n'}
+[5.829004] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__struct.h\n'}
+[5.839004] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__type_support.h\n'}
+[5.850898] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/drone_state.h\n'}
+[5.859221] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/experiment_event.h\n'}
+[5.867234] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/mission.h\n'}
+[5.875700] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[5.883816] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/swarm_status.h\n'}
+[5.891545] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task.h\n'}
+[5.899451] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task_assignment.h\n'}
+[5.908368] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task_bid.h\n'}
+[5.910459] (-) TimerEvent: {}
+[5.918613] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/library_path.sh\n'}
+[5.927603] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/library_path.dsv\n'}
+[5.937641] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__rosidl_typesupport_fastrtps_c.h\n'}
+[5.946236] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__rosidl_typesupport_fastrtps_c.h\n'}
+[5.954506] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__rosidl_typesupport_fastrtps_c.h\n'}
+[5.963159] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__rosidl_typesupport_fastrtps_c.h\n'}
+[5.971726] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__rosidl_typesupport_fastrtps_c.h\n'}
+[5.980353] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__rosidl_typesupport_fastrtps_c.h\n'}
+[5.989801] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__rosidl_typesupport_fastrtps_c.h\n'}
+[5.998868] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[6.007977] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__rosidl_typesupport_introspection_c.h\n'}
+[6.010519] (-) TimerEvent: {}
+[6.016943] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__rosidl_typesupport_introspection_c.h\n'}
+[6.025432] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__rosidl_typesupport_introspection_c.h\n'}
+[6.036717] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__rosidl_typesupport_introspection_c.h\n'}
+[6.045902] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__rosidl_typesupport_introspection_c.h\n'}
+[6.056998] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__rosidl_typesupport_introspection_c.h\n'}
+[6.065498] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__rosidl_typesupport_introspection_c.h\n'}
+[6.073828] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[6.083522] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__builder.hpp\n'}
+[6.092364] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__struct.hpp\n'}
+[6.099971] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__traits.hpp\n'}
+[6.108025] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__type_support.hpp\n'}
+[6.110599] (-) TimerEvent: {}
+[6.116247] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__builder.hpp\n'}
+[6.125496] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__struct.hpp\n'}
+[6.134471] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__traits.hpp\n'}
+[6.142767] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__type_support.hpp\n'}
+[6.152772] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__builder.hpp\n'}
+[6.161226] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__struct.hpp\n'}
+[6.169157] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__traits.hpp\n'}
+[6.177722] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__type_support.hpp\n'}
+[6.186382] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__builder.hpp\n'}
+[6.194914] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__struct.hpp\n'}
+[6.203564] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__traits.hpp\n'}
+[6.210728] (-) TimerEvent: {}
+[6.211983] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__type_support.hpp\n'}
+[6.219994] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__builder.hpp\n'}
+[6.227801] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__struct.hpp\n'}
+[6.235602] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__traits.hpp\n'}
+[6.244455] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__type_support.hpp\n'}
+[6.252617] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__builder.hpp\n'}
+[6.261766] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__struct.hpp\n'}
+[6.270222] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__traits.hpp\n'}
+[6.278591] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__type_support.hpp\n'}
+[6.287203] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__builder.hpp\n'}
+[6.296872] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__struct.hpp\n'}
+[6.306028] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__traits.hpp\n'}
+[6.310847] (-) TimerEvent: {}
+[6.315323] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__type_support.hpp\n'}
+[6.324330] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/drone_state.hpp\n'}
+[6.332596] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/experiment_event.hpp\n'}
+[6.341444] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/mission.hpp\n'}
+[6.350166] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[6.358479] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/swarm_status.hpp\n'}
+[6.369116] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task.hpp\n'}
+[6.378664] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task_assignment.hpp\n'}
+[6.387403] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task_bid.hpp\n'}
+[6.396654] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.406424] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.410989] (-) TimerEvent: {}
+[6.415274] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.423172] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.431302] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.440751] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.449338] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.457237] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[6.465969] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.474619] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.483186] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.492175] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.500217] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.508410] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.511050] (-) TimerEvent: {}
+[6.516489] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.524437] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/pythonpath.sh\n'}
+[6.532955] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/pythonpath.dsv\n'}
+[6.541756] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[6.550432] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[6.558847] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[6.568403] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[6.577698] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/__init__.py\n'}
+[6.587818] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[6.595627] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[6.604226] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[6.611154] (-) TimerEvent: {}
+[6.611502] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/__init__.py\n'}
+[6.619816] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_drone_state.py\n'}
+[6.628535] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_drone_state_s.c\n'}
+[6.635835] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_experiment_event.py\n'}
+[6.643984] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_experiment_event_s.c\n'}
+[6.652236] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_mission.py\n'}
+[6.660002] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_mission_s.c\n'}
+[6.668554] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_swarm_status.py\n'}
+[6.676593] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_swarm_status_s.c\n'}
+[6.684094] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task.py\n'}
+[6.692777] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task_assignment.py\n'}
+[6.701281] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task_assignment_s.c\n'}
+[6.709482] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task_bid.py\n'}
+[6.711216] (-) TimerEvent: {}
+[6.716984] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task_bid_s.c\n'}
+[6.724407] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task_s.c\n'}
+[6.732775] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/patrol_msgs_s__rosidl_typesupport_c.so\n'}
+[6.740387] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/patrol_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[6.748278] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/patrol_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[6.756348] (patrol_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/patrol_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[6.756670] (patrol_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/patrol_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[6.756772] (patrol_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/patrol_msgs_s__rosidl_typesupport_c.so\n'}
+[6.756930] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/rust/Cargo.toml\n'}
+[6.764697] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/rust/build.rs\n'}
+[6.773510] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/rust/src/lib.rs\n'}
+[6.781948] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/rust/src/msg.rs\n'}
+[6.789960] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/rust/src/msg/rmw.rs\n'}
+[6.796936] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/Task.idl\n'}
+[6.803802] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/Mission.idl\n'}
+[6.811046] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/DroneState.idl\n'}
+[6.811284] (-) TimerEvent: {}
+[6.818005] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/TaskBid.idl\n'}
+[6.826003] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/TaskAssignment.idl\n'}
+[6.833914] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/SwarmStatus.idl\n'}
+[6.843511] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/ExperimentEvent.idl\n'}
+[6.850906] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/Task.msg\n'}
+[6.857554] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/Mission.msg\n'}
+[6.866233] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/DroneState.msg\n'}
+[6.873803] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/TaskBid.msg\n'}
+[6.880607] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/TaskAssignment.msg\n'}
+[6.888140] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/SwarmStatus.msg\n'}
+[6.896021] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/ExperimentEvent.msg\n'}
+[6.904368] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/ament_index/resource_index/package_run_dependencies/patrol_msgs\n'}
+[6.911380] (-) TimerEvent: {}
+[6.911810] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/ament_index/resource_index/parent_prefix_path/patrol_msgs\n'}
+[6.921969] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/ament_prefix_path.sh\n'}
+[6.930266] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/ament_prefix_path.dsv\n'}
+[6.938078] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/path.sh\n'}
+[6.946455] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/path.dsv\n'}
+[6.954930] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/local_setup.bash\n'}
+[6.962045] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/local_setup.sh\n'}
+[6.970956] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/local_setup.zsh\n'}
+[6.978276] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/local_setup.dsv\n'}
+[6.986291] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/package.dsv\n'}
+[6.996629] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/ament_index/resource_index/packages/patrol_msgs\n'}
+[7.002826] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[7.010320] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[7.011445] (-) TimerEvent: {}
+[7.017283] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[7.025587] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[7.033309] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[7.040670] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[7.048415] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[7.055420] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[7.062964] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgsConfig.cmake\n'}
+[7.071082] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgsConfig-version.cmake\n'}
+[7.078039] (patrol_msgs) StdoutLine: {'line': b'-- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/package.xml\n'}
+[7.084939] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_generator_c.so\n'}
+[7.085624] (patrol_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_generator_c.so" to ""\n'}
+[7.085767] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[7.086242] (patrol_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[7.086302] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_introspection_c.so\n'}
+[7.086535] (patrol_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[7.086599] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_c.so\n'}
+[7.086820] (patrol_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_c.so" to ""\n'}
+[7.086879] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[7.087182] (patrol_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[7.087244] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[7.087517] (patrol_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[7.087573] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_cpp.so\n'}
+[7.088100] (patrol_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[7.111546] (-) TimerEvent: {}
+[7.118753] (patrol_msgs) StdoutLine: {'line': b"Listing '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs'...\n"}
+[7.118930] (patrol_msgs) StdoutLine: {'line': b"Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/__init__.py'...\n"}
+[7.119014] (patrol_msgs) StdoutLine: {'line': b"Listing '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg'...\n"}
+[7.119082] (patrol_msgs) StdoutLine: {'line': b"Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/__init__.py'...\n"}
+[7.119146] (patrol_msgs) StdoutLine: {'line': b"Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_drone_state.py'...\n"}
+[7.119212] (patrol_msgs) StdoutLine: {'line': b"Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_experiment_event.py'...\n"}
+[7.119278] (patrol_msgs) StdoutLine: {'line': b"Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_mission.py'...\n"}
+[7.119339] (patrol_msgs) StdoutLine: {'line': b"Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_swarm_status.py'...\n"}
+[7.119400] (patrol_msgs) StdoutLine: {'line': b"Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task.py'...\n"}
+[7.119459] (patrol_msgs) StdoutLine: {'line': b"Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task_assignment.py'...\n"}
+[7.119519] (patrol_msgs) StdoutLine: {'line': b"Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task_bid.py'...\n"}
+[7.124925] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_generator_py.so\n'}
+[7.125246] (patrol_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_generator_py.so" to ""\n'}
+[7.125366] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_generator_cExport.cmake\n'}
+[7.125467] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[7.125568] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[7.125667] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[7.125761] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[7.125859] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[7.125943] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_cExport.cmake\n'}
+[7.126028] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[7.126113] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_generator_cppExport.cmake\n'}
+[7.126272] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[7.126373] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[7.126437] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[7.126530] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[7.126638] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[7.126743] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[7.126842] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_generator_pyExport.cmake\n'}
+[7.126941] (patrol_msgs) StdoutLine: {'line': b'-- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[7.128962] (patrol_msgs) CommandEnded: {'returncode': 0}
+[7.142915] (patrol_msgs) JobEnded: {'identifier': 'patrol_msgs', 'rc': 0}
+[7.143427] (-) EventReactorShutdown: {}

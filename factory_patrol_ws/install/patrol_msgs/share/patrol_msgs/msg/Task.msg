@@ -1,7 +1,1 @@
-uint16 task_id
-float32 x
-float32 y
-float32 z
-uint8 priority
-uint8 inspection_type
-float32 hover_duration
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/Task.msg

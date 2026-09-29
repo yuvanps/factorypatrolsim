@@ -1,0 +1,381 @@
+[0.007s] Invoking command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs
+[0.125s] -- The C compiler identification is GNU 13.3.0
+[0.180s] -- The CXX compiler identification is GNU 13.3.0
+[0.197s] -- Detecting C compiler ABI info
+[0.283s] -- Detecting C compiler ABI info - done
+[0.289s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.289s] -- Detecting C compile features
+[0.290s] -- Detecting C compile features - done
+[0.299s] -- Detecting CXX compiler ABI info
+[0.390s] -- Detecting CXX compiler ABI info - done
+[0.395s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.396s] -- Detecting CXX compile features
+[0.396s] -- Detecting CXX compile features - done
+[0.400s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.508s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.557s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.636s] -- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.639s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.674s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.705s] -- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.159s] -- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.506s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.973s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.975s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[2.087s] -- Found PythonExtra: /usr/bin/python3  
+[2.456s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[2.503s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.513s] -- Configuring done (2.5s)
+[2.542s] -- Generating done (0.0s)
+[2.550s] -- Build files have been written to: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs
+[2.558s] Invoked command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs
+[2.559s] Invoking command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs -- -j16 -l16
+[2.607s] [  2%] Generating Rust code for ROS interfaces
+[2.607s] [  2%] Generating type hashes for ROS interfaces
+[2.615s] [  2%] Built target ament_cmake_python_symlink_patrol_msgs
+[2.788s] running egg_info
+[2.788s] creating patrol_msgs.egg-info
+[2.792s] [  2%] Built target patrol_msgs__rosidl_generator_type_description
+[2.801s] [  3%] Generating C code for ROS interfaces
+[2.806s] writing patrol_msgs.egg-info/PKG-INFO
+[2.806s] writing dependency_links to patrol_msgs.egg-info/dependency_links.txt
+[2.806s] writing top-level names to patrol_msgs.egg-info/top_level.txt
+[2.806s] writing manifest file 'patrol_msgs.egg-info/SOURCES.txt'
+[2.810s] [  4%] Generating C++ code for ROS interfaces
+[2.812s] [  4%] Built target patrol_msgs__rs
+[2.850s] reading manifest file 'patrol_msgs.egg-info/SOURCES.txt'
+[2.850s] writing manifest file 'patrol_msgs.egg-info/SOURCES.txt'
+[2.875s] [  4%] Built target ament_cmake_python_build_patrol_msgs_egg
+[3.117s] [  4%] Built target patrol_msgs__cpp
+[3.195s] [  8%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task__type_support.c.o
+[3.195s] [  8%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/mission__description.c.o
+[3.195s] [  8%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task__functions.c.o
+[3.195s] [  9%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task__description.c.o
+[3.195s] [ 11%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__description.c.o
+[3.195s] [  8%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/mission__functions.c.o
+[3.197s] [ 11%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__type_support.c.o
+[3.197s] [ 15%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__description.c.o
+[3.197s] [ 15%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__functions.c.o
+[3.197s] [ 15%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__functions.c.o
+[3.197s] [ 15%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__type_support.c.o
+[3.197s] [ 16%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/mission__type_support.c.o
+[3.199s] [ 20%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__description.c.o
+[3.199s] [ 20%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__type_support.c.o
+[3.199s] [ 20%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__functions.c.o
+[3.202s] [ 21%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__description.c.o
+[3.234s] [ 23%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__functions.c.o
+[3.234s] [ 23%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.c.o
+[3.237s] [ 26%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.c.o
+[3.237s] [ 26%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__description.c.o
+[3.237s] [ 26%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_c.dir/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.c.o
+[3.273s] [ 27%] Linking C shared library libpatrol_msgs__rosidl_generator_c.so
+[3.310s] [ 27%] Built target patrol_msgs__rosidl_generator_c
+[3.322s] [ 33%] Generating C type support dispatch for ROS interfaces
+[3.322s] [ 33%] Generating C++ type support dispatch for ROS interfaces
+[3.322s] [ 33%] Generating C introspection for ROS interfaces
+[3.322s] [ 33%] Generating C++ type support for eProsima Fast-RTPS
+[3.322s] [ 33%] Generating C++ introspection for ROS interfaces
+[3.323s] [ 33%] Generating C type support for eProsima Fast-RTPS
+[3.548s] [ 35%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/patrol_msgs/msg/task__type_support.cpp.o
+[3.548s] [ 35%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/patrol_msgs/msg/swarm_status__type_support.cpp.o
+[3.548s] [ 36%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/patrol_msgs/msg/mission__type_support.cpp.o
+[3.548s] [ 37%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/patrol_msgs/msg/task_bid__type_support.cpp.o
+[3.548s] [ 40%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/patrol_msgs/msg/task_assignment__type_support.cpp.o
+[3.548s] [ 40%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/patrol_msgs/msg/drone_state__type_support.cpp.o
+[3.549s] [ 41%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/patrol_msgs/msg/experiment_event__type_support.cpp.o
+[3.561s] [ 44%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/patrol_msgs/msg/mission__type_support.cpp.o
+[3.561s] [ 44%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/patrol_msgs/msg/task__type_support.cpp.o
+[3.562s] [ 44%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/patrol_msgs/msg/drone_state__type_support.cpp.o
+[3.572s] [ 45%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/patrol_msgs/msg/task_bid__type_support.cpp.o
+[3.574s] [ 46%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/patrol_msgs/msg/task_assignment__type_support.cpp.o
+[3.590s] [ 48%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/patrol_msgs/msg/experiment_event__type_support.cpp.o
+[3.590s] [ 48%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/patrol_msgs/msg/swarm_status__type_support.cpp.o
+[3.611s] [ 49%] Linking CXX shared library libpatrol_msgs__rosidl_typesupport_c.so
+[3.643s] [ 51%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/patrol_msgs/msg/detail/drone_state__type_support.cpp.o
+[3.643s] [ 51%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/patrol_msgs/msg/detail/mission__type_support.cpp.o
+[3.648s] [ 52%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/patrol_msgs/msg/detail/task__type_support.cpp.o
+[3.676s] [ 53%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/patrol_msgs/msg/detail/task_bid__type_support.cpp.o
+[3.687s] [ 54%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/patrol_msgs/msg/detail/task_assignment__type_support.cpp.o
+[3.694s] [ 54%] Built target patrol_msgs__rosidl_typesupport_c
+[3.712s] [ 55%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/patrol_msgs/msg/detail/swarm_status__type_support.cpp.o
+[3.726s] [ 56%] Building C object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/patrol_msgs/msg/detail/task__type_support.c.o
+[3.780s] [ 57%] Building C object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/patrol_msgs/msg/detail/mission__type_support.c.o
+[3.852s] [ 58%] Building C object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/patrol_msgs/msg/detail/drone_state__type_support.c.o
+[3.904s] [ 60%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/patrol_msgs/msg/detail/dds_fastrtps/task__type_support.cpp.o
+[3.905s] [ 61%] Building C object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/patrol_msgs/msg/detail/task_bid__type_support.c.o
+[3.939s] [ 62%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/patrol_msgs/msg/detail/dds_fastrtps/mission__type_support.cpp.o
+[3.942s] [ 63%] Building C object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/patrol_msgs/msg/detail/task_assignment__type_support.c.o
+[3.947s] [ 65%] Building C object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/patrol_msgs/msg/detail/swarm_status__type_support.c.o
+[3.947s] [ 65%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/patrol_msgs/msg/detail/dds_fastrtps/drone_state__type_support.cpp.o
+[3.958s] [ 67%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/patrol_msgs/msg/detail/experiment_event__type_support.cpp.o
+[3.958s] [ 67%] Building C object CMakeFiles/patrol_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/patrol_msgs/msg/detail/experiment_event__type_support.c.o
+[3.960s] [ 68%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/patrol_msgs/msg/detail/dds_fastrtps/task_bid__type_support.cpp.o
+[3.980s] [ 70%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/patrol_msgs/msg/detail/task__type_support_c.cpp.o
+[3.980s] [ 69%] Linking CXX shared library libpatrol_msgs__rosidl_typesupport_cpp.so
+[3.990s] [ 71%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/patrol_msgs/msg/detail/mission__type_support_c.cpp.o
+[4.004s] [ 72%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/patrol_msgs/msg/detail/dds_fastrtps/task_assignment__type_support.cpp.o
+[4.009s] [ 73%] Linking C shared library libpatrol_msgs__rosidl_typesupport_introspection_c.so
+[4.021s] [ 74%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/patrol_msgs/msg/detail/drone_state__type_support_c.cpp.o
+[4.034s] [ 74%] Built target patrol_msgs__rosidl_typesupport_cpp
+[4.046s] [ 75%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/patrol_msgs/msg/detail/task_assignment__type_support_c.cpp.o
+[4.046s] [ 76%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/patrol_msgs/msg/detail/task_bid__type_support_c.cpp.o
+[4.053s] [ 76%] Built target patrol_msgs__rosidl_typesupport_introspection_c
+[4.058s] [ 77%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/patrol_msgs/msg/detail/dds_fastrtps/swarm_status__type_support.cpp.o
+[4.058s] [ 78%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/patrol_msgs/msg/detail/dds_fastrtps/experiment_event__type_support.cpp.o
+[4.066s] [ 80%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/patrol_msgs/msg/detail/swarm_status__type_support_c.cpp.o
+[4.102s] [ 81%] Building CXX object CMakeFiles/patrol_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/patrol_msgs/msg/detail/experiment_event__type_support_c.cpp.o
+[4.328s] [ 82%] Linking CXX shared library libpatrol_msgs__rosidl_typesupport_introspection_cpp.so
+[4.525s] [ 82%] Built target patrol_msgs__rosidl_typesupport_introspection_cpp
+[4.600s] [ 83%] Linking CXX shared library libpatrol_msgs__rosidl_typesupport_fastrtps_c.so
+[4.629s] [ 84%] Linking CXX shared library libpatrol_msgs__rosidl_typesupport_fastrtps_cpp.so
+[4.671s] [ 84%] Built target patrol_msgs__rosidl_typesupport_fastrtps_c
+[4.705s] [ 84%] Built target patrol_msgs__rosidl_typesupport_fastrtps_cpp
+[4.723s] [ 84%] Built target patrol_msgs
+[4.742s] [ 85%] Generating Python code for ROS interfaces
+[5.217s] [ 85%] Built target patrol_msgs__py
+[5.239s] [ 87%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_swarm_status_s.c.o
+[5.239s] [ 87%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_task_s.c.o
+[5.240s] [ 88%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_drone_state_s.c.o
+[5.240s] [ 89%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_task_bid_s.c.o
+[5.241s] [ 91%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_task_assignment_s.c.o
+[5.241s] [ 91%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_mission_s.c.o
+[5.247s] [ 92%] Building C object CMakeFiles/patrol_msgs__rosidl_generator_py.dir/rosidl_generator_py/patrol_msgs/msg/_experiment_event_s.c.o
+[5.366s] [ 93%] Linking C shared library libpatrol_msgs__rosidl_generator_py.so
+[5.402s] [ 93%] Built target patrol_msgs__rosidl_generator_py
+[5.420s] [ 96%] Building C object CMakeFiles/patrol_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_c.c.o
+[5.421s] [ 96%] Building C object CMakeFiles/patrol_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[5.421s] [ 96%] Building C object CMakeFiles/patrol_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_introspection_c.c.o
+[5.510s] [ 97%] Linking C shared module rosidl_generator_py/patrol_msgs/patrol_msgs_s__rosidl_typesupport_c.so
+[5.516s] [100%] Linking C shared module rosidl_generator_py/patrol_msgs/patrol_msgs_s__rosidl_typesupport_fastrtps_c.so
+[5.516s] [100%] Linking C shared module rosidl_generator_py/patrol_msgs/patrol_msgs_s__rosidl_typesupport_introspection_c.so
+[5.546s] [100%] Built target patrol_msgs_s__rosidl_typesupport_c
+[5.554s] [100%] Built target patrol_msgs_s__rosidl_typesupport_fastrtps_c
+[5.554s] [100%] Built target patrol_msgs_s__rosidl_typesupport_introspection_c
+[5.572s] Invoked command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs -- -j16 -l16
+[5.581s] Invoking command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs
+[5.590s] -- Install configuration: ""
+[5.590s] -- Execute custom install script
+[5.590s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/ament_index/resource_index/rosidl_interfaces/patrol_msgs
+[5.599s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/Task.json
+[5.607s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/Mission.json
+[5.617s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/DroneState.json
+[5.626s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/TaskBid.json
+[5.636s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/TaskAssignment.json
+[5.645s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/SwarmStatus.json
+[5.654s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/ExperimentEvent.json
+[5.664s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__functions.h
+[5.673s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__struct.h
+[5.681s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__type_support.h
+[5.689s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__functions.h
+[5.697s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__struct.h
+[5.706s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__type_support.h
+[5.715s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__functions.h
+[5.723s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__struct.h
+[5.731s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__type_support.h
+[5.740s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__functions.h
+[5.748s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__struct.h
+[5.757s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__type_support.h
+[5.765s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__functions.h
+[5.775s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__struct.h
+[5.784s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__type_support.h
+[5.794s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__functions.h
+[5.802s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__struct.h
+[5.810s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__type_support.h
+[5.820s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__functions.h
+[5.829s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__struct.h
+[5.839s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__type_support.h
+[5.850s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/drone_state.h
+[5.859s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/experiment_event.h
+[5.867s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/mission.h
+[5.875s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/rosidl_generator_c__visibility_control.h
+[5.883s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/swarm_status.h
+[5.891s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task.h
+[5.899s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task_assignment.h
+[5.908s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task_bid.h
+[5.918s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/library_path.sh
+[5.927s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/library_path.dsv
+[5.937s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__rosidl_typesupport_fastrtps_c.h
+[5.946s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__rosidl_typesupport_fastrtps_c.h
+[5.954s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__rosidl_typesupport_fastrtps_c.h
+[5.963s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__rosidl_typesupport_fastrtps_c.h
+[5.971s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__rosidl_typesupport_fastrtps_c.h
+[5.980s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__rosidl_typesupport_fastrtps_c.h
+[5.989s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__rosidl_typesupport_fastrtps_c.h
+[5.998s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[6.008s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__rosidl_typesupport_introspection_c.h
+[6.017s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__rosidl_typesupport_introspection_c.h
+[6.025s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__rosidl_typesupport_introspection_c.h
+[6.036s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__rosidl_typesupport_introspection_c.h
+[6.046s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__rosidl_typesupport_introspection_c.h
+[6.057s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__rosidl_typesupport_introspection_c.h
+[6.065s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__rosidl_typesupport_introspection_c.h
+[6.073s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[6.083s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__builder.hpp
+[6.092s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__struct.hpp
+[6.100s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__traits.hpp
+[6.108s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__type_support.hpp
+[6.116s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__builder.hpp
+[6.125s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__struct.hpp
+[6.134s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__traits.hpp
+[6.142s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__type_support.hpp
+[6.152s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__builder.hpp
+[6.161s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__struct.hpp
+[6.169s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__traits.hpp
+[6.177s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__type_support.hpp
+[6.186s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__builder.hpp
+[6.195s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__struct.hpp
+[6.203s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__traits.hpp
+[6.212s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__type_support.hpp
+[6.220s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__builder.hpp
+[6.227s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__struct.hpp
+[6.235s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__traits.hpp
+[6.244s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__type_support.hpp
+[6.252s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__builder.hpp
+[6.261s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__struct.hpp
+[6.270s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__traits.hpp
+[6.278s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__type_support.hpp
+[6.287s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__builder.hpp
+[6.296s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__struct.hpp
+[6.306s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__traits.hpp
+[6.315s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__type_support.hpp
+[6.324s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/drone_state.hpp
+[6.332s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/experiment_event.hpp
+[6.341s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/mission.hpp
+[6.350s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[6.358s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/swarm_status.hpp
+[6.369s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task.hpp
+[6.378s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task_assignment.hpp
+[6.387s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task_bid.hpp
+[6.396s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__rosidl_typesupport_fastrtps_cpp.hpp
+[6.406s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__rosidl_typesupport_fastrtps_cpp.hpp
+[6.415s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__rosidl_typesupport_fastrtps_cpp.hpp
+[6.423s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__rosidl_typesupport_fastrtps_cpp.hpp
+[6.431s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__rosidl_typesupport_fastrtps_cpp.hpp
+[6.440s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__rosidl_typesupport_fastrtps_cpp.hpp
+[6.449s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__rosidl_typesupport_fastrtps_cpp.hpp
+[6.457s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[6.466s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__rosidl_typesupport_introspection_cpp.hpp
+[6.474s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/experiment_event__rosidl_typesupport_introspection_cpp.hpp
+[6.483s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__rosidl_typesupport_introspection_cpp.hpp
+[6.492s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__rosidl_typesupport_introspection_cpp.hpp
+[6.500s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__rosidl_typesupport_introspection_cpp.hpp
+[6.508s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__rosidl_typesupport_introspection_cpp.hpp
+[6.516s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__rosidl_typesupport_introspection_cpp.hpp
+[6.524s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/pythonpath.sh
+[6.533s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/pythonpath.dsv
+[6.541s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs-0.0.0-py3.12.egg-info/PKG-INFO
+[6.550s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs-0.0.0-py3.12.egg-info/SOURCES.txt
+[6.558s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs-0.0.0-py3.12.egg-info/dependency_links.txt
+[6.568s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs-0.0.0-py3.12.egg-info/top_level.txt
+[6.577s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/__init__.py
+[6.587s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_c.c
+[6.595s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[6.604s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[6.611s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/__init__.py
+[6.619s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_drone_state.py
+[6.628s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_drone_state_s.c
+[6.635s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_experiment_event.py
+[6.644s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_experiment_event_s.c
+[6.652s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_mission.py
+[6.660s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_mission_s.c
+[6.668s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_swarm_status.py
+[6.676s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_swarm_status_s.c
+[6.684s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task.py
+[6.692s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task_assignment.py
+[6.701s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task_assignment_s.c
+[6.709s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task_bid.py
+[6.717s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task_bid_s.c
+[6.724s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task_s.c
+[6.732s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/patrol_msgs_s__rosidl_typesupport_c.so
+[6.740s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/patrol_msgs_s__rosidl_typesupport_fastrtps_c.so
+[6.748s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/patrol_msgs_s__rosidl_typesupport_introspection_c.so
+[6.756s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/patrol_msgs_s__rosidl_typesupport_fastrtps_c.so
+[6.756s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/patrol_msgs_s__rosidl_typesupport_introspection_c.so
+[6.756s] -- Up-to-date symlink: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/patrol_msgs_s__rosidl_typesupport_c.so
+[6.756s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/rust/Cargo.toml
+[6.764s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/rust/build.rs
+[6.773s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/rust/src/lib.rs
+[6.782s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/rust/src/msg.rs
+[6.790s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/rust/src/msg/rmw.rs
+[6.797s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/Task.idl
+[6.803s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/Mission.idl
+[6.811s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/DroneState.idl
+[6.818s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/TaskBid.idl
+[6.826s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/TaskAssignment.idl
+[6.833s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/SwarmStatus.idl
+[6.843s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/ExperimentEvent.idl
+[6.851s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/Task.msg
+[6.857s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/Mission.msg
+[6.866s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/DroneState.msg
+[6.873s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/TaskBid.msg
+[6.880s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/TaskAssignment.msg
+[6.888s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/SwarmStatus.msg
+[6.896s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/msg/ExperimentEvent.msg
+[6.904s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/ament_index/resource_index/package_run_dependencies/patrol_msgs
+[6.911s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/ament_index/resource_index/parent_prefix_path/patrol_msgs
+[6.922s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/ament_prefix_path.sh
+[6.930s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/ament_prefix_path.dsv
+[6.938s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/path.sh
+[6.946s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/environment/path.dsv
+[6.955s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/local_setup.bash
+[6.962s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/local_setup.sh
+[6.971s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/local_setup.zsh
+[6.978s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/local_setup.dsv
+[6.986s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/package.dsv
+[6.996s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/ament_index/resource_index/packages/patrol_msgs
+[7.002s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/rosidl_cmake-extras.cmake
+[7.010s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[7.017s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[7.025s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[7.033s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[7.040s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[7.048s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[7.055s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[7.063s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgsConfig.cmake
+[7.071s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgsConfig-version.cmake
+[7.078s] -- Symlinking: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/package.xml
+[7.085s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_generator_c.so
+[7.085s] -- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_generator_c.so" to ""
+[7.085s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_fastrtps_c.so
+[7.086s] -- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[7.086s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_introspection_c.so
+[7.086s] -- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_introspection_c.so" to ""
+[7.086s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_c.so
+[7.086s] -- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_c.so" to ""
+[7.086s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_fastrtps_cpp.so
+[7.087s] -- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[7.087s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_introspection_cpp.so
+[7.087s] -- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[7.087s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_cpp.so
+[7.088s] -- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_typesupport_cpp.so" to ""
+[7.118s] Listing '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs'...
+[7.118s] Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/__init__.py'...
+[7.119s] Listing '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg'...
+[7.119s] Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/__init__.py'...
+[7.119s] Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_drone_state.py'...
+[7.119s] Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_experiment_event.py'...
+[7.119s] Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_mission.py'...
+[7.119s] Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_swarm_status.py'...
+[7.119s] Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task.py'...
+[7.119s] Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task_assignment.py'...
+[7.119s] Compiling '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/python3.12/site-packages/patrol_msgs/msg/_task_bid.py'...
+[7.125s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_generator_py.so
+[7.125s] -- Set non-toolchain portion of runtime path of "/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/lib/libpatrol_msgs__rosidl_generator_py.so" to ""
+[7.125s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_generator_cExport.cmake
+[7.125s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_generator_cExport-noconfig.cmake
+[7.125s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[7.125s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[7.125s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_introspection_cExport.cmake
+[7.125s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[7.125s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_cExport.cmake
+[7.126s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[7.126s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_generator_cppExport.cmake
+[7.126s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[7.126s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[7.126s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[7.126s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[7.126s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_cppExport.cmake
+[7.126s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/patrol_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[7.126s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_generator_pyExport.cmake
+[7.126s] -- Installing: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/share/patrol_msgs/cmake/export_patrol_msgs__rosidl_generator_pyExport-noconfig.cmake
+[7.129s] Invoked command in '/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs

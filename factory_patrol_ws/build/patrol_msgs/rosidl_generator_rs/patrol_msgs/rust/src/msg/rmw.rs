@@ -238,6 +238,9 @@ pub struct DroneState {
     #[allow(missing_docs)]
     pub state: u8,
 
+    /// task the drone is currently flying to / inspecting (0 = none)
+    pub current_task_id: u16,
+
 }
 
 
@@ -544,6 +547,193 @@ impl rosidl_runtime_rs::RmwMessage for SwarmStatus where Self: Sized {
   fn get_type_support() -> *const std::ffi::c_void {
     // SAFETY: No preconditions for this function.
     unsafe { rosidl_typesupport_c__get_message_type_support_handle__patrol_msgs__msg__SwarmStatus() }
+  }
+}
+
+
+#[link(name = "patrol_msgs__rosidl_typesupport_c")]
+extern "C" {
+    fn rosidl_typesupport_c__get_message_type_support_handle__patrol_msgs__msg__ExperimentEvent() -> *const std::ffi::c_void;
+}
+
+#[link(name = "patrol_msgs__rosidl_generator_c")]
+extern "C" {
+    fn patrol_msgs__msg__ExperimentEvent__init(msg: *mut ExperimentEvent) -> bool;
+    fn patrol_msgs__msg__ExperimentEvent__Sequence__init(seq: *mut rosidl_runtime_rs::Sequence<ExperimentEvent>, size: usize) -> bool;
+    fn patrol_msgs__msg__ExperimentEvent__Sequence__fini(seq: *mut rosidl_runtime_rs::Sequence<ExperimentEvent>);
+    fn patrol_msgs__msg__ExperimentEvent__Sequence__copy(in_seq: &rosidl_runtime_rs::Sequence<ExperimentEvent>, out_seq: *mut rosidl_runtime_rs::Sequence<ExperimentEvent>) -> bool;
+}
+
+// Corresponds to patrol_msgs__msg__ExperimentEvent
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[repr(C)]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct ExperimentEvent {
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub timestamp: u64,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub event_type: rosidl_runtime_rs::String,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub data: rosidl_runtime_rs::String,
+
+}
+
+
+
+impl Default for ExperimentEvent {
+  fn default() -> Self {
+    unsafe {
+      let mut msg = std::mem::zeroed();
+      if !patrol_msgs__msg__ExperimentEvent__init(&mut msg as *mut _) {
+        panic!("Call to patrol_msgs__msg__ExperimentEvent__init() failed");
+      }
+      msg
+    }
+  }
+}
+
+impl rosidl_runtime_rs::SequenceAlloc for ExperimentEvent {
+  fn sequence_init(seq: &mut rosidl_runtime_rs::Sequence<Self>, size: usize) -> bool {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { patrol_msgs__msg__ExperimentEvent__Sequence__init(seq as *mut _, size) }
+  }
+  fn sequence_fini(seq: &mut rosidl_runtime_rs::Sequence<Self>) {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { patrol_msgs__msg__ExperimentEvent__Sequence__fini(seq as *mut _) }
+  }
+  fn sequence_copy(in_seq: &rosidl_runtime_rs::Sequence<Self>, out_seq: &mut rosidl_runtime_rs::Sequence<Self>) -> bool {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { patrol_msgs__msg__ExperimentEvent__Sequence__copy(in_seq, out_seq as *mut _) }
+  }
+}
+
+impl rosidl_runtime_rs::Message for ExperimentEvent {
+  type RmwMsg = Self;
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> { msg_cow }
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self { msg }
+}
+
+impl rosidl_runtime_rs::RmwMessage for ExperimentEvent where Self: Sized {
+  const TYPE_NAME: &'static str = "patrol_msgs/msg/ExperimentEvent";
+  fn get_type_support() -> *const std::ffi::c_void {
+    // SAFETY: No preconditions for this function.
+    unsafe { rosidl_typesupport_c__get_message_type_support_handle__patrol_msgs__msg__ExperimentEvent() }
+  }
+}
+
+
+#[link(name = "patrol_msgs__rosidl_typesupport_c")]
+extern "C" {
+    fn rosidl_typesupport_c__get_message_type_support_handle__patrol_msgs__msg__MovementCommand() -> *const std::ffi::c_void;
+}
+
+#[link(name = "patrol_msgs__rosidl_generator_c")]
+extern "C" {
+    fn patrol_msgs__msg__MovementCommand__init(msg: *mut MovementCommand) -> bool;
+    fn patrol_msgs__msg__MovementCommand__Sequence__init(seq: *mut rosidl_runtime_rs::Sequence<MovementCommand>, size: usize) -> bool;
+    fn patrol_msgs__msg__MovementCommand__Sequence__fini(seq: *mut rosidl_runtime_rs::Sequence<MovementCommand>);
+    fn patrol_msgs__msg__MovementCommand__Sequence__copy(in_seq: &rosidl_runtime_rs::Sequence<MovementCommand>, out_seq: *mut rosidl_runtime_rs::Sequence<MovementCommand>) -> bool;
+}
+
+// Corresponds to patrol_msgs__msg__MovementCommand
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+
+/// Movement command from a reactive coordination algorithm (e.g. APF) to one patrol controller.
+/// All positions/velocities are in the common factory frame used by DroneState and Task:
+///   x = Gazebo X (east), y = Gazebo Y (north), z = -height (negative = above ground).
+
+#[repr(C)]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct MovementCommand {
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub drone_id: u8,
+
+    /// goal this command steers toward; controllers ignore commands for any other task
+    pub task_id: u16,
+
+    /// position setpoint the controller should track
+    pub target_x: f32,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub target_y: f32,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub target_z: f32,
+
+    /// commanded velocity that produced the target (informational / diagnostics)
+    pub velocity_x: f32,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub velocity_y: f32,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub velocity_z: f32,
+
+}
+
+
+
+impl Default for MovementCommand {
+  fn default() -> Self {
+    unsafe {
+      let mut msg = std::mem::zeroed();
+      if !patrol_msgs__msg__MovementCommand__init(&mut msg as *mut _) {
+        panic!("Call to patrol_msgs__msg__MovementCommand__init() failed");
+      }
+      msg
+    }
+  }
+}
+
+impl rosidl_runtime_rs::SequenceAlloc for MovementCommand {
+  fn sequence_init(seq: &mut rosidl_runtime_rs::Sequence<Self>, size: usize) -> bool {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { patrol_msgs__msg__MovementCommand__Sequence__init(seq as *mut _, size) }
+  }
+  fn sequence_fini(seq: &mut rosidl_runtime_rs::Sequence<Self>) {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { patrol_msgs__msg__MovementCommand__Sequence__fini(seq as *mut _) }
+  }
+  fn sequence_copy(in_seq: &rosidl_runtime_rs::Sequence<Self>, out_seq: &mut rosidl_runtime_rs::Sequence<Self>) -> bool {
+    // SAFETY: This is safe since the pointer is guaranteed to be valid/initialized.
+    unsafe { patrol_msgs__msg__MovementCommand__Sequence__copy(in_seq, out_seq as *mut _) }
+  }
+}
+
+impl rosidl_runtime_rs::Message for MovementCommand {
+  type RmwMsg = Self;
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> { msg_cow }
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self { msg }
+}
+
+impl rosidl_runtime_rs::RmwMessage for MovementCommand where Self: Sized {
+  const TYPE_NAME: &'static str = "patrol_msgs/msg/MovementCommand";
+  fn get_type_support() -> *const std::ffi::c_void {
+    // SAFETY: No preconditions for this function.
+    unsafe { rosidl_typesupport_c__get_message_type_support_handle__patrol_msgs__msg__MovementCommand() }
   }
 }
 

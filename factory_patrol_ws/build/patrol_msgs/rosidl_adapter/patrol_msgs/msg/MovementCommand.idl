@@ -1,0 +1,36 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from patrol_msgs/msg/MovementCommand.msg
+// generated code does not contain a copyright notice
+
+
+module patrol_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Movement command from a reactive coordination algorithm (e.g. APF) to one patrol controller." "\n"
+      "All positions/velocities are in the common factory frame used by DroneState and Task:" "\n"
+      "  x = Gazebo X (east), y = Gazebo Y (north), z = -height (negative = above ground).")
+    struct MovementCommand {
+      uint8 drone_id;
+
+      @verbatim (language="comment", text=
+        "goal this command steers toward; controllers ignore commands for any other task")
+      uint16 task_id;
+
+      @verbatim (language="comment", text=
+        "position setpoint the controller should track")
+      float target_x;
+
+      float target_y;
+
+      float target_z;
+
+      @verbatim (language="comment", text=
+        "commanded velocity that produced the target (informational / diagnostics)")
+      float velocity_x;
+
+      float velocity_y;
+
+      float velocity_z;
+    };
+  };
+};

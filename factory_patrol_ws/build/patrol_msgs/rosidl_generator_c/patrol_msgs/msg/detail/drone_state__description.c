@@ -11,10 +11,10 @@ patrol_msgs__msg__DroneState__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xda, 0xd4, 0xe8, 0x71, 0x95, 0x12, 0x7d, 0xb7,
-      0xf9, 0x33, 0xa0, 0xb5, 0x9d, 0xc1, 0xee, 0x1b,
-      0xb7, 0x60, 0xb7, 0xc1, 0x0c, 0x49, 0x0f, 0xfb,
-      0x65, 0x4e, 0x3e, 0xc6, 0x69, 0x09, 0x8b, 0x89,
+      0x7d, 0x4f, 0x24, 0x73, 0x93, 0xc6, 0x26, 0xf2,
+      0xb5, 0x3b, 0x8b, 0xda, 0x21, 0xed, 0x73, 0x5a,
+      0x7a, 0xe7, 0x14, 0xc0, 0x53, 0xdd, 0x1f, 0x21,
+      0xe0, 0xde, 0xe0, 0x83, 0x3a, 0x67, 0xbd, 0x08,
     }};
   return &hash;
 }
@@ -37,6 +37,7 @@ static char patrol_msgs__msg__DroneState__FIELD_NAME__y[] = "y";
 static char patrol_msgs__msg__DroneState__FIELD_NAME__z[] = "z";
 static char patrol_msgs__msg__DroneState__FIELD_NAME__battery_level[] = "battery_level";
 static char patrol_msgs__msg__DroneState__FIELD_NAME__state[] = "state";
+static char patrol_msgs__msg__DroneState__FIELD_NAME__current_task_id[] = "current_task_id";
 
 static rosidl_runtime_c__type_description__Field patrol_msgs__msg__DroneState__FIELDS[] = {
   {
@@ -99,6 +100,16 @@ static rosidl_runtime_c__type_description__Field patrol_msgs__msg__DroneState__F
     },
     {NULL, 0, 0},
   },
+  {
+    {patrol_msgs__msg__DroneState__FIELD_NAME__current_task_id, 15, 15},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_UINT16,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
 };
 
 const rosidl_runtime_c__type_description__TypeDescription *
@@ -110,7 +121,7 @@ patrol_msgs__msg__DroneState__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {patrol_msgs__msg__DroneState__TYPE_NAME, 26, 26},
-      {patrol_msgs__msg__DroneState__FIELDS, 6, 6},
+      {patrol_msgs__msg__DroneState__FIELDS, 7, 7},
     },
     {NULL, 0, 0},
   };
@@ -126,7 +137,8 @@ static char toplevel_type_raw_source[] =
   "float32 y\n"
   "float32 z\n"
   "float32 battery_level\n"
-  "uint8 state";
+  "uint8 state\n"
+  "uint16 current_task_id  # task the drone is currently flying to / inspecting (0 = none)";
 
 static char msg_encoding[] = "msg";
 
@@ -140,7 +152,7 @@ patrol_msgs__msg__DroneState__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {patrol_msgs__msg__DroneState__TYPE_NAME, 26, 26},
     {msg_encoding, 3, 3},
-    {toplevel_type_raw_source, 79, 79},
+    {toplevel_type_raw_source, 167, 167},
   };
   return &source;
 }

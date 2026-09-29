@@ -1,1 +1,1 @@
-prepend-non-duplicate-if-exists;PATH;bin
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/ament_cmake_environment_hooks/path.dsv

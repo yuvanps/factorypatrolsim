@@ -247,4 +247,10 @@ CMakeFiles/patrol_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generato
  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__functions.h \
  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.h \
  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__struct.h \
- /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__functions.h
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__functions.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__struct.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__struct.h \
+ /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.h

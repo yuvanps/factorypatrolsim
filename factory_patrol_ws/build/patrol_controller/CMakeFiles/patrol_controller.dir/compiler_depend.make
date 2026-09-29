@@ -46,31 +46,35 @@ CMakeFiles/patrol_controller.dir/src/auction_logic.c.o: /home/mrweirdo/factory_p
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
 CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__functions.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__struct.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__type_support.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__functions.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__struct.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__type_support.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__functions.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__struct.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__type_support.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__functions.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__struct.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__type_support.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__functions.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__struct.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__type_support.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__functions.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__struct.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__type_support.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/drone_state.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/mission.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/rosidl_generator_c__visibility_control.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/swarm_status.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task_assignment.h \
-  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task_bid.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__functions.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__struct.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__type_support.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/mission__functions.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/mission__struct.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/mission__type_support.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__struct.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__functions.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__struct.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task__functions.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task__struct.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task__type_support.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__functions.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__struct.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__type_support.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__functions.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__struct.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__type_support.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/drone_state.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/mission.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/movement_command.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/rosidl_generator_c__visibility_control.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/swarm_status.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/task.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/task_assignment.h \
+  /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/task_bid.h \
   /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/offboard_control_mode__functions.h \
   /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/offboard_control_mode__struct.h \
   /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/offboard_control_mode__type_support.h \
@@ -337,6 +341,8 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdalign.h:
 
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
@@ -359,19 +365,17 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
-/usr/include/uchar.h:
+/usr/include/time.h:
 
-/opt/ros/jazzy/include/rcl/rcl/time.h:
+/usr/include/strings.h:
 
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__functions.h:
 
-/opt/ros/jazzy/include/rcl/rcl/service_introspection.h:
+/opt/ros/jazzy/include/rcl/rcl/macros.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/mission.h:
 
-/opt/ros/jazzy/include/rcl/rcl/init_options.h:
-
-/opt/ros/jazzy/include/rcl/rcl/graph.h:
+/opt/ros/jazzy/include/rclc/visibility_control.h:
 
 /opt/ros/jazzy/include/rcl/rcl/error_handling.h:
 
@@ -385,33 +389,17 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /opt/ros/jazzy/include/rcl/rcl/arguments.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
-/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/dynamic_data.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/opt/ros/jazzy/include/action_msgs/action_msgs/srv/detail/cancel_goal__struct.h:
-
 /opt/ros/jazzy/include/action_msgs/action_msgs/srv/cancel_goal.h:
 
-/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__struct.h:
-
-/opt/ros/jazzy/include/rclc/subscription.h:
-
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
-
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__type_support.h:
-
-/opt/ros/jazzy/include/rcl_action/rcl_action/action_client.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /opt/ros/jazzy/include/rcutils/rcutils/types.h:
 
 /opt/ros/jazzy/include/rcl/rcl/guard_condition.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/include/px4_msgs/px4_msgs/msg/vehicle_command.h:
 
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/include/px4_msgs/px4_msgs/msg/offboard_control_mode.h:
 
@@ -426,6 +414,10 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_command__struct.h:
 
 /opt/ros/jazzy/include/rmw/rmw/message_sequence.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/trajectory_setpoint__type_support.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
 
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/trajectory_setpoint__functions.h:
 
@@ -445,23 +437,15 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/offboard_control_mode__functions.h:
 
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__struct.h:
+
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /opt/ros/jazzy/include/rmw/rmw/names_and_types.h:
 
-/opt/ros/jazzy/include/rmw/rmw/events_statuses/offered_deadline_missed.h:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__struct.h:
 
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
-
-/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__functions.h:
-
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task_assignment.h:
-
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/rosidl_generator_c__visibility_control.h:
-
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__type_support.h:
-
-/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/dynamic_type.h:
+/opt/ros/jazzy/include/rcutils/rcutils/error_handling.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
@@ -477,19 +461,31 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/vehicle_command__type_support.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__struct.h:
+/usr/include/uchar.h:
 
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__type_support.h:
 
-/opt/ros/jazzy/include/rmw/rmw/domain_id.h:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/task_assignment.h:
 
-/opt/ros/jazzy/include/rcl/rcl/macros.h:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/task.h:
 
-/opt/ros/jazzy/include/rclc/visibility_control.h:
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__functions.h:
+/opt/ros/jazzy/include/rcl/rcl/init_options.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__type_support.h:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/swarm_status.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/rosidl_generator_c__visibility_control.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/drone_state.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__type_support.h:
+
+/opt/ros/jazzy/include/rcutils/rcutils/snprintf.h:
+
+/opt/ros/jazzy/include/rcl/rcl/graph.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
@@ -503,6 +499,12 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /opt/ros/jazzy/include/rcutils/rcutils/testing/fault_injection.h:
 
+/opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_info__struct.h:
+
+/opt/ros/jazzy/include/rclc/subscription.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/mission__struct.h:
+
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /opt/ros/jazzy/include/rcl/rcl/log_level.h:
@@ -512,8 +514,6 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/rosidl_generator_c__visibility_control.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/drone_state.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
@@ -535,9 +535,9 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__functions.h:
-
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__type_support.h:
 
 /opt/ros/jazzy/include/rcl/rcl/init.h:
 
@@ -547,19 +547,25 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string_functions.h:
 
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_bid__functions.h:
+
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status__type_support.h:
+
+/opt/ros/jazzy/include/rclc/executor.h:
+
+/opt/ros/jazzy/include/rmw/rmw/events_statuses/incompatible_qos.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/movement_command.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__functions.h:
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
-/opt/ros/jazzy/include/rclc/publisher.h:
-
-/opt/ros/jazzy/include/rmw/rmw/localhost.h:
-
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_bid__functions.h:
+/opt/ros/jazzy/include/rclc/action_server.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
@@ -577,11 +583,21 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /opt/ros/jazzy/include/rcutils/rcutils/types/char_array.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/math.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.h:
+
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
 /opt/ros/jazzy/include/rclc/node.h:
+
+/opt/ros/jazzy/include/rmw/rmw/events_statuses/offered_deadline_missed.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
@@ -597,45 +613,47 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/include/px4_msgs/px4_msgs/msg/detail/trajectory_setpoint__type_support.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/opt/ros/jazzy/include/rcl/rcl/timer.h:
-
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__struct.h:
-
-/opt/ros/jazzy/include/rmw/rmw/get_topic_names_and_types.h:
-
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__struct.h:
-
-/opt/ros/jazzy/include/rcl/rcl/allocator.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /opt/ros/jazzy/include/rcl/rcl/rcl.h:
 
 /opt/ros/jazzy/include/rclc/action_goal_handle.h:
 
-/opt/ros/jazzy/include/rcutils/rcutils/macros.h:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task__struct.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/swarm_status.h:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__struct.h:
+
+/opt/ros/jazzy/include/rcutils/rcutils/macros.h:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/goal_info.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
+/opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/drone_state__functions.h:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
+
+/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/dynamic_data.h:
+
+/opt/ros/jazzy/include/rcl_action/rcl_action/action_client.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__struct.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__functions.h:
+
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/patrol_controller.c:
 
 /home/mrweirdo/factory_patrol_sim/factory_patrol_ws/patrol_controller/src/auction_logic.c:
 
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
-/opt/ros/jazzy/include/action_msgs/action_msgs/msg/goal_status_array.h:
+/opt/ros/jazzy/include/rcl/rcl/time.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
@@ -643,37 +661,39 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/type_description__struct.h:
 
-/usr/include/alloca.h:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/mission__type_support.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/px4_msgs/include/px4_msgs/px4_msgs/msg/vehicle_command.h:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task__type_support.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field__struct.h:
+/opt/ros/jazzy/include/rclc/publisher.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__struct.h:
+/opt/ros/jazzy/include/rmw/rmw/localhost.h:
 
-/opt/ros/jazzy/include/rcl/rcl/node.h:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__struct.h:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/msg/detail/goal_status_array__functions.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
+/opt/ros/jazzy/include/rcl/rcl/node.h:
 
-/usr/include/math.h:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/mission__functions.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__functions.h:
+/opt/ros/jazzy/include/action_msgs/action_msgs/srv/detail/cancel_goal__struct.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__type_support.h:
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task.h:
+/opt/ros/jazzy/include/action_msgs/action_msgs/msg/goal_status_array.h:
 
-/usr/include/assert.h:
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task__functions.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task_assignment__struct.h:
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/opt/ros/jazzy/include/rclc/types.h:
+/opt/ros/jazzy/include/rmw/rmw/domain_id.h:
 
-/opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/srv/detail/get_type_description__struct.h:
+/opt/ros/jazzy/include/rcl/rcl/service_introspection.h:
+
+/opt/ros/jazzy/include/rcl/rcl/timer.h:
 
 /opt/ros/jazzy/include/rcl/rcl/types.h:
 
@@ -689,17 +709,11 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /opt/ros/jazzy/include/rcl/rcl/client.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/task_bid.h:
-
 /opt/ros/jazzy/include/rcl_action/rcl_action/goal_handle.h:
 
 /opt/ros/jazzy/include/rcutils/rcutils/types/string_array.h:
 
 /opt/ros/jazzy/include/rmw/rmw/time.h:
-
-/opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/field_type__struct.h:
-
-/opt/ros/jazzy/include/rmw/rmw/topic_endpoint_info.h:
 
 /opt/ros/jazzy/include/rcl_action/rcl_action/graph.h:
 
@@ -709,6 +723,8 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h:
 
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__functions.h:
+
 /opt/ros/jazzy/include/rcl_action/rcl_action/wait.h:
 
 /opt/ros/jazzy/include/rcl_yaml_param_parser/rcl_yaml_param_parser/types.h:
@@ -717,19 +733,9 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /opt/ros/jazzy/include/rcutils/rcutils/logging.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/task__struct.h:
-
-/opt/ros/jazzy/include/rclc/action_server.h:
-
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /opt/ros/jazzy/include/rclc/client.h:
-
-/opt/ros/jazzy/include/rmw/rmw/events_statuses/incompatible_qos.h:
-
-/opt/ros/jazzy/include/rclc/executor.h:
 
 /opt/ros/jazzy/include/rclc/executor_handle.h:
 
@@ -753,7 +759,9 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /opt/ros/jazzy/include/rclc/timer.h:
 
-/opt/ros/jazzy/include/rcutils/rcutils/error_handling.h:
+/opt/ros/jazzy/include/rclc/types.h:
+
+/opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/srv/detail/get_type_description__struct.h:
 
 /opt/ros/jazzy/include/action_msgs/action_msgs/srv/detail/cancel_goal__functions.h:
 
@@ -762,16 +770,6 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 /opt/ros/jazzy/include/rcutils/rcutils/qsort.h:
 
 /opt/ros/jazzy/include/rcutils/rcutils/sha256.h:
-
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/mission.h:
-
-/opt/ros/jazzy/include/rcutils/rcutils/snprintf.h:
-
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h:
-
-/opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
@@ -823,11 +821,17 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /opt/ros/jazzy/include/rmw/rmw/features.h:
 
+/opt/ros/jazzy/include/rmw/rmw/get_topic_names_and_types.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/movement_command__type_support.h:
+
 /opt/ros/jazzy/include/rmw/rmw/macros.h:
 
 /opt/ros/jazzy/include/rmw/rmw/publisher_options.h:
 
 /usr/include/string.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__functions.h:
 
 /opt/ros/jazzy/include/rmw/rmw/qos_policy_kind.h:
 
@@ -848,6 +852,10 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 /opt/ros/jazzy/include/rcl/rcl/node_options.h:
 
 /opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/visibility_control.h:
+
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/build/patrol_msgs/rosidl_generator_c/patrol_msgs/msg/task_bid.h:
+
+/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/dynamic_type.h:
 
 /opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/serialization_support.h:
 
@@ -877,11 +885,15 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/swarm_status__type_support.h:
-
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field__struct.h:
+
+/opt/ros/jazzy/include/rcl/rcl/allocator.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h:
 
@@ -889,11 +901,15 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
 
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/drone_state__functions.h:
-
 /opt/ros/jazzy/include/rcl_action/rcl_action/goal_state_machine.h:
 
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/field__struct.h:
+
+/opt/ros/jazzy/include/rmw/rmw/topic_endpoint_info.h:
+
+/opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/field_type__struct.h:
+
+/usr/include/assert.h:
 
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/key_value__struct.h:
 
@@ -903,12 +919,8 @@ CMakeFiles/patrol_controller.dir/src/patrol_controller.c.o: /home/mrweirdo/facto
 
 /opt/ros/jazzy/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.h:
 
+/usr/include/alloca.h:
+
 /usr/include/stdint.h:
 
 /usr/include/endian.h:
-
-/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/install/patrol_msgs/include/patrol_msgs/patrol_msgs/msg/detail/mission__type_support.h:
-
-/usr/include/strings.h:
-
-/usr/include/time.h:

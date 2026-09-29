@@ -28,6 +28,8 @@ typedef struct patrol_msgs__msg__DroneState
   float z;
   float battery_level;
   uint8_t state;
+  /// task the drone is currently flying to / inspecting (0 = none)
+  uint16_t current_task_id;
 } patrol_msgs__msg__DroneState;
 
 // Struct for a sequence of patrol_msgs__msg__DroneState.

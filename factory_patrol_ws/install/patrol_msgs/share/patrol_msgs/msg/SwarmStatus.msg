@@ -1,7 +1,1 @@
-uint8 STATUS_OK=0
-uint8 STATUS_NO_DRONES_AVAILABLE=1
-uint8 STATUS_ALL_DRONES_LOW_BATTERY=2
-uint8 STATUS_PATROL_CYCLE_COMPLETE=3
-
-uint8 status
-string reason
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/SwarmStatus.msg

@@ -1,3 +1,1 @@
-uint8 drone_id
-uint16 task_id
-float32 cost
+/home/mrweirdo/factory_patrol_sim/factory_patrol_ws/src/patrol_msgs/msg/TaskBid.msg

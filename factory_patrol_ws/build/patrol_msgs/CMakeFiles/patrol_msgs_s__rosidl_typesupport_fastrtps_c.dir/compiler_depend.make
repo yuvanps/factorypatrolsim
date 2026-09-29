@@ -5,9 +5,15 @@ CMakeFiles/patrol_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/
   rosidl_generator_c/patrol_msgs/msg/detail/drone_state__functions.h \
   rosidl_generator_c/patrol_msgs/msg/detail/drone_state__struct.h \
   rosidl_generator_c/patrol_msgs/msg/detail/drone_state__type_support.h \
+  rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.h \
+  rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__struct.h \
+  rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.h \
   rosidl_generator_c/patrol_msgs/msg/detail/mission__functions.h \
   rosidl_generator_c/patrol_msgs/msg/detail/mission__struct.h \
   rosidl_generator_c/patrol_msgs/msg/detail/mission__type_support.h \
+  rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__functions.h \
+  rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__struct.h \
+  rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.h \
   rosidl_generator_c/patrol_msgs/msg/detail/task__functions.h \
   rosidl_generator_c/patrol_msgs/msg/detail/task__struct.h \
   rosidl_generator_c/patrol_msgs/msg/detail/task__type_support.h \
@@ -326,23 +332,11 @@ CMakeFiles/patrol_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
-/usr/include/python3.12/genericaliasobject.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
-/usr/include/assert.h:
-
-/usr/include/python3.12/floatobject.h:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
-/usr/include/python3.12/fileobject.h:
-
-/opt/ros/jazzy/include/rcutils/rcutils/visibility_control_macros.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/python3.12/cpython/weakrefobject.h:
-
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-/usr/include/python3.12/cpython/traceback.h:
 
 /usr/include/python3.12/cpython/pymem.h:
 
@@ -372,13 +366,7 @@ rosidl_generator_c/patrol_msgs/msg/detail/task__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
-/usr/include/python3.12/cpython/initconfig.h:
-
 /usr/include/python3.12/cpython/funcobject.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-rosidl_generator_c/patrol_msgs/msg/detail/task_bid__struct.h:
 
 /usr/include/linux/close_range.h:
 
@@ -390,17 +378,7 @@ rosidl_generator_c/patrol_msgs/msg/detail/task_bid__struct.h:
 
 /usr/include/python3.12/cpython/fileutils.h:
 
-/usr/include/python3.12/intrcheck.h:
-
-/usr/include/python3.12/traceback.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
-
 /usr/include/python3.12/cpython/context.h:
-
-/usr/include/python3.12/import.h:
 
 /usr/include/python3.12/cpython/import.h:
 
@@ -413,6 +391,10 @@ rosidl_generator_c/patrol_msgs/msg/detail/task_bid__struct.h:
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h:
 
 /usr/include/python3.12/codecs.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
+
+/usr/include/python3.12/pybuffer.h:
 
 rosidl_generator_c/patrol_msgs/msg/detail/drone_state__type_support.h:
 
@@ -450,15 +432,41 @@ rosidl_generator_c/patrol_msgs/msg/detail/drone_state__type_support.h:
 
 /usr/include/python3.12/Python.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
+/usr/include/python3.12/cpython/object.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
+/usr/include/python3.12/bytearrayobject.h:
 
-/opt/ros/jazzy/include/rcutils/rcutils/sha256.h:
+/usr/include/python3.12/rangeobject.h:
+
+/usr/include/linux/types.h:
+
+/usr/include/python3.12/cpython/picklebufobject.h:
+
+/usr/include/python3.12/complexobject.h:
+
+/usr/include/linux/stddef.h:
+
+/usr/include/python3.12/pyframe.h:
+
+/usr/include/linux/stat.h:
+
+/usr/include/linux/posix_types.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/linux/limits.h:
 
 /usr/include/asm-generic/errno-base.h:
 
 rosidl_generator_c/patrol_msgs/msg/detail/drone_state__functions.h:
+
+/opt/ros/jazzy/include/rcutils/rcutils/sha256.h:
+
+rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__type_support.h:
+
+rosidl_generator_c/patrol_msgs/msg/detail/task_bid__functions.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
 
 /usr/include/python3.12/cpython/code.h:
 
@@ -470,25 +478,25 @@ rosidl_generator_c/patrol_msgs/msg/detail/drone_state__functions.h:
 
 rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__type_support.h:
 
+/opt/ros/jazzy/include/rcutils/rcutils/visibility_control_macros.h:
+
+/usr/include/python3.12/fileobject.h:
+
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
-
-/usr/include/python3.12/cpython/picklebufobject.h:
-
-/usr/include/python3.12/complexobject.h:
-
-/usr/include/linux/stddef.h:
-
-/usr/include/asm-generic/posix_types.h:
-
-rosidl_generator_c/patrol_msgs/msg/detail/task_bid__functions.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
 rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__functions.h:
 
+rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__struct.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
+
+/usr/include/python3.12/cpython/complexobject.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field__struct.h:
 
 /usr/include/python3.12/cpython/modsupport.h:
 
@@ -496,11 +504,25 @@ rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__functions.h:
 
 /usr/include/pthread.h:
 
-/usr/include/python3.12/cpython/odictobject.h:
+/usr/include/stdint.h:
 
-/usr/include/alloca.h:
+/usr/include/endian.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h:
+/usr/include/python3.12/cpython/listobject.h:
+
+rosidl_generator_c/patrol_msgs/msg/detail/task__type_support.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
+
+/usr/include/features.h:
+
+/usr/include/python3.12/unicodeobject.h:
+
+rosidl_generator_c/patrol_msgs/msg/detail/task__functions.h:
+
+/usr/include/python3.12/cpython/pydebug.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
@@ -510,57 +532,51 @@ rosidl_generator_c/patrol_msgs/msg/detail/mission__struct.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
-/usr/include/python3.12/setobject.h:
-
-rosidl_generator_c/patrol_msgs/msg/detail/task_bid__type_support.h:
-
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+rosidl_generator_c/patrol_msgs/msg/detail/mission__functions.h:
 
-rosidl_generator_c/patrol_msgs/msg/detail/mission__type_support.h:
+/usr/include/asm-generic/posix_types.h:
 
-/opt/ros/jazzy/include/rcutils/rcutils/types/rcutils_ret.h:
+/usr/include/python3.12/cpython/initconfig.h:
 
-rosidl_generator_c/patrol_msgs/msg/detail/task_assignment__struct.h:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
 
 /usr/include/python3.12/cpython/fileobject.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
-/usr/include/python3.12/cpython/object.h:
+rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__type_support.h:
 
-/usr/include/python3.12/bytearrayobject.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
 
-/usr/include/python3.12/rangeobject.h:
+/usr/include/x86_64-linux-gnu/bits/environments.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h:
 
-/usr/include/linux/types.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
-/usr/include/linux/stat.h:
+/usr/include/python3.12/cpython/bytearrayobject.h:
 
-/usr/include/python3.12/pyframe.h:
+/usr/include/python3.12/tracemalloc.h:
 
-/usr/include/python3.12/cpython/complexobject.h:
+/usr/include/asm-generic/errno.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field__struct.h:
+/usr/include/python3.12/cpython/odictobject.h:
 
-/usr/include/python3.12/cpython/pydebug.h:
+/usr/include/alloca.h:
 
-rosidl_generator_c/patrol_msgs/msg/detail/task__functions.h:
+rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__functions.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h:
 
 /usr/include/python3.12/cpython/ceval.h:
-
-/usr/include/python3.12/pybuffer.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_statx.h:
 
 /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
 
@@ -570,7 +586,17 @@ rosidl_generator_c/patrol_msgs/msg/detail/task__functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
 
-rosidl_generator_c/patrol_msgs/msg/detail/task__type_support.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
+
+/usr/include/python3.12/cpython/unicodeobject.h:
+
+rosidl_generator_c/patrol_msgs/msg/detail/mission__type_support.h:
+
+/opt/ros/jazzy/include/rcutils/rcutils/types/rcutils_ret.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
+
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /opt/ros/jazzy/include/rcutils/rcutils/visibility_control.h:
 
@@ -598,11 +624,13 @@ rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.
 
 /usr/include/inttypes.h:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h:
-
 /usr/include/python3.12/cpython/memoryobject.h:
 
 /usr/include/asm-generic/int-ll64.h:
+
+/usr/include/assert.h:
+
+/usr/include/python3.12/genericaliasobject.h:
 
 /usr/include/ctype.h:
 
@@ -612,45 +640,49 @@ rosidl_generator_py/patrol_msgs/_patrol_msgs_s.ep.rosidl_typesupport_fastrtps_c.
 
 /usr/include/python3.12/objimpl.h:
 
-/usr/include/python3.12/fileutils.h:
-
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
 /usr/include/features-time64.h:
 
 /usr/include/python3.12/iterobject.h:
-
-/usr/include/features.h:
-
-/usr/include/python3.12/unicodeobject.h:
 
 rosidl_generator_c/patrol_msgs/msg/detail/drone_state__struct.h:
 
 /usr/include/limits.h:
 
+rosidl_generator_c/patrol_msgs/msg/detail/experiment_event__struct.h:
+
 /usr/include/linux/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
-/usr/include/linux/limits.h:
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
-/usr/include/endian.h:
+/usr/include/python3.12/fileutils.h:
 
-/usr/include/python3.12/cpython/listobject.h:
+/usr/include/python3.12/cpython/traceback.h:
 
-/usr/include/stdint.h:
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
-rosidl_generator_c/patrol_msgs/msg/detail/mission__functions.h:
+rosidl_generator_c/patrol_msgs/msg/detail/task_bid__struct.h:
 
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
-/usr/include/linux/posix_types.h:
+/usr/include/python3.12/floatobject.h:
 
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
-/usr/include/python3.12/cpython/unicodeobject.h:
+/usr/include/python3.12/import.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h:
+rosidl_generator_c/patrol_msgs/msg/detail/task_bid__type_support.h:
+
+/usr/include/python3.12/setobject.h:
+
+/usr/include/python3.12/intrcheck.h:
+
+/usr/include/python3.12/traceback.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/python3.12/listobject.h:
 
@@ -722,17 +754,11 @@ rosidl_generator_c/patrol_msgs/msg/rosidl_generator_c__visibility_control.h:
 
 /usr/include/python3.12/pytypedefs.h:
 
+rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__functions.h:
+
 /usr/include/python3.12/structseq.h:
 
 /usr/include/python3.12/sysmodule.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
-
-/usr/include/python3.12/cpython/bytearrayobject.h:
-
-/usr/include/asm-generic/errno.h:
-
-/usr/include/python3.12/tracemalloc.h:
 
 /usr/include/python3.12/cpython/tupleobject.h:
 
@@ -770,10 +796,6 @@ rosidl_generator_c/patrol_msgs/msg/rosidl_generator_c__visibility_control.h:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/python3.12/sliceobject.h:
@@ -805,6 +827,8 @@ rosidl_generator_c/patrol_msgs/msg/rosidl_generator_c__visibility_control.h:
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_stat.h:
+
+rosidl_generator_c/patrol_msgs/msg/detail/swarm_status__struct.h:
 
 /usr/include/time.h:
 
@@ -845,9 +869,3 @@ rosidl_generator_c/patrol_msgs/msg/rosidl_generator_c__visibility_control.h:
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:

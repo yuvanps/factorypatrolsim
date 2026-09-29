@@ -17,6 +17,10 @@ module patrol_msgs {
       float battery_level;
 
       uint8 state;
+
+      @verbatim (language="comment", text=
+        "task the drone is currently flying to / inspecting (0 = none)")
+      uint16 current_task_id;
     };
   };
 };
