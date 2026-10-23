@@ -1,0 +1,46 @@
+# =============================================================================
+# NMOPSO navigation parameters (NMOPSO leg planner + the RL algorithm's path following)
+# =============================================================================
+# NMOPSO (Duong, Bui & Phung 2025) replaces the RL policy as the leg planner; everything else (flight
+# geometry, following, yield rule, holds) is the RL algorithm's, with the same values as rl.yaml, so the
+# two differ only in how a leg's path is found. Planner: rlpatrol.nmopso.NMOPSOPlanner, a vectorised
+# port of the authors' NMOPSO.m with their parameters. Legs between fixed points are precomputed:
+#   rl-nmopso-factory-patrol/.venv/bin/python scripts/precompute_nmopso_cache.py
+# any other leg is planned in a background thread while the drone holds (see nmopso_nav.py).
+
+nmopso:
+  # --- Planner (authors' NMOPSO.m values) ---
+  repo_path: rl-nmopso-factory-patrol            # provides rlpatrol (world model, MyCost port, NMOPSO port)
+  device: cpu
+  torch_threads: 2
+  seed: 0
+  max_iterations: 500          # MaxIt
+  population: 100              # nPop
+  repository: 50               # nRep
+  keep_in_x: 12.0              # m  as rl.yaml: only paths the controller can fly
+  keep_in_y: 7.0
+  cache_file: config/algorithms/nmopso_cache.json
+  cache_start_tolerance: 1.0   # m  a cached leg is used when the drone is this close to its start
+  # --- Flight geometry (factory frame z = -height) ---
+  cruise_height: 1.8           # m  height of drone 0's layer = the band the policy was trained in
+  layer_separation: 1.0        # m  drone i flies at cruise_height + i * layer_separation
+  max_cruise_height: 10.0      # m  cap (ceiling barrier at 12 m; controller transit tops out at 10 m)
+
+  # --- Path following (same speed cap and look-ahead as APF, config/algorithms/apf.yaml) ---
+  max_velocity: 1.5            # m/s
+  command_horizon: 1.0         # s    setpoint = p + clamp(carrot - p, max_velocity * horizon)
+  goal_tolerance: 1.2          # m    = controller WAYPOINT_RADIUS (diagnostics only; the controller decides arrival)
+  replan_deviation: 2.5        # m    replan when the drone is this far from its path
+  retry_period: 2.0            # s    retry a failed plan (new seed) after this long; the drone holds meanwhile
+  max_plans_per_tick: 3        #      cache hits are instant; online plans run in the background thread
+
+  # --- Drone-drone yield rule (as patrol_follower.py in the RL repository's Gazebo flights) ---
+  yield_radius: 2.5            # m    hold while a lower-ID drone this close would be approached; 0 disables
+  max_yield_time: 30.0         # s    per leg
+
+  # --- Loop / liveness / diagnostics (as APF) ---
+  update_rate_hz: 10.0
+  heartbeat_timeout: 5.0
+  diagnostics_interval: 1.0
+  stall_speed: 0.1             # m/s  moved less than stall_speed * stall_time ...
+  stall_time: 5.0              # s    ... during stall_time outside goal_tolerance -> one rl_stall event per goal

@@ -1,0 +1,28 @@
+{
+  "run_id": "run_20261022_063703",
+  "status": "timeout",
+  "window_s": 600.174,
+  "per_drone_distance_m": {
+    "0": 12.986,
+    "1": 12.585,
+    "2": 13.02
+  },
+  "per_drone_battery_consumed_percent": {
+    "0": 59.1,
+    "1": 59.1,
+    "2": 59.09
+  },
+  "per_drone_valid_samples": {
+    "0": 5910,
+    "1": 5911,
+    "2": 5910
+  },
+  "per_drone_placeholder_samples": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+  },
+  "rejected_transitions": {},
+  "first_completion": {},
+  "excluded": {}
+}

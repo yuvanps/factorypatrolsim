@@ -1,0 +1,28 @@
+{
+  "run_id": "run_20261022_064936",
+  "status": "aborted",
+  "window_s": 170.092,
+  "per_drone_distance_m": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+  },
+  "per_drone_battery_consumed_percent": {
+    "0": 17.0,
+    "1": 17.0,
+    "2": 17.0
+  },
+  "per_drone_valid_samples": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+  },
+  "per_drone_placeholder_samples": {
+    "0": 1701,
+    "1": 1701,
+    "2": 1701
+  },
+  "rejected_transitions": {},
+  "first_completion": {},
+  "excluded": {}
+}

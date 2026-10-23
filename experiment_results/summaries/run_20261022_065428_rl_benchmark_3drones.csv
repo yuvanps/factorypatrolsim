@@ -1,0 +1,2 @@
+run_id,timestamp,algorithm,scenario,num_drones,status,total_tasks,completed_tasks,task_completion_rate_percent,mission_completion_time_s,total_flight_distance_m,minimum_inter_drone_distance_m,total_battery_consumed_percent,workload_min,workload_max,drone_0_tasks,drone_1_tasks,drone_2_tasks,notes
+run_20261022_065428,2026-10-22T06:54:35,rl,benchmark,3,aborted,6,0,0.0,,0,N/A,80.12,0,0,0,0,0,

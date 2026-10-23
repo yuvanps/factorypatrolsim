@@ -1,0 +1,9 @@
+run_id,algorithm,scenario,repeat,stop_reason,started
+run_20261023_170645,nmopso,benchmark,1,summary written after 102 s,2026-10-23T17:06:19+05:30
+run_20261023_170832,nmopso,safety_stress,1,summary written after 130 s,2026-10-23T17:08:06+05:30
+run_20261023_171047,nmopso,comm_loss,1,summary written after 196 s,2026-10-23T17:10:21+05:30
+run_20261023_171408,nmopso,comm_loss_orchestrator,1,summary written after 196 s,2026-10-23T17:13:42+05:30
+run_20261023_171729,nmopso,benchmark,2,summary written after 102 s,2026-10-23T17:17:03+05:30
+run_20261023_171916,nmopso,safety_stress,2,summary written after 136 s,2026-10-23T17:18:50+05:30
+run_20261023_172137,nmopso,comm_loss,2,summary written after 196 s,2026-10-23T17:21:11+05:30
+run_20261023_172458,nmopso,comm_loss_orchestrator,2,summary written after 196 s,2026-10-23T17:24:32+05:30

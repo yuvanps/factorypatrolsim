@@ -150,3 +150,193 @@ def test_phantom_and_pre_start_samples_ignored():
     m.start(T0, 'apf', 'benchmark', 2, (101,))
     m.on_state(T0 + S, 7, 0, 0, -3, 100, 1)          # phantom drone id
     assert 7 not in m.tracks and m.tracks[0].samples == []
+
+
+# --------------------------------------------------------------------------- extended metrics (7-11)
+
+from patrol_coordinator.obstacles import BoxObstacle  # noqa: E402
+
+BOX = BoxObstacle.from_center_size('rack', (0.0, 0.0, -1.75), (1.0, 1.0, 3.5))      # x, y in [-0.5, 0.5]
+FLOOR = BoxObstacle.from_center_size('floor', (0.0, 0.0, 0.05), (30.0, 20.0, 0.1))
+
+
+def started_ext(num_drones=2, tasks=(101, 102), window=0.0, obstacles=(BOX, FLOOR)):
+    m = RunMetrics()
+    m.start(T0, 'rl', 'benchmark', num_drones, tasks, observation_window_s=window, obstacles=list(obstacles))
+    return m
+
+
+def fly(m, drone, points, t_start=0.0, dt=0.1):
+    """10 Hz samples along the given (x, y, z) points."""
+    for k, (x, y, z) in enumerate(points):
+        m.on_state(T0 + int((t_start + k * dt) * S), drone, x, y, z, 100.0, 1)
+
+
+def test_obstacle_clearance_contacts_and_floor_ignored():
+    m = started_ext(1, (101,))
+    # 2 s at 2.0 m from the box face (x = 2.5), then 1 s at 0.2 m (x = 0.7): one contact episode
+    fly(m, 0, [(2.5, 0.0, -2.0)] * 20 + [(0.7, 0.0, -2.0)] * 10)
+    row, detail = m.finalize(T0 + int(2.9 * S), 'run_x', 'ts')
+    assert row['min_obstacle_clearance_m'] == pytest.approx(0.2, abs=1e-6)   # floor (1.95 m below) ignored
+    assert row['obstacle_contacts'] == 1
+    assert row['obstacle_near_miss_s'] == pytest.approx(0.9, abs=0.11)       # 20 Hz timeline over the last second
+
+
+def test_low_samples_do_not_count_for_clearance():
+    m = started_ext(1, (101,))
+    fly(m, 0, [(0.7, 0.0, -0.2)] * 10)                                       # 0.2 m high: on the pad
+    row, _ = m.finalize(T0 + 1 * S, 'run_x', 'ts')
+    assert row['min_obstacle_clearance_m'] == '' and row['obstacle_contacts'] == 0
+
+
+def test_separation_near_miss_and_contact_episodes():
+    m = started_ext(2, (101,), obstacles=())
+    fly(m, 0, [(5.0, 5.0, -3.0)] * 30)
+    fly(m, 1, [(5.0, 8.0, -3.0)] * 10 + [(5.0, 5.8, -3.0)] * 10 + [(5.0, 5.5, -3.0)] * 10)
+    row, _ = m.finalize(T0 + int(2.9 * S), 'run_x', 'ts')
+    assert row['separation_near_miss_s'] == pytest.approx(1.9, abs=0.11)    # 0.8 m and 0.5 m phases
+    assert row['separation_contacts'] == 1                                  # 0.5 m < 2 x 0.3 m, one episode
+
+
+def test_idleness_average_and_worst():
+    m = started_ext(1, (101, 102), obstacles=())
+    m.on_task_completed(T0 + 4 * S, 0, 101)          # 101: gaps 4 s, 6 s; 102: never visited, 10 s
+    m.on_task_completed(T0 + 7 * S, 0, 102)          # 102 visited at 7: gaps 7 s, 3 s
+    row, _ = m.finalize(T0 + 10 * S, 'run_x', 'ts', status='incomplete')
+    # mission completes at t+7 (both tasks visited): the evaluation window is the mission window
+    assert row['evaluation_window_s'] == pytest.approx(7.0)
+    # 101: gaps 4, 3 -> 8 + 4.5 = 12.5 ; 102: gap 7 -> 24.5 ; mean = 37 / (7 * 2)
+    assert row['mean_task_idleness_s'] == pytest.approx(37 / 14, abs=1e-3)
+    assert row['max_task_idleness_s'] == pytest.approx(7.0)
+
+
+def test_observation_window_keeps_mission_metrics_and_extends_the_rest():
+    m = started_ext(1, (101,), window=20.0, obstacles=())
+    fly(m, 0, [(float(k), 0.0, -2.0) for k in range(20)], dt=1.0)           # 1 m/s for 19 s
+    m.on_task_completed(T0 + 5 * S, 0, 101)                                 # mission done at t+5
+    m.on_task_completed(T0 + 15 * S, 0, 101)                                # a later visit (observation only)
+    row, detail = m.finalize(T0 + 30 * S, 'run_x', 'ts')
+    assert row['mission_completion_time_s'] == pytest.approx(5.0)
+    assert row['total_flight_distance_m'] == pytest.approx(5.0)            # mission window only
+    assert row['evaluation_window_s'] == pytest.approx(20.0)
+    assert row['task_visits'] == 2
+    assert row['max_task_idleness_s'] == pytest.approx(10.0)               # 5 -> 15
+
+
+def test_compute_time_aggregation_per_source():
+    m = started_ext(1, (101,), obstacles=())
+    m.on_event(T0 + 5 * S, 'compute_stats', {'source': 'coordinator', 'n': 10, 'mean_ms': 1.0, 'max_ms': 3.0, 'p95_ms': 2.0})
+    m.on_event(T0 + 10 * S, 'compute_stats', {'source': 'coordinator', 'n': 30, 'mean_ms': 2.0, 'max_ms': 9.0, 'p95_ms': 4.0})
+    m.on_event(T0 + 5 * S, 'compute_stats', {'source': 'allocation', 'n': 50, 'mean_ms': 0.01, 'max_ms': 0.05})
+    row, _ = m.finalize(T0 + 11 * S, 'run_x', 'ts')
+    assert row['decision_time_mean_ms'] == pytest.approx(1.75)                # (10 * 1 + 30 * 2) / 40
+    assert row['decision_time_p95_ms'] == pytest.approx(4.0) and row['decision_time_max_ms'] == pytest.approx(9.0)
+    assert row['allocation_time_mean_ms'] == pytest.approx(0.01)
+
+
+def test_comm_loss_detection_reassignment_restoration_rejoin_resume():
+    m = started_ext(2, (101, 102, 103), window=100.0, obstacles=())
+    m.on_assignment(T0 + 1 * S, 101, 0)
+    m.on_assignment(T0 + 1 * S, 102, 1)
+    m.on_assignment(T0 + 1 * S, 103, 1)
+    fly(m, 0, [(0.0, 0.0, -3.0)] * 600)                                     # 60 s
+    fly(m, 1, [(4.0, 0.0, -3.0)] * 200 + [(1.5, 0.0, -3.0)] * 400)         # 2.5 m apart from t+20
+    m.on_event(T0 + 20 * S, 'comm_loss_started', {'drone_id': 1})
+    m.on_event(T0 + 25 * S, 'peer_declared_failed', {'drone_id': 1, 'by': 0})
+    m.on_assignment(T0 + 26 * S, 102, 0)
+    m.on_task_completed(T0 + 30 * S, 0, 102)
+    m.on_task_completed(T0 + 33 * S, 0, 103)
+    m.on_event(T0 + 35 * S, 'comm_loss_ended', {'drone_id': 1})
+    m.on_event(T0 + 35 * S + S // 2, 'peer_recovered', {'drone_id': 1, 'by': 0})
+    m.on_task_completed(T0 + 41 * S, 1, 102)
+    row, detail = m.finalize(T0 + 100 * S, 'run_x', 'ts')
+    assert row['comm_loss_drone'] == 1 and row['comm_loss_start_s'] == pytest.approx(20.0)
+    assert row['comm_loss_duration_s'] == pytest.approx(15.0)
+    assert row['detection_s'] == pytest.approx(5.0)
+    assert row['reassignment_s'] == pytest.approx(6.0)
+    assert row['coverage_restored_s'] == pytest.approx(13.0)                # 102 at +30, 103 at +33
+    assert row['rejoin_s'] == pytest.approx(0.5)
+    assert row['resume_s'] == pytest.approx(6.0)
+    assert row['min_separation_during_loss_m'] == pytest.approx(1.5)
+    assert detail['comm_loss']['lost_drone_tasks'] == [102, 103]
+
+
+def test_no_comm_loss_leaves_columns_empty():
+    m = started_ext(1, (101,), obstacles=())
+    row, _ = m.finalize(T0 + 5 * S, 'run_x', 'ts')
+    assert all(row[k] == '' for k in ('comm_loss_drone', 'detection_s', 'rejoin_s', 'resume_s'))
+
+
+def test_workload_imbalance_jain_and_gini_on_tasks_and_distance():
+    m = started_ext(2, (101, 102), window=10.0, obstacles=())
+    fly(m, 0, [(float(k) * 0.1, 0.0, -3.0) for k in range(31)])          # 3 m
+    fly(m, 1, [(5.0 + k * 0.1, 0.0, -3.0) for k in range(11)])           # 1 m
+    for t, d, task in ((1, 0, 101), (2, 0, 102), (3, 0, 101), (4, 1, 102)):
+        m.on_task_completed(T0 + t * S, d, task)
+    row, detail = m.finalize(T0 + 10 * S, 'run_x', 'ts')
+    # tasks (3, 1): Jain = 16 / (2 * 10) = 0.8; Gini = 2 * 2 / (2 * 2 * 4) = 0.25
+    assert row['workload_imbalance_tasks'] == pytest.approx(0.2)
+    assert row['workload_gini_tasks'] == pytest.approx(0.25)
+    # distance (3, 1) m: the same ratios
+    assert row['workload_imbalance_distance'] == pytest.approx(0.2, abs=1e-3)
+    assert row['workload_gini_distance'] == pytest.approx(0.25, abs=1e-3)
+    assert detail['per_drone_task_completions'] == {0: 3, 1: 1}
+
+
+def test_workload_imbalance_empty_without_work():
+    m = started_ext(2, (101,), obstacles=())
+    row, _ = m.finalize(T0 + 5 * S, 'run_x', 'ts')
+    assert row['workload_imbalance_tasks'] == '' and row['workload_gini_tasks'] == ''
+
+
+def test_reallocations_count_only_changes_of_drone_and_allocation_latency():
+    m = started_ext(2, (101, 102), window=120.0, obstacles=())
+    m.on_assignment(T0 + 2 * S, 101, 0)
+    m.on_assignment(T0 + 3 * S, 102, 1)          # every task assigned at +3 s
+    m.on_assignment(T0 + 20 * S, 101, 0)         # same drone again: not a reallocation
+    m.on_assignment(T0 + 30 * S, 102, 0)         # 1 -> 0
+    m.on_assignment(T0 + 40 * S, 102, 1)         # 0 -> 1
+    m.on_task_completed(T0 + 5 * S, 0, 101)
+    m.on_task_completed(T0 + 12 * S, 1, 102)     # MCT = 12 s
+    row, _ = m.finalize(T0 + 120 * S, 'run_x', 'ts')
+    assert row['task_reallocations'] == 2
+    assert row['reallocations_per_min'] == pytest.approx(1.0)       # 2 in a 2 min window
+    assert row['alloc_first_assignment_s'] == pytest.approx(2.0)
+    assert row['alloc_all_assigned_s'] == pytest.approx(3.0)
+    assert row['allocation_to_mct_ratio'] == pytest.approx(0.25)
+
+
+def test_separation_percentiles_and_violation_episodes():
+    m = started_ext(2, (101,), window=10.0, obstacles=())
+    # pair 3 m apart, then 0.8 m for 1 s twice (two episodes below D_SAFE = 1 m)
+    xs = [3.0] * 30 + [0.8] * 10 + [3.0] * 20 + [0.8] * 10 + [3.0] * 31
+    fly(m, 0, [(0.0, 0.0, -3.0)] * len(xs))
+    fly(m, 1, [(x, 0.0, -3.0) for x in xs])
+    row, detail = m.finalize(T0 + 10 * S, 'run_x', 'ts')
+    assert row['separation_violations'] == 2
+    assert row['separation_p1_m'] == pytest.approx(0.8, abs=0.05)
+    assert row['separation_p5_m'] == pytest.approx(0.8, abs=0.05)   # ~20 % of the time at 0.8 m
+    assert sum(detail['separation_histogram_m'].values()) > 0
+
+
+def test_loss_safety_depth_and_time_and_reassign_after_detection():
+    m = started_ext(2, (101, 102), window=60.0, obstacles=())
+    m.on_assignment(T0 + 1 * S, 101, 0)
+    m.on_assignment(T0 + 1 * S, 102, 1)
+    fly(m, 0, [(0.0, 0.0, -3.0)] * 600)
+    # drone 1: 3 m away, 0.6 m away for 2 s during the loss (t+20..t+35), then 3 m
+    fly(m, 1, [(3.0, 0.0, -3.0)] * 240 + [(0.6, 0.0, -3.0)] * 20 + [(3.0, 0.0, -3.0)] * 340)
+    m.on_event(T0 + 20 * S, 'comm_loss_started', {'drone_id': 1})
+    m.on_event(T0 + 25 * S, 'peer_declared_failed', {'drone_id': 1, 'by': 0})
+    m.on_assignment(T0 + 27 * S, 102, 0)
+    m.on_event(T0 + 35 * S, 'comm_loss_ended', {'drone_id': 1})
+    row, _ = m.finalize(T0 + 60 * S, 'run_x', 'ts')
+    assert row['reassign_after_detection_s'] == pytest.approx(2.0)
+    assert row['loss_safety_depth_m'] == pytest.approx(0.4, abs=0.01)
+    assert row['loss_safety_time_s'] == pytest.approx(2.0, abs=0.15)
+
+
+def test_no_loss_leaves_transient_safety_empty():
+    m = started_ext(2, (101,), obstacles=())
+    row, _ = m.finalize(T0 + 5 * S, 'run_x', 'ts')
+    assert row['loss_safety_depth_m'] == '' and row['loss_safety_time_s'] == ''

@@ -1,0 +1,53 @@
+{
+  "run_id": "run_20261022_233145",
+  "status": "completed",
+  "window_s": 44.214,
+  "per_drone_distance_m": {
+    "0": 35.191,
+    "1": 33.258,
+    "2": 31.543
+  },
+  "per_drone_battery_consumed_percent": {
+    "0": 4.41,
+    "1": 4.41,
+    "2": 4.41
+  },
+  "per_drone_valid_samples": {
+    "0": 442,
+    "1": 442,
+    "2": 442
+  },
+  "per_drone_placeholder_samples": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+  },
+  "rejected_transitions": {},
+  "first_completion": {
+    "101": {
+      "drone_id": 0,
+      "t_s": 18.514
+    },
+    "102": {
+      "drone_id": 1,
+      "t_s": 18.014
+    },
+    "103": {
+      "drone_id": 2,
+      "t_s": 25.514
+    },
+    "104": {
+      "drone_id": 2,
+      "t_s": 44.214
+    },
+    "105": {
+      "drone_id": 1,
+      "t_s": 40.714
+    },
+    "106": {
+      "drone_id": 0,
+      "t_s": 41.114
+    }
+  },
+  "excluded": {}
+}

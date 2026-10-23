@@ -1,0 +1,49 @@
+# =============================================================================
+# RL navigation parameters (trained PPO leg planner of rl-nmopso-factory-patrol)
+# =============================================================================
+# Scenario-independent, like apf.yaml. Any value can be overridden on the command line as a
+# ROS 2 parameter, e.g.  -p rl.checkpoint:=/abs/path/to/policy.pt  (start_experiment.sh:
+# --rl-checkpoint). The values actually used are recorded in the mission_started event
+# (algorithm_params) and the loaded policy in the rl_policy_loaded event.
+#
+# Responsibilities: task ALLOCATION is unchanged (native auction, as for APF); the policy plans
+# every LEG (navigation) and the coordinator streams the path as MovementCommands to the
+# controllers in 'external' navigation mode. Units: metres, seconds, m/s.
+
+rl:
+  # --- Policy ---
+  repo_path: rl-nmopso-factory-patrol            # relative to factory_patrol_sim/ (or absolute)
+  checkpoint: rl-nmopso-factory-patrol/results/ckpt/vB_seed2.pt   # release policy: round 7 (vB) of LOOP.md,
+                               # threat-budget conditioned with route guidance (v2: the round-2 policy)
+  device: cpu                  # cpu | cuda | auto. Inference of one leg is ~0.05 s on CPU; keep the GPU free
+  torch_threads: 2             # CPU threads for inference (the simulation needs the rest)
+  num_preferences: 50          # candidate preferences per leg (as scripts/evaluate.py, K = 50)
+  samples_per_preference: 3    # stochastic rollouts per preference besides the deterministic one (S = 3)
+  refine_on_failure: true      # CEM refinement (RL+LS) when no policy candidate is feasible
+  seed: 0                      # base seed of the sampled rollouts (plan k uses seed + k)
+  keep_in_x: 12.0              # m  plan only inside |x| <= keep_in_x, |y| <= keep_in_y: the box patrol_controller.c
+  keep_in_y: 7.0               # m  clamps its targets to (the policy's map reaches 13.35 / 8.35); 0 disables
+
+  # --- Flight geometry (factory frame z = -height) ---
+  cruise_height: 1.8           # m  height of drone 0's layer = the band the policy was trained in
+  layer_separation: 1.0        # m  drone i flies at cruise_height + i * layer_separation
+  max_cruise_height: 10.0      # m  cap (ceiling barrier at 12 m; controller transit tops out at 10 m)
+
+  # --- Path following (same speed cap and look-ahead as APF, config/algorithms/apf.yaml) ---
+  max_velocity: 1.5            # m/s
+  command_horizon: 1.0         # s    setpoint = p + clamp(carrot - p, max_velocity * horizon)
+  goal_tolerance: 1.2          # m    = controller WAYPOINT_RADIUS (diagnostics only; the controller decides arrival)
+  replan_deviation: 2.5        # m    replan when the drone is this far from its path
+  retry_period: 2.0            # s    retry a failed plan (new seed) after this long; the drone holds meanwhile
+  max_plans_per_tick: 1        #      bound the planning time spent in one coordinator tick
+
+  # --- Drone-drone yield rule (as patrol_follower.py in the RL repository's Gazebo flights) ---
+  yield_radius: 2.5            # m    hold while a lower-ID drone this close would be approached; 0 disables
+  max_yield_time: 30.0         # s    per leg
+
+  # --- Loop / liveness / diagnostics (as APF) ---
+  update_rate_hz: 10.0
+  heartbeat_timeout: 5.0
+  diagnostics_interval: 1.0
+  stall_speed: 0.1             # m/s  moved less than stall_speed * stall_time ...
+  stall_time: 5.0              # s    ... during stall_time outside goal_tolerance -> one rl_stall event per goal

@@ -1,0 +1,132 @@
+{
+  "run_id": "run_20261023_041629",
+  "status": "completed",
+  "window_s": 44.13,
+  "per_drone_distance_m": {
+    "0": 35.083,
+    "1": 32.748,
+    "2": 31.391
+  },
+  "per_drone_battery_consumed_percent": {
+    "0": 4.4,
+    "1": 4.41,
+    "2": 4.4
+  },
+  "per_drone_valid_samples": {
+    "0": 441,
+    "1": 442,
+    "2": 441
+  },
+  "per_drone_placeholder_samples": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+  },
+  "rejected_transitions": {},
+  "first_completion": {
+    "101": {
+      "drone_id": 0,
+      "t_s": 18.53
+    },
+    "102": {
+      "drone_id": 1,
+      "t_s": 18.13
+    },
+    "103": {
+      "drone_id": 2,
+      "t_s": 25.53
+    },
+    "104": {
+      "drone_id": 2,
+      "t_s": 44.13
+    },
+    "105": {
+      "drone_id": 1,
+      "t_s": 40.93
+    },
+    "106": {
+      "drone_id": 0,
+      "t_s": 41.03
+    }
+  },
+  "excluded": {},
+  "per_drone_min_obstacle_clearance_m": {
+    "0": 0.489,
+    "2": 0.636,
+    "1": 0.612
+  },
+  "per_task_max_idleness_s": {
+    "101": 21.601,
+    "102": 22.001,
+    "103": 25.53,
+    "104": 44.13,
+    "105": 40.93,
+    "106": 41.03
+  },
+  "task_visits": {
+    "101": [
+      {
+        "t_s": 18.53,
+        "drone_id": 0
+      },
+      {
+        "t_s": 22.53,
+        "drone_id": 0
+      }
+    ],
+    "102": [
+      {
+        "t_s": 18.13,
+        "drone_id": 1
+      },
+      {
+        "t_s": 22.13,
+        "drone_id": 1
+      }
+    ],
+    "103": [
+      {
+        "t_s": 25.53,
+        "drone_id": 2
+      },
+      {
+        "t_s": 29.53,
+        "drone_id": 2
+      }
+    ],
+    "104": [
+      {
+        "t_s": 44.13,
+        "drone_id": 2
+      }
+    ],
+    "105": [
+      {
+        "t_s": 40.93,
+        "drone_id": 1
+      }
+    ],
+    "106": [
+      {
+        "t_s": 41.03,
+        "drone_id": 0
+      }
+    ]
+  },
+  "compute_time_ms": {
+    "coordinator": {
+      "mean_ms": 0.1712,
+      "p95_ms": 0.3967,
+      "max_ms": 0.5361,
+      "n": 407
+    },
+    "allocation": {
+      "mean_ms": 0.0016,
+      "p95_ms": 0.1172,
+      "max_ms": 0.1172,
+      "n": 350
+    }
+  },
+  "comm_loss": {},
+  "fault_events": []
+}

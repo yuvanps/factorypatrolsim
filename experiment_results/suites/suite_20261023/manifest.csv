@@ -1,0 +1,61 @@
+run_id,algorithm,scenario,repeat,stop_reason,started
+run_20261023_005932,auction,benchmark,1,summary written after 87 s,2026-10-23T00:59:08+05:30
+run_20261023_010105,apf,benchmark,1,summary written after 88 s,2026-10-23T01:00:40+05:30
+run_20261023_010239,rl,benchmark,1,summary written after 104 s,2026-10-23T01:02:13+05:30
+run_20261023_010427,auction,safety_stress,1,time limit 330s after 340 s,2026-10-23T01:04:02+05:30
+run_20261023_015506,apf,safety_stress,1,time limit 330s after 340 s,2026-10-23T01:54:41+05:30
+run_20261023_020052,rl,safety_stress,1,summary written after 129 s,2026-10-23T02:00:26+05:30
+run_20261023_020305,auction,comm_loss,1,summary written after 195 s,2026-10-23T02:02:40+05:30
+run_20261023_020624,apf,comm_loss,1,summary written after 194 s,2026-10-23T02:06:00+05:30
+run_20261023_020945,rl,comm_loss,1,summary written after 196 s,2026-10-23T02:09:19+05:30
+run_20261023_021305,auction,comm_loss_orchestrator,1,summary written after 194 s,2026-10-23T02:12:40+05:30
+run_20261023_021624,apf,comm_loss_orchestrator,1,summary written after 194 s,2026-10-23T02:15:59+05:30
+run_20261023_021944,rl,comm_loss_orchestrator,1,summary written after 196 s,2026-10-23T02:19:18+05:30
+run_20261023_022304,auction,benchmark,2,summary written after 88 s,2026-10-23T02:22:39+05:30
+run_20261023_022437,apf,benchmark,2,summary written after 88 s,2026-10-23T02:24:12+05:30
+run_20261023_022611,rl,benchmark,2,summary written after 105 s,2026-10-23T02:25:45+05:30
+run_20261023_022800,auction,safety_stress,2,time limit 330s after 338 s,2026-10-23T02:27:35+05:30
+run_20261023_023343,apf,safety_stress,2,time limit 330s after 340 s,2026-10-23T02:33:18+05:30
+run_20261023_023929,rl,safety_stress,2,summary written after 130 s,2026-10-23T02:39:03+05:30
+run_20261023_024143,auction,comm_loss,2,summary written after 194 s,2026-10-23T02:41:18+05:30
+run_20261023_024502,apf,comm_loss,2,summary written after 194 s,2026-10-23T02:44:37+05:30
+run_20261023_024822,rl,comm_loss,2,summary written after 196 s,2026-10-23T02:47:56+05:30
+run_20261023_025142,auction,comm_loss_orchestrator,2,summary written after 194 s,2026-10-23T02:51:17+05:30
+run_20261023_025501,apf,comm_loss_orchestrator,2,summary written after 194 s,2026-10-23T02:54:36+05:30
+run_20261023_025822,rl,comm_loss_orchestrator,2,summary written after 197 s,2026-10-23T02:57:55+05:30
+run_20261023_030141,auction,benchmark,3,summary written after 87 s,2026-10-23T03:01:17+05:30
+run_20261023_030314,apf,benchmark,3,summary written after 88 s,2026-10-23T03:02:49+05:30
+run_20261023_030448,rl,benchmark,3,summary written after 106 s,2026-10-23T03:04:22+05:30
+run_20261023_030638,auction,safety_stress,3,time limit 330s after 340 s,2026-10-23T03:06:13+05:30
+run_20261023_031222,apf,safety_stress,3,time limit 330s after 339 s,2026-10-23T03:11:58+05:30
+run_20261023_031808,rl,safety_stress,3,summary written after 130 s,2026-10-23T03:17:42+05:30
+run_20261023_032022,auction,comm_loss,3,summary written after 194 s,2026-10-23T03:19:57+05:30
+run_20261023_032341,apf,comm_loss,3,summary written after 194 s,2026-10-23T03:23:16+05:30
+run_20261023_032702,rl,comm_loss,3,summary written after 196 s,2026-10-23T03:26:35+05:30
+run_20261023_033021,auction,comm_loss_orchestrator,3,summary written after 194 s,2026-10-23T03:29:56+05:30
+run_20261023_033341,apf,comm_loss_orchestrator,3,summary written after 194 s,2026-10-23T03:33:16+05:30
+run_20261023_033701,rl,comm_loss_orchestrator,3,summary written after 196 s,2026-10-23T03:36:35+05:30
+run_20261023_034021,auction,benchmark,4,summary written after 88 s,2026-10-23T03:39:56+05:30
+run_20261023_034153,apf,benchmark,4,summary written after 87 s,2026-10-23T03:41:29+05:30
+run_20261023_034328,rl,benchmark,4,summary written after 106 s,2026-10-23T03:43:01+05:30
+run_20261023_034517,auction,safety_stress,4,summary written after 96 s,2026-10-23T03:44:52+05:30
+run_20261023_034658,apf,safety_stress,4,time limit 330s after 340 s,2026-10-23T03:46:33+05:30
+run_20261023_035244,rl,safety_stress,4,summary written after 129 s,2026-10-23T03:52:18+05:30
+run_20261023_035457,auction,comm_loss,4,summary written after 195 s,2026-10-23T03:54:32+05:30
+run_20261023_035816,apf,comm_loss,4,summary written after 194 s,2026-10-23T03:57:52+05:30
+run_20261023_040137,rl,comm_loss,4,summary written after 196 s,2026-10-23T04:01:11+05:30
+run_20261023_040457,auction,comm_loss_orchestrator,4,summary written after 194 s,2026-10-23T04:04:32+05:30
+run_20261023_040816,apf,comm_loss_orchestrator,4,summary written after 194 s,2026-10-23T04:07:51+05:30
+run_20261023_041136,rl,comm_loss_orchestrator,4,summary written after 196 s,2026-10-23T04:11:10+05:30
+run_20261023_041456,auction,benchmark,5,summary written after 88 s,2026-10-23T04:14:31+05:30
+run_20261023_041629,apf,benchmark,5,summary written after 88 s,2026-10-23T04:16:04+05:30
+run_20261023_041803,rl,benchmark,5,summary written after 103 s,2026-10-23T04:17:37+05:30
+run_20261023_041950,auction,safety_stress,5,summary written after 102 s,2026-10-23T04:19:25+05:30
+run_20261023_042137,apf,safety_stress,5,time limit 330s after 340 s,2026-10-23T04:21:12+05:30
+run_20261023_042723,rl,safety_stress,5,summary written after 130 s,2026-10-23T04:26:57+05:30
+run_20261023_042937,auction,comm_loss,5,summary written after 194 s,2026-10-23T04:29:12+05:30
+run_20261023_043256,apf,comm_loss,5,summary written after 194 s,2026-10-23T04:32:31+05:30
+run_20261023_043616,rl,comm_loss,5,disk below 1.5 GB after 109 s,2026-10-23T04:35:50+05:30
+run_20261023_043809,auction,comm_loss_orchestrator,5,summary written after 194 s,2026-10-23T04:37:44+05:30
+run_20261023_044128,apf,comm_loss_orchestrator,5,summary written after 194 s,2026-10-23T04:41:03+05:30
+run_20261023_044448,rl,comm_loss_orchestrator,5,summary written after 196 s,2026-10-23T04:44:22+05:30

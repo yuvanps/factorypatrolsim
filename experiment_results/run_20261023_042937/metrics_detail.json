@@ -1,0 +1,285 @@
+{
+  "run_id": "run_20261023_042937",
+  "status": "completed",
+  "window_s": 43.936,
+  "per_drone_distance_m": {
+    "0": 98.699,
+    "1": 86.026,
+    "2": 65.212
+  },
+  "per_drone_battery_consumed_percent": {
+    "0": 4.38,
+    "1": 4.38,
+    "2": 4.38
+  },
+  "per_drone_valid_samples": {
+    "0": 1500,
+    "1": 575,
+    "2": 878
+  },
+  "per_drone_placeholder_samples": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+  },
+  "rejected_transitions": {},
+  "first_completion": {
+    "101": {
+      "drone_id": 0,
+      "t_s": 15.236
+    },
+    "102": {
+      "drone_id": 1,
+      "t_s": 18.536
+    },
+    "103": {
+      "drone_id": 2,
+      "t_s": 21.736
+    },
+    "104": {
+      "drone_id": 2,
+      "t_s": 43.936
+    },
+    "105": {
+      "drone_id": 1,
+      "t_s": 39.136
+    },
+    "106": {
+      "drone_id": 0,
+      "t_s": 33.236
+    }
+  },
+  "excluded": {
+    "1": {
+      "from_s": 57.538,
+      "reason": "position outside factory (9.8,1.7,0.8)"
+    },
+    "2": {
+      "from_s": 87.838,
+      "reason": "position outside factory (11.0,7.7,1.0)"
+    }
+  },
+  "per_drone_min_obstacle_clearance_m": {
+    "1": 0.407,
+    "0": 0.929,
+    "2": 0.0
+  },
+  "per_task_max_idleness_s": {
+    "101": 26.5,
+    "102": 20.7,
+    "103": 57.2,
+    "104": 57.7,
+    "105": 39.136,
+    "106": 33.236
+  },
+  "task_visits": {
+    "101": [
+      {
+        "t_s": 15.236,
+        "drone_id": 0
+      },
+      {
+        "t_s": 24.336,
+        "drone_id": 0
+      },
+      {
+        "t_s": 41.936,
+        "drone_id": 0
+      },
+      {
+        "t_s": 68.336,
+        "drone_id": 0
+      },
+      {
+        "t_s": 94.636,
+        "drone_id": 0
+      },
+      {
+        "t_s": 121.036,
+        "drone_id": 0
+      },
+      {
+        "t_s": 147.536,
+        "drone_id": 0
+      }
+    ],
+    "102": [
+      {
+        "t_s": 18.536,
+        "drone_id": 1
+      },
+      {
+        "t_s": 28.736,
+        "drone_id": 1
+      },
+      {
+        "t_s": 49.436,
+        "drone_id": 1
+      },
+      {
+        "t_s": 59.336,
+        "drone_id": 0
+      },
+      {
+        "t_s": 74.036,
+        "drone_id": 1
+      },
+      {
+        "t_s": 85.736,
+        "drone_id": 0
+      },
+      {
+        "t_s": 97.837,
+        "drone_id": 1
+      },
+      {
+        "t_s": 112.137,
+        "drone_id": 0
+      },
+      {
+        "t_s": 130.537,
+        "drone_id": 1
+      },
+      {
+        "t_s": 138.536,
+        "drone_id": 0
+      }
+    ],
+    "103": [
+      {
+        "t_s": 21.736,
+        "drone_id": 2
+      },
+      {
+        "t_s": 32.836,
+        "drone_id": 2
+      },
+      {
+        "t_s": 67.837,
+        "drone_id": 2
+      },
+      {
+        "t_s": 125.037,
+        "drone_id": 2
+      }
+    ],
+    "104": [
+      {
+        "t_s": 43.936,
+        "drone_id": 2
+      },
+      {
+        "t_s": 78.836,
+        "drone_id": 2
+      },
+      {
+        "t_s": 136.536,
+        "drone_id": 2
+      }
+    ],
+    "105": [
+      {
+        "t_s": 39.136,
+        "drone_id": 1
+      },
+      {
+        "t_s": 55.936,
+        "drone_id": 2
+      },
+      {
+        "t_s": 63.636,
+        "drone_id": 1
+      },
+      {
+        "t_s": 84.436,
+        "drone_id": 1
+      },
+      {
+        "t_s": 108.136,
+        "drone_id": 1
+      },
+      {
+        "t_s": 108.236,
+        "drone_id": 2
+      },
+      {
+        "t_s": 141.036,
+        "drone_id": 1
+      },
+      {
+        "t_s": 149.136,
+        "drone_id": 2
+      }
+    ],
+    "106": [
+      {
+        "t_s": 33.236,
+        "drone_id": 0
+      },
+      {
+        "t_s": 50.836,
+        "drone_id": 0
+      },
+      {
+        "t_s": 77.236,
+        "drone_id": 0
+      },
+      {
+        "t_s": 103.536,
+        "drone_id": 0
+      },
+      {
+        "t_s": 129.936,
+        "drone_id": 0
+      }
+    ]
+  },
+  "compute_time_ms": {
+    "allocation": {
+      "mean_ms": 0.0021,
+      "p95_ms": 0.157,
+      "max_ms": 0.157,
+      "n": 1400
+    }
+  },
+  "comm_loss": {
+    "comm_loss_drone": 1,
+    "comm_loss_start_s": 20.036,
+    "comm_loss_duration_s": 15.0,
+    "detection_s": 5.0,
+    "reassignment_s": 5.0,
+    "coverage_restored_s": 19.1,
+    "rejoin_s": 0.0,
+    "resume_s": 4.1,
+    "min_separation_during_loss_m": 2.034,
+    "lost_drone_tasks": [
+      102,
+      105
+    ]
+  },
+  "fault_events": [
+    {
+      "t_s": 20.036,
+      "event": "comm_loss_started",
+      "drone_id": 1
+    },
+    {
+      "t_s": 25.036,
+      "event": "peer_declared_failed",
+      "drone_id": 1,
+      "by": 0,
+      "reason": "heartbeat_timeout"
+    },
+    {
+      "t_s": 35.036,
+      "event": "comm_loss_ended",
+      "drone_id": 1
+    },
+    {
+      "t_s": 35.036,
+      "event": "peer_recovered",
+      "drone_id": 1,
+      "by": 0
+    }
+  ]
+}

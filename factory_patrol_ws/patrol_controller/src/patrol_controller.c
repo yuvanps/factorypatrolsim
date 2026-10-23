@@ -43,6 +43,7 @@ static rcl_publisher_t task_bid_pub;
 static rcl_publisher_t task_assignment_pub;
 static rcl_publisher_t swarm_status_pub;
 static rcl_publisher_t experiment_event_pub; // instrumentation only (metrics), never read by any controller
+static rcl_publisher_t ground_truth_pub;     // instrumentation only: true state, published even during a comm loss
 
 static rcl_subscription_t mission_sub;
 static rcl_subscription_t task_bid_sub;
@@ -97,6 +98,9 @@ static uint16_t my_zones[MAX_MY_ZONES];
 static uint8_t my_zone_count = 0;
 static uint8_t my_zone_index = 0;  // Next zone to patrol
 
+// Instrumentation: peers this drone's heartbeat monitor declared FAILED (only drone 0 runs it)
+static bool peer_declared_failed[MAX_DRONES];
+
 // Collision avoidance
 #define SAFE_DISTANCE_SQ 6.25f  // 2.5m squared — hold if peer is within this
 static bool proximity_hold = false;
@@ -125,6 +129,66 @@ static uint64_t timestamp_us(void) {
     struct timespec ts;
     clock_gettime(CLOCK_REALTIME, &ts);
     return ((uint64_t)ts.tv_sec * 1000000ULL) + ((uint64_t)ts.tv_nsec / 1000ULL);
+}
+
+// ---- Fault injection: communication loss (experiment instrumentation) ----
+// PATROL_COMM_LOSS="drone:start_s:duration_s[,drone:start_s:duration_s...]", times relative to the
+// moment this drone receives the mission. During a window that names this drone, its radio is dead:
+// it publishes nothing on the swarm / ground-station topics (drone state = heartbeat, bids,
+// assignments, swarm status) and ignores everything it would receive on them (peer states, bids,
+// assignments, movement commands). It keeps flying on its own state machine. Instrumentation
+// (/experiment/events, /experiment/ground_truth_state) is not radio traffic and is never suppressed.
+#define MAX_COMM_LOSS 4
+static uint64_t comm_loss_start_us[MAX_COMM_LOSS], comm_loss_end_us[MAX_COMM_LOSS];
+static float comm_loss_start_s[MAX_COMM_LOSS], comm_loss_dur_s[MAX_COMM_LOSS];
+static int comm_loss_count = 0;
+static bool comm_lost = false;            // current state (for start/end events)
+static uint64_t mission_rx_us = 0;
+
+static void parse_comm_loss(const char *spec) {
+    if (!spec) return;
+    const char *p = spec;
+    while (*p && comm_loss_count < MAX_COMM_LOSS) {
+        int d; float st, du; int n = 0;
+        if (sscanf(p, "%d:%f:%f%n", &d, &st, &du, &n) != 3) {
+            fprintf(stderr, "[Drone %d] Ignoring malformed PATROL_COMM_LOSS entry at '%s'\n", g_drone_id, p);
+            return;
+        }
+        if (d == g_drone_id && st >= 0.0f && du > 0.0f) {
+            comm_loss_start_s[comm_loss_count] = st;
+            comm_loss_dur_s[comm_loss_count] = du;
+            comm_loss_count++;
+            printf("[Drone %d] Fault injection: communication loss at t+%.1fs for %.1fs\n", g_drone_id, st, du);
+        }
+        p += n;
+        if (*p == ',') p++;
+        else break;
+    }
+}
+
+static bool comm_blackout(void) {
+    if (!comm_loss_count || !mission_rx_us) return false;
+    uint64_t now = timestamp_us();
+    for (int i = 0; i < comm_loss_count; i++) {
+        if (now >= comm_loss_start_us[i] && now < comm_loss_end_us[i]) return true;
+    }
+    return false;
+}
+
+static void publish_event(const char *type, const char *data) {
+    patrol_msgs__msg__ExperimentEvent ev;
+    patrol_msgs__msg__ExperimentEvent__init(&ev);
+    ev.timestamp = timestamp_us() * 1000ULL; // ns, same clock as the other experiment events
+    rosidl_runtime_c__String__assign(&ev.event_type, type);
+    rosidl_runtime_c__String__assign(&ev.data, data);
+    (void)rcl_publish(&experiment_event_pub, &ev, NULL);
+    patrol_msgs__msg__ExperimentEvent__fini(&ev);
+}
+
+// Radio publish: dropped during a communication loss.
+static void radio_publish(const rcl_publisher_t *pub, const void *msg) {
+    if (comm_blackout()) return;
+    (void)rcl_publish(pub, msg, NULL);
 }
 
 static void publish_offboard_control_mode(void) {
@@ -193,14 +257,23 @@ static void odometry_callback(const void * msgin) {
 
 static void peer_drone_state_callback(const void * msgin) {
     const patrol_msgs__msg__DroneState * msg = (const patrol_msgs__msg__DroneState *)msgin;
+    if (comm_blackout()) return;
     if (msg->drone_id != g_drone_id && msg->drone_id < g_num_drones && msg->battery_level > 0.0f) {
+        bool was_failed = peer_declared_failed[msg->drone_id];
         auction_update_drone_state(msg->drone_id, msg->x, msg->y, msg->z, msg->battery_level, msg->state, timestamp_us());
+        if (was_failed && auction_is_drone_healthy(msg->drone_id)) {
+            // Heartbeat back after a timeout (instrumentation; only drone 0 runs the timeout check)
+            peer_declared_failed[msg->drone_id] = false;
+            char data[64];
+            snprintf(data, sizeof(data), "{\"drone_id\": %d, \"by\": %d}", msg->drone_id, g_drone_id);
+            publish_event("peer_recovered", data);
+        }
     }
 }
 
 static void movement_command_callback(const void * msgin) {
     const patrol_msgs__msg__MovementCommand * msg = (const patrol_msgs__msg__MovementCommand *)msgin;
-    if (msg->drone_id != g_drone_id) return;
+    if (comm_blackout() || msg->drone_id != g_drone_id) return;
     // Reject malformed commands outright (defence in depth; the algorithm already guarantees finite values)
     if (!isfinite(msg->target_x) || !isfinite(msg->target_y) || !isfinite(msg->target_z)) return;
     movement_cmd_task_id = msg->task_id;
@@ -216,6 +289,11 @@ static void mission_callback(const void * msgin) {
     printf("[Drone %d] Mission %d received with %zu tasks. ARMING & STARTING PATROL!\n", g_drone_id, msg->mission_id, msg->tasks.size);
     mission_started = true;
     mission_start_tick = setpoint_counter;
+    mission_rx_us = timestamp_us();
+    for (int i = 0; i < comm_loss_count; i++) {
+        comm_loss_start_us[i] = mission_rx_us + (uint64_t)(comm_loss_start_s[i] * 1e6f);
+        comm_loss_end_us[i] = comm_loss_start_us[i] + (uint64_t)(comm_loss_dur_s[i] * 1e6f);
+    }
 
     // Reset battery to full for the new mission run
     current_battery = 100.0f;
@@ -237,12 +315,13 @@ static void mission_callback(const void * msgin) {
         bid.task_id = t->task_id;
         bid.drone_id = g_drone_id;
         bid.cost = cost;
-        (void)rcl_publish(&task_bid_pub, &bid, NULL);
+        radio_publish(&task_bid_pub, &bid);
     }
 }
 
 static void task_bid_callback(const void * msgin) {
     const patrol_msgs__msg__TaskBid * msg = (const patrol_msgs__msg__TaskBid *)msgin;
+    if (comm_blackout()) return;
     auction_record_bid(msg->task_id, msg->drone_id, msg->cost);
 }
 
@@ -307,6 +386,7 @@ static bool check_peer_proximity(void) {
 
 static void task_assignment_callback(const void * msgin) {
     const patrol_msgs__msg__TaskAssignment * msg = (const patrol_msgs__msg__TaskAssignment *)msgin;
+    if (comm_blackout()) return;
     AuctionTask* t = auction_get_task(msg->task_id);
     if (t) {
         t->assigned_drone = msg->drone_id;
@@ -400,16 +480,10 @@ static void update_external_navigation(const AuctionTask *t, float task_z) {
 // /experiment/events so the metrics collector counts exactly what the mission logic
 // completed. Publish-only; it does not influence navigation or allocation.
 static void publish_task_completed(uint16_t task_id, float hover_s) {
-    patrol_msgs__msg__ExperimentEvent ev;
-    patrol_msgs__msg__ExperimentEvent__init(&ev);
-    ev.timestamp = timestamp_us() * 1000ULL; // ns, same clock as the other experiment events
     char data[96];
     snprintf(data, sizeof(data), "{\"drone_id\": %d, \"task_id\": %d, \"hover_s\": %.2f}",
              g_drone_id, task_id, hover_s);
-    rosidl_runtime_c__String__assign(&ev.event_type, "task_completed");
-    rosidl_runtime_c__String__assign(&ev.data, data);
-    (void)rcl_publish(&experiment_event_pub, &ev, NULL);
-    patrol_msgs__msg__ExperimentEvent__fini(&ev);
+    publish_event("task_completed", data);
 }
 
 static void update_task_execution(void) {
@@ -547,7 +621,19 @@ static void timer_callback(rcl_timer_t *timer_handle, int64_t last_call_time) {
     // Drone 0 orchestrates continuous patrol cycle and peer health
     // Wait 50 ticks (5 seconds) so all drones have received the mission and published bids
     if (g_drone_id == 0 && mission_started && (setpoint_counter - mission_start_tick > 50)) {
+        struct timespec c0, c1;
+        clock_gettime(CLOCK_MONOTONIC, &c0);
+        bool healthy_before[MAX_DRONES];
+        for (uint8_t d = 0; d < g_num_drones; d++) healthy_before[d] = auction_is_drone_healthy(d);
         auction_check_peer_timeouts(timestamp_us(), 5000000ULL); // 5 sec timeout
+        for (uint8_t d = 0; d < g_num_drones; d++) {
+            if (d != g_drone_id && healthy_before[d] && !auction_is_drone_healthy(d) && !peer_declared_failed[d]) {
+                peer_declared_failed[d] = true;           // instrumentation: heartbeat timeout fired
+                char data[80];
+                snprintf(data, sizeof(data), "{\"drone_id\": %d, \"by\": %d, \"reason\": \"heartbeat_timeout\"}", d, g_drone_id);
+                publish_event("peer_declared_failed", data);
+            }
+        }
         auction_recycle_tasks_if_all_completed(); // Loop patrol continuously
 
         // Allocate ALL unassigned tasks in one timer tick (not just one per tick)
@@ -560,7 +646,7 @@ static void timer_callback(rcl_timer_t *timer_handle, int64_t last_call_time) {
             patrol_msgs__msg__TaskAssignment__init(&assign);
             assign.task_id = out_t;
             assign.drone_id = out_d;
-            (void)rcl_publish(&task_assignment_pub, &assign, NULL);
+            radio_publish(&task_assignment_pub, &assign);
 
             // Drone 0 must also collect its own zones here (callback may not fire for self)
             if (out_d == 0) {
@@ -600,6 +686,25 @@ static void timer_callback(rcl_timer_t *timer_handle, int64_t last_call_time) {
             }
         }
 
+        // Instrumentation: time spent in the allocation step (heartbeat check, recycling, auction),
+        // reported every 5 s as a compute_stats event (source "allocation").
+        clock_gettime(CLOCK_MONOTONIC, &c1);
+        {
+            static double alloc_sum_ms = 0.0, alloc_max_ms = 0.0;
+            static int alloc_n = 0;
+            double ms = (c1.tv_sec - c0.tv_sec) * 1e3 + (c1.tv_nsec - c0.tv_nsec) / 1e6;
+            alloc_sum_ms += ms; alloc_n++;
+            if (ms > alloc_max_ms) alloc_max_ms = ms;
+            if (alloc_n >= 50) {
+                char data[160];
+                snprintf(data, sizeof(data), "{\"source\": \"allocation\", \"drone_id\": %d, \"n\": %d, "
+                         "\"mean_ms\": %.4f, \"max_ms\": %.4f, \"p95_ms\": %.4f}", g_drone_id, alloc_n,
+                         alloc_sum_ms / alloc_n, alloc_max_ms, alloc_max_ms);
+                publish_event("compute_stats", data);
+                alloc_sum_ms = 0.0; alloc_max_ms = 0.0; alloc_n = 0;
+            }
+        }
+
         if (!any_allocated && any_unassigned && auction_count_healthy_drones() == 0) {
             if (!no_drones_reported) {
                 no_drones_reported = true;
@@ -609,7 +714,7 @@ static void timer_callback(rcl_timer_t *timer_handle, int64_t last_call_time) {
                 status_msg.status = patrol_msgs__msg__SwarmStatus__STATUS_NO_DRONES_AVAILABLE;
                 rosidl_runtime_c__String__assign(&status_msg.reason,
                     "All drones are unavailable (low battery or failed). Patrol suspended.");
-                (void)rcl_publish(&swarm_status_pub, &status_msg, NULL);
+                radio_publish(&swarm_status_pub, &status_msg);
                 patrol_msgs__msg__SwarmStatus__fini(&status_msg);
             }
         } else {
@@ -618,6 +723,15 @@ static void timer_callback(rcl_timer_t *timer_handle, int64_t last_call_time) {
     }
 
     publish_offboard_control_mode();
+
+    bool lost_now = comm_blackout();
+    if (lost_now != comm_lost) {
+        comm_lost = lost_now;
+        char data[64];
+        snprintf(data, sizeof(data), "{\"drone_id\": %d}", g_drone_id);
+        publish_event(lost_now ? "comm_loss_started" : "comm_loss_ended", data);
+        printf("[Drone %d] %s\n", g_drone_id, lost_now ? "COMMUNICATION LOST (fault injection)" : "Communication restored");
+    }
 
     // Always send ARM + OFFBOARD commands every 10 ticks so PX4 satisfies its
     // 10-setpoint requirement and drones are ready to fly the moment a mission arrives.
@@ -662,7 +776,8 @@ static void timer_callback(rcl_timer_t *timer_handle, int64_t last_call_time) {
     ds.battery_level = current_battery;
     ds.state = g_state;
     ds.current_task_id = has_active_task ? current_task_id : 0;
-    (void)rcl_publish(&drone_state_pub, &ds, NULL);
+    radio_publish(&drone_state_pub, &ds);
+    (void)rcl_publish(&ground_truth_pub, &ds, NULL);
 }
 
 int main(int argc, char const * const * argv) {
@@ -687,6 +802,7 @@ int main(int argc, char const * const * argv) {
     }
     g_drone_id = (uint8_t)arg_id;
     g_num_drones = (uint8_t)arg_num;
+    parse_comm_loss(getenv("PATROL_COMM_LOSS"));
 
     // Set spawn offset matching start_swarm.sh coordinates
     // Drones spawn in north area (y=7), spaced 4m apart along X starting at x=-8
@@ -729,6 +845,7 @@ int main(int argc, char const * const * argv) {
     rclc_publisher_init(&task_assignment_pub, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(patrol_msgs, msg, TaskAssignment), "/swarm/task_assignment", &rel_qos_profile);
     rclc_publisher_init(&swarm_status_pub, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(patrol_msgs, msg, SwarmStatus), "/ground_station/swarm_status", &rel_qos_profile);
     rclc_publisher_init(&experiment_event_pub, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(patrol_msgs, msg, ExperimentEvent), "/experiment/events", &rel_qos_profile);
+    rclc_publisher_init(&ground_truth_pub, &node, ROSIDL_GET_MSG_TYPE_SUPPORT(patrol_msgs, msg, DroneState), "/experiment/ground_truth_state", &rel_qos_profile);
 
     rclc_timer_init_default(&timer, &support, RCL_MS_TO_NS(TIMER_PERIOD_MS), timer_callback);
     

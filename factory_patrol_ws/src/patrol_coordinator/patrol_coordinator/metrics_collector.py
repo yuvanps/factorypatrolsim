@@ -34,6 +34,7 @@ from patrol_msgs.msg import (
     SwarmStatus, ExperimentEvent, Mission,
 )
 from patrol_coordinator.metrics_summary import RunMetrics
+from patrol_coordinator.obstacles import load_obstacles
 
 
 class MetricsCollector(Node):
@@ -43,6 +44,9 @@ class MetricsCollector(Node):
         self.declare_parameter('output_dir', 'experiment_results')
         self.declare_parameter('state_snapshot_interval', 1.0)  # seconds
         self.declare_parameter('mission_timeout_s', 600.0)  # summary written as 'timeout' after this
+        # > 0: keep observing (safety, idleness, fault recovery) until start + this, and write the
+        # summary then instead of at mission completion (metrics 1-6 keep the mission window)
+        self.declare_parameter('observation_window_s', 0.0)
 
         output_dir = self.get_parameter('output_dir').value
         snapshot_interval = self.get_parameter('state_snapshot_interval').value
@@ -54,6 +58,8 @@ class MetricsCollector(Node):
         self._summary_dir = os.path.join(output_dir, 'summaries')
         os.makedirs(self._output_dir, exist_ok=True)
         self._mission_timeout_s = float(self.get_parameter('mission_timeout_s').value)
+        self._observation_window_s = float(self.get_parameter('observation_window_s').value)
+        self._ground_truth_seen: set[int] = set()   # drones whose instrumentation state arrives
 
         # Summary metrics state
         self._metrics = RunMetrics()
@@ -102,6 +108,12 @@ class MetricsCollector(Node):
         self.create_subscription(
             ExperimentEvent, '/experiment/events',
             self._experiment_event_cb, reliable_qos)
+        # Instrumentation copy of every drone's state, published even while its radio is down
+        # (fault injection). Used for all metrics when available; /ground_station/drone_state
+        # (the radio channel) is the fallback for controllers that do not publish it.
+        self.create_subscription(
+            DroneState, '/experiment/ground_truth_state',
+            self._ground_truth_cb, reliable_qos)
         self.create_subscription(
             Mission, '/ground_station/mission',
             self._mission_cb, reliable_qos)
@@ -126,6 +138,15 @@ class MetricsCollector(Node):
         self._events_file.flush()
 
     def _drone_state_cb(self, msg: DroneState):
+        if msg.drone_id in self._ground_truth_seen:
+            return
+        self._use_state(msg)
+
+    def _ground_truth_cb(self, msg: DroneState):
+        self._ground_truth_seen.add(msg.drone_id)
+        self._use_state(msg)
+
+    def _use_state(self, msg: DroneState):
         self._latest_states[msg.drone_id] = msg
         self._metrics.on_state(self.get_clock().now().nanoseconds, msg.drone_id,
                                msg.x, msg.y, msg.z, msg.battery_level, msg.state)
@@ -135,6 +156,7 @@ class MetricsCollector(Node):
             'task_id': msg.task_id,
             'drone_id': msg.drone_id,
         })
+        self._metrics.on_assignment(self.get_clock().now().nanoseconds, msg.task_id, msg.drone_id)
 
     def _task_bid_cb(self, msg: TaskBid):
         self._record_event('bid_received', {
@@ -164,8 +186,10 @@ class MetricsCollector(Node):
                 self._metrics.on_task_completed(int(msg.timestamp), int(data['drone_id']), int(data['task_id']))
             except (KeyError, TypeError, ValueError):
                 return
-            if self._metrics.mission_complete and not self._summary_written:
+            if self._metrics.mission_complete and not self._summary_written and self._observation_window_s <= 0:
                 self._write_summary()
+        else:
+            self._metrics.on_event(int(msg.timestamp), msg.event_type, data)
 
     def _mission_cb(self, msg: Mission):
         if self._mission_task_ids is None:
@@ -177,8 +201,18 @@ class MetricsCollector(Node):
         if self._metrics.started or self._mission_info is None or self._mission_task_ids is None:
             return
         t_ns, info = self._mission_info
+        obstacles = []
+        path = info.get('obstacles_file', '')
+        if path and os.path.exists(path):
+            try:
+                obstacles = load_obstacles(path)
+            except (OSError, ValueError, KeyError) as e:
+                self.get_logger().error(f'Cannot load obstacles {path}: {e}; clearance not computed')
+        else:
+            self.get_logger().warn('No obstacles_file in mission_started: clearance not computed')
         self._metrics.start(t_ns, info.get('algorithm', 'unknown'), info.get('scenario', 'unspecified'),
-                            int(info.get('num_drones', 0)), self._mission_task_ids)
+                            int(info.get('num_drones', 0)), self._mission_task_ids,
+                            observation_window_s=self._observation_window_s, obstacles=obstacles)
         self.get_logger().info(
             f'Metrics window started: {self._metrics.algorithm} / {self._metrics.scenario} / '
             f'{self._metrics.num_drones} drones / {len(self._metrics.task_ids)} tasks')
@@ -186,7 +220,9 @@ class MetricsCollector(Node):
     def _check_mission_timeout(self):
         if self._metrics.started and not self._summary_written:
             elapsed = (self.get_clock().now().nanoseconds - self._metrics.start_ns) / 1e9
-            if elapsed >= self._mission_timeout_s:
+            if 0 < self._observation_window_s <= elapsed:
+                self._write_summary(status='completed' if self._metrics.mission_complete else 'timeout')
+            elif elapsed >= self._mission_timeout_s:
                 self._write_summary(status='timeout')
 
     def _write_summary(self, status=None):

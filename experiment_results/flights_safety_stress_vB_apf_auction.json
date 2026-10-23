@@ -1,0 +1,44 @@
+{
+ "vB_seed2": [
+  {
+   "run": "run_20261022_235553",
+   "status": "completed",
+   "completed_tasks": 8,
+   "total_tasks": 8,
+   "mission_time_s": 85.662,
+   "distance_m": 212.875,
+   "min_separation_m": 1.613,
+   "min_obstacle_clearance_m": 0.6449999999999996,
+   "rl_plans": 15,
+   "rl_stalls": 1
+  }
+ ],
+ "apf": [
+  {
+   "run": "run_20261022_235808",
+   "status": "aborted",
+   "completed_tasks": 7,
+   "total_tasks": 8,
+   "mission_time_s": NaN,
+   "distance_m": 661.356,
+   "min_separation_m": 0.731,
+   "min_obstacle_clearance_m": 0.0,
+   "rl_plans": 0,
+   "rl_stalls": 0
+  }
+ ],
+ "auction": [
+  {
+   "run": "run_20261023_000523",
+   "status": "aborted",
+   "completed_tasks": 6,
+   "total_tasks": 8,
+   "mission_time_s": NaN,
+   "distance_m": 983.782,
+   "min_separation_m": 0.398,
+   "min_obstacle_clearance_m": 0.0,
+   "rl_plans": 0,
+   "rl_stalls": 0
+  }
+ ]
+}

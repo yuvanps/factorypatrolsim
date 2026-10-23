@@ -147,6 +147,10 @@ class CoordinatorNode(Node):
         self.get_logger().info(f'Algorithm: {self._algorithm_name}')
         self.get_logger().info(f'Num drones: {self._num_drones}')
 
+        # Fail closed: if the selected algorithm cannot be initialised, NO mission is published.
+        # (Publishing it anyway would let the controllers' native auction fly the run while the
+        # metrics label it with the selected algorithm.)
+        self._init_error = None
         try:
             algo_class = get_algorithm_class(self._algorithm_name)
             self._algorithm = algo_class(self._config)
@@ -156,11 +160,14 @@ class CoordinatorNode(Node):
         except NotImplementedError as e:
             self._algorithm = None
             self._algorithm_active = False
-            self.get_logger().error(f'Algorithm not available: {e}')
+            self._init_error = f'Algorithm not available: {e}'
         except Exception as e:
             self._algorithm = None
             self._algorithm_active = False
-            self.get_logger().error(f'Failed to initialize algorithm: {e}')
+            self._init_error = f'Failed to initialize algorithm {self._algorithm_name!r}: {type(e).__name__}: {e}'
+        if self._init_error:
+            self.get_logger().error(self._init_error)
+            self.get_logger().error('No mission will be published (no silent fallback to another algorithm).')
 
         # --- QoS ---
         reliable_qos = QoSProfile(
@@ -187,7 +194,10 @@ class CoordinatorNode(Node):
             self._assignment_cb, reliable_qos)
 
         # --- State ---
+        self._compute_ms: list[float] = []      # compute() durations since the last compute_stats event
+        self._compute_report_t = time.monotonic()
         self._mission_published = False
+        self._shutdown_requested = False
         self._drone_states: dict[int, DroneState] = {}
 
         # --- Timer: publish mission after delay ---
@@ -215,6 +225,13 @@ class CoordinatorNode(Node):
             return
         self._mission_published = True
         self._startup_timer.cancel()
+
+        if self._init_error:
+            self._emit_event('algorithm_init_failed', {
+                'algorithm': self._algorithm_name, 'scenario': self._scenario, 'error': self._init_error})
+            self.get_logger().error(f'Mission NOT published: {self._init_error}')
+            self._shutdown_requested = True
+            return
 
         if not self._tasks:
             self.get_logger().error('No tasks loaded — cannot publish mission!')
@@ -285,11 +302,13 @@ class CoordinatorNode(Node):
         if not self._algorithm_active or not self._mission_published:
             return
 
+        t0 = time.perf_counter()
         try:
             result = self._algorithm.compute(self.get_clock().now().nanoseconds)
         except NotImplementedError as e:
             self.get_logger().error(f'Algorithm error: {e}', throttle_duration_sec=10.0)
             return
+        self._record_compute_time((time.perf_counter() - t0) * 1e3)
 
         # Publish task assignments
         for assignment in result.assignments:
@@ -316,6 +335,21 @@ class CoordinatorNode(Node):
 
         for event_type, data in result.metadata.get('events', []):
             self._emit_event(event_type, data)
+
+    def _record_compute_time(self, ms: float):
+        """Decision time of the algorithm (wall time of compute()), reported every 5 s as a
+        compute_stats event (source "coordinator"); the metrics collector aggregates them."""
+        self._compute_ms.append(ms)
+        if time.monotonic() - self._compute_report_t < 5.0:
+            return
+        v = sorted(self._compute_ms)
+        self._emit_event('compute_stats', {
+            'source': 'coordinator', 'algorithm': self._algorithm_name, 'n': len(v),
+            'mean_ms': round(sum(v) / len(v), 4), 'max_ms': round(v[-1], 4),
+            'p95_ms': round(v[min(len(v) - 1, int(0.95 * len(v)))], 4),
+        })
+        self._compute_ms.clear()
+        self._compute_report_t = time.monotonic()
 
     def _load_algorithm_params(self) -> dict:
         """Read the '<algorithm>:' section of the algorithm config file.
@@ -351,14 +385,24 @@ class CoordinatorNode(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = CoordinatorNode()
+    exit_code = 0
     try:
-        rclpy.spin(node)
+        while rclpy.ok() and not node._shutdown_requested:
+            rclpy.spin_once(node, timeout_sec=0.1)
+        if node._shutdown_requested:
+            # let the algorithm_init_failed event reach the metrics collector, then exit non-zero
+            end = time.time() + 1.0
+            while time.time() < end:
+                rclpy.spin_once(node, timeout_sec=0.1)
+            exit_code = 1
     except KeyboardInterrupt:
         pass
     finally:
         node.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
+    return exit_code
 
 
 if __name__ == '__main__':
-    main()
+    raise SystemExit(main())

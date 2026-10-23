@@ -1,0 +1,45 @@
+# =============================================================================
+# Scenario: COMM LOSS OF THE ORCHESTRATOR (drone 0 runs the auction for the whole swarm)
+# =============================================================================
+# The benchmark task layout, with drone 0's radio lost 20 s after the mission starts, for 15 s.
+# During the loss drone 1 publishes nothing on the swarm / ground-station topics (no heartbeat,
+# bids, assignments) and receives nothing (no peer states, assignments or movement commands);
+# it keeps flying on its own state machine (patrol_controller.c, PATROL_COMM_LOSS).
+# Drone 0 runs the heartbeat monitor and the auction for the whole swarm, so nobody declares it
+# FAILED and nobody reassigns its tasks; it instead stops hearing the others, declares THEM failed
+# after 5 s and reallocates their tasks locally (unheard). This tests the single point of failure.
+#
+# The run is observed for observation_window_s (not only until every task was visited once), so
+# detection, reassignment, coverage restoration, rejoin and resume times can be measured
+# (metrics_summary.py, metric 11; docs/METRICS.md).
+#
+#   ./scripts/start_experiment.sh --scenario comm_loss --algorithm rl --drones 3
+
+scenario:
+  name: comm_loss_orchestrator
+  description: Benchmark patrol; drone 0 (the auction orchestrator) loses its radio at t+20 s for 15 s.
+
+experiment:
+  num_drones: 3
+  random_seed: 42
+
+mission:
+  hover_time: 4.0
+  tasks_file: config/tasks/benchmark.yaml
+
+faults:
+  comm_loss: "0:20:15"     # drone:start_s:duration_s (times from mission receipt)
+
+drones:
+  initial_battery: 100.0
+  battery_drain_rate: 0.01
+
+metrics:
+  state_snapshot_interval: 0.2
+  mission_timeout_s: 600.0
+  observation_window_s: 150.0
+
+simulation:
+  duration_seconds: 0
+  world: factory
+  obstacles_file: config/environment/factory_obstacles.yaml

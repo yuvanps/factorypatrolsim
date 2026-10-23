@@ -1,0 +1,109 @@
+{"timestamp_ns": 1792745943612353299, "wall_time": "2026-10-23T14:29:03.612368", "event_type": "metrics_collector_started"}
+{"timestamp_ns": 1792745949624724844, "wall_time": "2026-10-23T14:29:09.624743", "event_type": "bid_received", "task_id": 103, "drone_id": 2, "cost": 13.059630393981934}
+{"timestamp_ns": 1792745949624916316, "wall_time": "2026-10-23T14:29:09.624920", "event_type": "bid_received", "task_id": 104, "drone_id": 1, "cost": 8.971817970275879}
+{"timestamp_ns": 1792745949625042595, "wall_time": "2026-10-23T14:29:09.625046", "event_type": "bid_received", "task_id": 104, "drone_id": 0, "cost": 12.675435066223145}
+{"timestamp_ns": 1792745949625118148, "wall_time": "2026-10-23T14:29:09.625121", "event_type": "mission_started", "mission_id": 1, "num_tasks": 6, "scenario": "comm_loss_orchestrator", "algorithm": "auction", "num_drones": 3, "tasks_file": "/home/mrweirdo/factory_patrol_sim/config/tasks/benchmark.yaml", "obstacles_file": "/home/mrweirdo/factory_patrol_sim/config/environment/factory_obstacles.yaml", "num_obstacles": 18, "algorithm_params": {}}
+{"timestamp_ns": 1792745949630186204, "wall_time": "2026-10-23T14:29:09.630192", "event_type": "bid_received", "task_id": 104, "drone_id": 2, "cost": 5.687496185302734}
+{"timestamp_ns": 1792745949630261416, "wall_time": "2026-10-23T14:29:09.630267", "event_type": "bid_received", "task_id": 103, "drone_id": 2, "cost": 13.059630393981934}
+{"timestamp_ns": 1792745949630405678, "wall_time": "2026-10-23T14:29:09.630408", "event_type": "bid_received", "task_id": 105, "drone_id": 1, "cost": 14.744034767150879}
+{"timestamp_ns": 1792745949630460652, "wall_time": "2026-10-23T14:29:09.630463", "event_type": "bid_received", "task_id": 104, "drone_id": 1, "cost": 8.971817970275879}
+{"timestamp_ns": 1792745949630582723, "wall_time": "2026-10-23T14:29:09.630585", "event_type": "bid_received", "task_id": 105, "drone_id": 2, "cost": 11.008437156677246}
+{"timestamp_ns": 1792745949630617949, "wall_time": "2026-10-23T14:29:09.630620", "event_type": "bid_received", "task_id": 104, "drone_id": 0, "cost": 12.675435066223145}
+{"timestamp_ns": 1792745949630733798, "wall_time": "2026-10-23T14:29:09.630736", "event_type": "bid_received", "task_id": 106, "drone_id": 1, "cost": 15.93332290649414}
+{"timestamp_ns": 1792745949630768334, "wall_time": "2026-10-23T14:29:09.630770", "event_type": "bid_received", "task_id": 104, "drone_id": 2, "cost": 5.687496185302734}
+{"timestamp_ns": 1792745949630876117, "wall_time": "2026-10-23T14:29:09.630878", "event_type": "bid_received", "task_id": 106, "drone_id": 2, "cost": 13.503676414489746}
+{"timestamp_ns": 1792745949630908659, "wall_time": "2026-10-23T14:29:09.630910", "event_type": "bid_received", "task_id": 105, "drone_id": 1, "cost": 14.744034767150879}
+{"timestamp_ns": 1792745949631038845, "wall_time": "2026-10-23T14:29:09.631042", "event_type": "bid_received", "task_id": 105, "drone_id": 0, "cost": 18.5909366607666}
+{"timestamp_ns": 1792745949631080774, "wall_time": "2026-10-23T14:29:09.631083", "event_type": "bid_received", "task_id": 105, "drone_id": 2, "cost": 11.008437156677246}
+{"timestamp_ns": 1792745949631193607, "wall_time": "2026-10-23T14:29:09.631195", "event_type": "bid_received", "task_id": 106, "drone_id": 0, "cost": 18.9443302154541}
+{"timestamp_ns": 1792745949631227231, "wall_time": "2026-10-23T14:29:09.631230", "event_type": "bid_received", "task_id": 106, "drone_id": 1, "cost": 15.93332290649414}
+{"timestamp_ns": 1792745949631351035, "wall_time": "2026-10-23T14:29:09.631353", "event_type": "bid_received", "task_id": 106, "drone_id": 2, "cost": 13.503676414489746}
+{"timestamp_ns": 1792745949631474207, "wall_time": "2026-10-23T14:29:09.631476", "event_type": "bid_received", "task_id": 105, "drone_id": 0, "cost": 18.5909366607666}
+{"timestamp_ns": 1792745949631588023, "wall_time": "2026-10-23T14:29:09.631590", "event_type": "bid_received", "task_id": 106, "drone_id": 0, "cost": 18.9443302154541}
+{"timestamp_ns": 1792745954813464654, "wall_time": "2026-10-23T14:29:14.813480", "event_type": "task_assigned", "task_id": 101, "drone_id": 0}
+{"timestamp_ns": 1792745954813873536, "wall_time": "2026-10-23T14:29:14.813878", "event_type": "task_assigned", "task_id": 102, "drone_id": 1}
+{"timestamp_ns": 1792745954813957305, "wall_time": "2026-10-23T14:29:14.813961", "event_type": "task_assigned", "task_id": 101, "drone_id": 0}
+{"timestamp_ns": 1792745954814210172, "wall_time": "2026-10-23T14:29:14.814215", "event_type": "task_assigned", "task_id": 103, "drone_id": 2}
+{"timestamp_ns": 1792745954814277179, "wall_time": "2026-10-23T14:29:14.814280", "event_type": "task_assigned", "task_id": 102, "drone_id": 1}
+{"timestamp_ns": 1792745954814501142, "wall_time": "2026-10-23T14:29:14.814506", "event_type": "task_assigned", "task_id": 104, "drone_id": 2}
+{"timestamp_ns": 1792745954814572497, "wall_time": "2026-10-23T14:29:14.814576", "event_type": "task_assigned", "task_id": 103, "drone_id": 2}
+{"timestamp_ns": 1792745954814749161, "wall_time": "2026-10-23T14:29:14.814752", "event_type": "task_assigned", "task_id": 105, "drone_id": 1}
+{"timestamp_ns": 1792745954814801259, "wall_time": "2026-10-23T14:29:14.814804", "event_type": "task_assigned", "task_id": 104, "drone_id": 2}
+{"timestamp_ns": 1792745954814964899, "wall_time": "2026-10-23T14:29:14.814968", "event_type": "task_assigned", "task_id": 106, "drone_id": 0}
+{"timestamp_ns": 1792745954815016436, "wall_time": "2026-10-23T14:29:14.815019", "event_type": "task_assigned", "task_id": 105, "drone_id": 1}
+{"timestamp_ns": 1792745954815185425, "wall_time": "2026-10-23T14:29:14.815189", "event_type": "task_assigned", "task_id": 106, "drone_id": 0}
+{"timestamp_ns": 1792745959713523383, "wall_time": "2026-10-23T14:29:19.713538", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0043, "max_ms": 0.1605, "p95_ms": 0.1605}
+{"timestamp_ns": 1792745964713504316, "wall_time": "2026-10-23T14:29:24.713518", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.001, "max_ms": 0.0014, "p95_ms": 0.0014}
+{"timestamp_ns": 1792745964713959176, "wall_time": "2026-10-23T14:29:24.713968", "event_type": "task_completed", "drone_id": 0, "task_id": 101, "hover_s": 4.0}
+{"timestamp_ns": 1792745968198823084, "wall_time": "2026-10-23T14:29:28.198836", "event_type": "task_completed", "drone_id": 1, "task_id": 102, "hover_s": 4.0}
+{"timestamp_ns": 1792745969713449881, "wall_time": "2026-10-23T14:29:29.713464", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0011, "max_ms": 0.0018, "p95_ms": 0.0018}
+{"timestamp_ns": 1792745969713838706, "wall_time": "2026-10-23T14:29:29.713847", "event_type": "comm_loss_started", "drone_id": 0}
+{"timestamp_ns": 1792745971598922544, "wall_time": "2026-10-23T14:29:31.598941", "event_type": "task_completed", "drone_id": 2, "task_id": 103, "hover_s": 4.0}
+{"timestamp_ns": 1792745973913525849, "wall_time": "2026-10-23T14:29:33.913539", "event_type": "task_completed", "drone_id": 0, "task_id": 101, "hover_s": 4.0}
+{"timestamp_ns": 1792745974613404984, "wall_time": "2026-10-23T14:29:34.613424", "event_type": "peer_declared_failed", "drone_id": 1, "by": 0, "reason": "heartbeat_timeout"}
+{"timestamp_ns": 1792745974613703578, "wall_time": "2026-10-23T14:29:34.613709", "event_type": "peer_declared_failed", "drone_id": 2, "by": 0, "reason": "heartbeat_timeout"}
+{"timestamp_ns": 1792745974713494664, "wall_time": "2026-10-23T14:29:34.713508", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0024, "max_ms": 0.0615, "p95_ms": 0.0615}
+{"timestamp_ns": 1792745978398862761, "wall_time": "2026-10-23T14:29:38.398875", "event_type": "task_completed", "drone_id": 1, "task_id": 102, "hover_s": 4.0}
+{"timestamp_ns": 1792745979713546940, "wall_time": "2026-10-23T14:29:39.713564", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0017, "p95_ms": 0.0017}
+{"timestamp_ns": 1792745982698872378, "wall_time": "2026-10-23T14:29:42.698886", "event_type": "task_completed", "drone_id": 2, "task_id": 103, "hover_s": 4.0}
+{"timestamp_ns": 1792745982813466294, "wall_time": "2026-10-23T14:29:42.813481", "event_type": "task_completed", "drone_id": 0, "task_id": 106, "hover_s": 4.0}
+{"timestamp_ns": 1792745984699120008, "wall_time": "2026-10-23T14:29:44.699128", "event_type": "peer_recovered", "drone_id": 2, "by": 0}
+{"timestamp_ns": 1792745984699448749, "wall_time": "2026-10-23T14:29:44.699455", "event_type": "peer_recovered", "drone_id": 1, "by": 0}
+{"timestamp_ns": 1792745984713479500, "wall_time": "2026-10-23T14:29:44.713496", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0015, "p95_ms": 0.0015}
+{"timestamp_ns": 1792745984713903090, "wall_time": "2026-10-23T14:29:44.713911", "event_type": "comm_loss_ended", "drone_id": 0}
+{"timestamp_ns": 1792745988598902104, "wall_time": "2026-10-23T14:29:48.598918", "event_type": "task_completed", "drone_id": 1, "task_id": 105, "hover_s": 4.0}
+{"timestamp_ns": 1792745989713451564, "wall_time": "2026-10-23T14:29:49.713463", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0016, "max_ms": 0.0253, "p95_ms": 0.0253}
+{"timestamp_ns": 1792745991613551619, "wall_time": "2026-10-23T14:29:51.613564", "event_type": "task_completed", "drone_id": 0, "task_id": 101, "hover_s": 4.0}
+{"timestamp_ns": 1792745993998837199, "wall_time": "2026-10-23T14:29:53.998850", "event_type": "task_completed", "drone_id": 2, "task_id": 104, "hover_s": 4.0}
+{"timestamp_ns": 1792745994713485475, "wall_time": "2026-10-23T14:29:54.713501", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0015, "p95_ms": 0.0015}
+{"timestamp_ns": 1792745998798795300, "wall_time": "2026-10-23T14:29:58.798807", "event_type": "task_completed", "drone_id": 1, "task_id": 102, "hover_s": 4.0}
+{"timestamp_ns": 1792745999713522943, "wall_time": "2026-10-23T14:29:59.713542", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0016, "p95_ms": 0.0016}
+{"timestamp_ns": 1792746000513562743, "wall_time": "2026-10-23T14:30:00.513578", "event_type": "task_completed", "drone_id": 0, "task_id": 106, "hover_s": 4.0}
+{"timestamp_ns": 1792746004713507450, "wall_time": "2026-10-23T14:30:04.713526", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.002, "p95_ms": 0.002}
+{"timestamp_ns": 1792746004798875101, "wall_time": "2026-10-23T14:30:04.798888", "event_type": "task_completed", "drone_id": 2, "task_id": 103, "hover_s": 4.0}
+{"timestamp_ns": 1792746008998893871, "wall_time": "2026-10-23T14:30:08.998907", "event_type": "task_completed", "drone_id": 1, "task_id": 105, "hover_s": 4.0}
+{"timestamp_ns": 1792746009113582945, "wall_time": "2026-10-23T14:30:09.113597", "event_type": "task_completed", "drone_id": 0, "task_id": 102, "hover_s": 4.0}
+{"timestamp_ns": 1792746009713515312, "wall_time": "2026-10-23T14:30:09.713531", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0013, "max_ms": 0.0057, "p95_ms": 0.0057}
+{"timestamp_ns": 1792746014713532551, "wall_time": "2026-10-23T14:30:14.713556", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0011, "max_ms": 0.0018, "p95_ms": 0.0018}
+{"timestamp_ns": 1792746015798827002, "wall_time": "2026-10-23T14:30:15.798841", "event_type": "task_completed", "drone_id": 2, "task_id": 104, "hover_s": 4.0}
+{"timestamp_ns": 1792746017513670378, "wall_time": "2026-10-23T14:30:17.513684", "event_type": "task_completed", "drone_id": 0, "task_id": 103, "hover_s": 4.0}
+{"timestamp_ns": 1792746019498855209, "wall_time": "2026-10-23T14:30:19.498868", "event_type": "task_completed", "drone_id": 1, "task_id": 102, "hover_s": 4.0}
+{"timestamp_ns": 1792746019713481462, "wall_time": "2026-10-23T14:30:19.713498", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0019, "p95_ms": 0.0019}
+{"timestamp_ns": 1792746024713552535, "wall_time": "2026-10-23T14:30:24.713567", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0022, "p95_ms": 0.0022}
+{"timestamp_ns": 1792746025813479480, "wall_time": "2026-10-23T14:30:25.813491", "event_type": "task_completed", "drone_id": 0, "task_id": 104, "hover_s": 4.0}
+{"timestamp_ns": 1792746026598797766, "wall_time": "2026-10-23T14:30:26.598813", "event_type": "task_completed", "drone_id": 2, "task_id": 103, "hover_s": 4.0}
+{"timestamp_ns": 1792746029698939983, "wall_time": "2026-10-23T14:30:29.698956", "event_type": "task_completed", "drone_id": 1, "task_id": 105, "hover_s": 4.0}
+{"timestamp_ns": 1792746029713498201, "wall_time": "2026-10-23T14:30:29.713516", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0015, "p95_ms": 0.0015}
+{"timestamp_ns": 1792746034713410032, "wall_time": "2026-10-23T14:30:34.713430", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0015, "p95_ms": 0.0015}
+{"timestamp_ns": 1792746035313585212, "wall_time": "2026-10-23T14:30:35.313603", "event_type": "task_completed", "drone_id": 0, "task_id": 105, "hover_s": 4.0}
+{"timestamp_ns": 1792746037598825759, "wall_time": "2026-10-23T14:30:37.598840", "event_type": "task_completed", "drone_id": 2, "task_id": 104, "hover_s": 4.0}
+{"timestamp_ns": 1792746039713517816, "wall_time": "2026-10-23T14:30:39.713534", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0019, "p95_ms": 0.0019}
+{"timestamp_ns": 1792746041499061152, "wall_time": "2026-10-23T14:30:41.499084", "event_type": "task_completed", "drone_id": 1, "task_id": 102, "hover_s": 4.0}
+{"timestamp_ns": 1792746044313532774, "wall_time": "2026-10-23T14:30:44.313552", "event_type": "task_completed", "drone_id": 0, "task_id": 101, "hover_s": 4.0}
+{"timestamp_ns": 1792746044713476448, "wall_time": "2026-10-23T14:30:44.713497", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0011, "max_ms": 0.0015, "p95_ms": 0.0015}
+{"timestamp_ns": 1792746048398933373, "wall_time": "2026-10-23T14:30:48.398952", "event_type": "task_completed", "drone_id": 2, "task_id": 103, "hover_s": 4.0}
+{"timestamp_ns": 1792746049713489805, "wall_time": "2026-10-23T14:30:49.713505", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.001, "max_ms": 0.0014, "p95_ms": 0.0014}
+{"timestamp_ns": 1792746051799013220, "wall_time": "2026-10-23T14:30:51.799033", "event_type": "task_completed", "drone_id": 1, "task_id": 105, "hover_s": 4.0}
+{"timestamp_ns": 1792746053213433411, "wall_time": "2026-10-23T14:30:53.213443", "event_type": "task_completed", "drone_id": 0, "task_id": 106, "hover_s": 4.0}
+{"timestamp_ns": 1792746054713527359, "wall_time": "2026-10-23T14:30:54.713546", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0011, "max_ms": 0.0015, "p95_ms": 0.0015}
+{"timestamp_ns": 1792746059198925557, "wall_time": "2026-10-23T14:30:59.198945", "event_type": "task_completed", "drone_id": 2, "task_id": 104, "hover_s": 4.0}
+{"timestamp_ns": 1792746059713446049, "wall_time": "2026-10-23T14:30:59.713462", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0045, "p95_ms": 0.0045}
+{"timestamp_ns": 1792746064713457606, "wall_time": "2026-10-23T14:31:04.713471", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0015, "p95_ms": 0.0015}
+{"timestamp_ns": 1792746065998905471, "wall_time": "2026-10-23T14:31:05.998921", "event_type": "task_completed", "drone_id": 1, "task_id": 102, "hover_s": 4.0}
+{"timestamp_ns": 1792746069713390064, "wall_time": "2026-10-23T14:31:09.713410", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0047, "p95_ms": 0.0047}
+{"timestamp_ns": 1792746069998811168, "wall_time": "2026-10-23T14:31:09.998827", "event_type": "task_completed", "drone_id": 2, "task_id": 103, "hover_s": 4.0}
+{"timestamp_ns": 1792746074713450446, "wall_time": "2026-10-23T14:31:14.713464", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0011, "max_ms": 0.0022, "p95_ms": 0.0022}
+{"timestamp_ns": 1792746076298872999, "wall_time": "2026-10-23T14:31:16.298887", "event_type": "task_completed", "drone_id": 1, "task_id": 105, "hover_s": 4.0}
+{"timestamp_ns": 1792746077113483548, "wall_time": "2026-10-23T14:31:17.113500", "event_type": "task_completed", "drone_id": 0, "task_id": 102, "hover_s": 4.0}
+{"timestamp_ns": 1792746079713385502, "wall_time": "2026-10-23T14:31:19.713396", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0016, "p95_ms": 0.0016}
+{"timestamp_ns": 1792746080898812124, "wall_time": "2026-10-23T14:31:20.898827", "event_type": "task_completed", "drone_id": 2, "task_id": 104, "hover_s": 4.0}
+{"timestamp_ns": 1792746084713460895, "wall_time": "2026-10-23T14:31:24.713474", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0011, "max_ms": 0.0015, "p95_ms": 0.0015}
+{"timestamp_ns": 1792746087898919631, "wall_time": "2026-10-23T14:31:27.898937", "event_type": "task_completed", "drone_id": 1, "task_id": 102, "hover_s": 4.0}
+{"timestamp_ns": 1792746088313473705, "wall_time": "2026-10-23T14:31:28.313484", "event_type": "task_completed", "drone_id": 0, "task_id": 103, "hover_s": 4.0}
+{"timestamp_ns": 1792746089713387108, "wall_time": "2026-10-23T14:31:29.713396", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0017, "p95_ms": 0.0017}
+{"timestamp_ns": 1792746094713455661, "wall_time": "2026-10-23T14:31:34.713474", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0012, "max_ms": 0.0039, "p95_ms": 0.0039}
+{"timestamp_ns": 1792746098298897658, "wall_time": "2026-10-23T14:31:38.298918", "event_type": "task_completed", "drone_id": 1, "task_id": 105, "hover_s": 4.0}
+{"timestamp_ns": 1792746099713484291, "wall_time": "2026-10-23T14:31:39.713502", "event_type": "compute_stats", "source": "allocation", "drone_id": 0, "n": 50, "mean_ms": 0.0011, "max_ms": 0.0014, "p95_ms": 0.0014}
+{"timestamp_ns": 1792746100755626525, "wall_time": "2026-10-23T14:31:40.755647", "event_type": "run_summary_written", "path": "/home/mrweirdo/factory_patrol_sim/experiment_results/summaries/run_20261023_142903_auction_comm_loss_orchestrator_3drones.csv", "status": "completed", "completed_tasks": 6, "total_tasks": 6, "mission_completion_time_s": 44.374}
+{"timestamp_ns": 1792746100756340634, "wall_time": "2026-10-23T14:31:40.756347", "event_type": "task_completed", "drone_id": 0, "task_id": 104, "hover_s": 4.0}
+{"timestamp_ns": 1792746104619135550, "wall_time": "2026-10-23T14:31:44.619146", "event_type": "metrics_collector_stopped"}

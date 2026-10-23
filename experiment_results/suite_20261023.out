@@ -1,0 +1,122 @@
+[2026-10-23T00:59:08+05:30] auction / benchmark / repeat 1
+    -> run_20261023_005932 (summary written after 87 s)
+[2026-10-23T01:00:40+05:30] apf / benchmark / repeat 1
+    -> run_20261023_010105 (summary written after 88 s)
+[2026-10-23T01:02:13+05:30] rl / benchmark / repeat 1
+    -> run_20261023_010239 (summary written after 104 s)
+[2026-10-23T01:04:02+05:30] auction / safety_stress / repeat 1
+    -> run_20261023_010427 (time limit 330s after 340 s)
+[2026-10-23T01:09:47+05:30] apf / safety_stress / repeat 1
+[2026-10-23T01:54:41+05:30] apf / safety_stress / repeat 1
+    -> run_20261023_015506 (time limit 330s after 340 s)
+[2026-10-23T02:00:26+05:30] rl / safety_stress / repeat 1
+    -> run_20261023_020052 (summary written after 129 s)
+[2026-10-23T02:02:40+05:30] auction / comm_loss / repeat 1
+    -> run_20261023_020305 (summary written after 195 s)
+[2026-10-23T02:06:00+05:30] apf / comm_loss / repeat 1
+    -> run_20261023_020624 (summary written after 194 s)
+[2026-10-23T02:09:19+05:30] rl / comm_loss / repeat 1
+    -> run_20261023_020945 (summary written after 196 s)
+[2026-10-23T02:12:40+05:30] auction / comm_loss_orchestrator / repeat 1
+    -> run_20261023_021305 (summary written after 194 s)
+[2026-10-23T02:15:59+05:30] apf / comm_loss_orchestrator / repeat 1
+    -> run_20261023_021624 (summary written after 194 s)
+[2026-10-23T02:19:18+05:30] rl / comm_loss_orchestrator / repeat 1
+    -> run_20261023_021944 (summary written after 196 s)
+[2026-10-23T02:22:39+05:30] auction / benchmark / repeat 2
+    -> run_20261023_022304 (summary written after 88 s)
+[2026-10-23T02:24:12+05:30] apf / benchmark / repeat 2
+    -> run_20261023_022437 (summary written after 88 s)
+[2026-10-23T02:25:45+05:30] rl / benchmark / repeat 2
+    -> run_20261023_022611 (summary written after 105 s)
+[2026-10-23T02:27:35+05:30] auction / safety_stress / repeat 2
+    -> run_20261023_022800 (time limit 330s after 338 s)
+[2026-10-23T02:33:18+05:30] apf / safety_stress / repeat 2
+    -> run_20261023_023343 (time limit 330s after 340 s)
+[2026-10-23T02:39:03+05:30] rl / safety_stress / repeat 2
+    -> run_20261023_023929 (summary written after 130 s)
+[2026-10-23T02:41:18+05:30] auction / comm_loss / repeat 2
+    -> run_20261023_024143 (summary written after 194 s)
+[2026-10-23T02:44:37+05:30] apf / comm_loss / repeat 2
+    -> run_20261023_024502 (summary written after 194 s)
+[2026-10-23T02:47:56+05:30] rl / comm_loss / repeat 2
+    -> run_20261023_024822 (summary written after 196 s)
+[2026-10-23T02:51:17+05:30] auction / comm_loss_orchestrator / repeat 2
+    -> run_20261023_025142 (summary written after 194 s)
+[2026-10-23T02:54:36+05:30] apf / comm_loss_orchestrator / repeat 2
+    -> run_20261023_025501 (summary written after 194 s)
+[2026-10-23T02:57:55+05:30] rl / comm_loss_orchestrator / repeat 2
+    -> run_20261023_025822 (summary written after 197 s)
+[2026-10-23T03:01:17+05:30] auction / benchmark / repeat 3
+    -> run_20261023_030141 (summary written after 87 s)
+[2026-10-23T03:02:49+05:30] apf / benchmark / repeat 3
+    -> run_20261023_030314 (summary written after 88 s)
+[2026-10-23T03:04:22+05:30] rl / benchmark / repeat 3
+    -> run_20261023_030448 (summary written after 106 s)
+[2026-10-23T03:06:13+05:30] auction / safety_stress / repeat 3
+    -> run_20261023_030638 (time limit 330s after 340 s)
+[2026-10-23T03:11:58+05:30] apf / safety_stress / repeat 3
+    -> run_20261023_031222 (time limit 330s after 339 s)
+[2026-10-23T03:17:42+05:30] rl / safety_stress / repeat 3
+    -> run_20261023_031808 (summary written after 130 s)
+[2026-10-23T03:19:57+05:30] auction / comm_loss / repeat 3
+    -> run_20261023_032022 (summary written after 194 s)
+[2026-10-23T03:23:16+05:30] apf / comm_loss / repeat 3
+    -> run_20261023_032341 (summary written after 194 s)
+[2026-10-23T03:26:35+05:30] rl / comm_loss / repeat 3
+    -> run_20261023_032702 (summary written after 196 s)
+[2026-10-23T03:29:56+05:30] auction / comm_loss_orchestrator / repeat 3
+    -> run_20261023_033021 (summary written after 194 s)
+[2026-10-23T03:33:16+05:30] apf / comm_loss_orchestrator / repeat 3
+    -> run_20261023_033341 (summary written after 194 s)
+[2026-10-23T03:36:35+05:30] rl / comm_loss_orchestrator / repeat 3
+    -> run_20261023_033701 (summary written after 196 s)
+[2026-10-23T03:39:56+05:30] auction / benchmark / repeat 4
+    -> run_20261023_034021 (summary written after 88 s)
+[2026-10-23T03:41:29+05:30] apf / benchmark / repeat 4
+    -> run_20261023_034153 (summary written after 87 s)
+[2026-10-23T03:43:01+05:30] rl / benchmark / repeat 4
+    -> run_20261023_034328 (summary written after 106 s)
+[2026-10-23T03:44:52+05:30] auction / safety_stress / repeat 4
+    -> run_20261023_034517 (summary written after 96 s)
+[2026-10-23T03:46:33+05:30] apf / safety_stress / repeat 4
+    -> run_20261023_034658 (time limit 330s after 340 s)
+[2026-10-23T03:52:18+05:30] rl / safety_stress / repeat 4
+    -> run_20261023_035244 (summary written after 129 s)
+[2026-10-23T03:54:32+05:30] auction / comm_loss / repeat 4
+    -> run_20261023_035457 (summary written after 195 s)
+[2026-10-23T03:57:52+05:30] apf / comm_loss / repeat 4
+    -> run_20261023_035816 (summary written after 194 s)
+[2026-10-23T04:01:11+05:30] rl / comm_loss / repeat 4
+    -> run_20261023_040137 (summary written after 196 s)
+[2026-10-23T04:04:32+05:30] auction / comm_loss_orchestrator / repeat 4
+    -> run_20261023_040457 (summary written after 194 s)
+[2026-10-23T04:07:51+05:30] apf / comm_loss_orchestrator / repeat 4
+    -> run_20261023_040816 (summary written after 194 s)
+[2026-10-23T04:11:10+05:30] rl / comm_loss_orchestrator / repeat 4
+    -> run_20261023_041136 (summary written after 196 s)
+[2026-10-23T04:14:31+05:30] auction / benchmark / repeat 5
+    -> run_20261023_041456 (summary written after 88 s)
+[2026-10-23T04:16:04+05:30] apf / benchmark / repeat 5
+    -> run_20261023_041629 (summary written after 88 s)
+[2026-10-23T04:17:37+05:30] rl / benchmark / repeat 5
+    -> run_20261023_041803 (summary written after 103 s)
+[2026-10-23T04:19:25+05:30] auction / safety_stress / repeat 5
+    -> run_20261023_041950 (summary written after 102 s)
+[2026-10-23T04:21:12+05:30] apf / safety_stress / repeat 5
+    -> run_20261023_042137 (time limit 330s after 340 s)
+[2026-10-23T04:26:57+05:30] rl / safety_stress / repeat 5
+    -> run_20261023_042723 (summary written after 130 s)
+[2026-10-23T04:29:12+05:30] auction / comm_loss / repeat 5
+    -> run_20261023_042937 (summary written after 194 s)
+[2026-10-23T04:32:31+05:30] apf / comm_loss / repeat 5
+    -> run_20261023_043256 (summary written after 194 s)
+[2026-10-23T04:35:50+05:30] rl / comm_loss / repeat 5
+    -> run_20261023_043616 (disk below 1.5 GB after 109 s)
+[2026-10-23T04:37:44+05:30] auction / comm_loss_orchestrator / repeat 5
+    -> run_20261023_043809 (summary written after 194 s)
+[2026-10-23T04:41:03+05:30] apf / comm_loss_orchestrator / repeat 5
+    -> run_20261023_044128 (summary written after 194 s)
+[2026-10-23T04:44:22+05:30] rl / comm_loss_orchestrator / repeat 5
+    -> run_20261023_044448 (summary written after 196 s)
+suite suite_20261023 done: /home/mrweirdo/factory_patrol_sim/experiment_results/suites/suite_20261023/manifest.csv

@@ -1,0 +1,116 @@
+{
+ "vB_seed2": [
+  {
+   "run": "run_20261022_232247",
+   "status": "completed",
+   "completed_tasks": 6,
+   "total_tasks": 6,
+   "mission_time_s": 59.34,
+   "distance_m": 141.214,
+   "min_separation_m": 2.409,
+   "min_obstacle_clearance_m": 0.8291356945639234,
+   "rl_plans": 12,
+   "rl_stalls": 0
+  },
+  {
+   "run": "run_20261022_232809",
+   "status": "completed",
+   "completed_tasks": 6,
+   "total_tasks": 6,
+   "mission_time_s": 59.524,
+   "distance_m": 140.321,
+   "min_separation_m": 2.377,
+   "min_obstacle_clearance_m": 0.7694446048936853,
+   "rl_plans": 12,
+   "rl_stalls": 1
+  },
+  {
+   "run": "run_20261022_233319",
+   "status": "completed",
+   "completed_tasks": 6,
+   "total_tasks": 6,
+   "mission_time_s": 59.412,
+   "distance_m": 139.436,
+   "min_separation_m": 2.307,
+   "min_obstacle_clearance_m": 0.7886856154387496,
+   "rl_plans": 12,
+   "rl_stalls": 1
+  }
+ ],
+ "v2": [
+  {
+   "run": "run_20261022_232438",
+   "status": "completed",
+   "completed_tasks": 6,
+   "total_tasks": 6,
+   "mission_time_s": 55.416,
+   "distance_m": 132.214,
+   "min_separation_m": 2.296,
+   "min_obstacle_clearance_m": 0.8010898825974525,
+   "rl_plans": 12,
+   "rl_stalls": 1
+  },
+  {
+   "run": "run_20261022_233000",
+   "status": "completed",
+   "completed_tasks": 6,
+   "total_tasks": 6,
+   "mission_time_s": 55.612,
+   "distance_m": 132.938,
+   "min_separation_m": 2.171,
+   "min_obstacle_clearance_m": 0.7855762216360673,
+   "rl_plans": 12,
+   "rl_stalls": 1
+  },
+  {
+   "run": "run_20261022_233510",
+   "status": "completed",
+   "completed_tasks": 6,
+   "total_tasks": 6,
+   "mission_time_s": 55.628,
+   "distance_m": 133.853,
+   "min_separation_m": 2.182,
+   "min_obstacle_clearance_m": 0.7728757985601569,
+   "rl_plans": 12,
+   "rl_stalls": 0
+  }
+ ],
+ "apf": [
+  {
+   "run": "run_20261022_232623",
+   "status": "completed",
+   "completed_tasks": 6,
+   "total_tasks": 6,
+   "mission_time_s": 44.386,
+   "distance_m": 99.323,
+   "min_separation_m": 1.971,
+   "min_obstacle_clearance_m": 0.5049801976315506,
+   "rl_plans": 0,
+   "rl_stalls": 0
+  },
+  {
+   "run": "run_20261022_233145",
+   "status": "completed",
+   "completed_tasks": 6,
+   "total_tasks": 6,
+   "mission_time_s": 44.214,
+   "distance_m": 99.992,
+   "min_separation_m": 1.926,
+   "min_obstacle_clearance_m": 0.3602138253870888,
+   "rl_plans": 0,
+   "rl_stalls": 0
+  },
+  {
+   "run": "run_20261022_233655",
+   "status": "completed",
+   "completed_tasks": 6,
+   "total_tasks": 6,
+   "mission_time_s": 44.128,
+   "distance_m": 99.017,
+   "min_separation_m": 1.971,
+   "min_obstacle_clearance_m": 0.41100486615124154,
+   "rl_plans": 0,
+   "rl_stalls": 0
+  }
+ ]
+}
